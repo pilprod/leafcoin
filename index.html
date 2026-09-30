@@ -33,10 +33,10 @@
   <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="assets/ios_ligth_leafcoin.png">
   <link rel="preload" href="assets/fonts/ibm-plex-sans.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20260930-menu">
+  <link rel="stylesheet" href="styles.css?v=20260930-footer">
   <link rel="stylesheet" href="gallery.css">
   <link rel="stylesheet" href="section-illustrations.css">
-  <link rel="stylesheet" href="analytics-ui.css">
+  <link rel="stylesheet" href="analytics-ui.css?v=20260930-footer">
   <script src="site.js?v=20260930-menu2" defer></script>
   <script src="gallery.js" defer></script>
   <script src="analytics.js" defer></script>
@@ -357,10 +357,17 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><p>Leafcoin<span aria-hidden="true">.</span> <span class="footer-context">A concept for verifiable agriculture.</span></p><div class="footer-links"><a href="https://old.leafcoin.org/">Original version</a><a href="#main">Back to top</a></div><div id="analytics-tools" class="analytics-tools" hidden>
-  <button id="analytics-settings" class="analytics-settings" type="button" aria-controls="analytics-consent" aria-expanded="false">Analytics settings</button>
-  <span id="analytics-status" class="analytics-status" role="status" aria-live="polite">Google Analytics is off.</span>
-</div></footer>
+  <footer class="site-footer">
+    <p>Leafcoin<span aria-hidden="true">.</span> <span class="footer-context">A concept for verifiable agriculture.</span></p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="https://old.leafcoin.org/">Original version</a>
+      <a href="#main">Back to top</a>
+    </nav>
+    <div id="analytics-tools" class="analytics-tools" hidden>
+      <button id="analytics-settings" class="analytics-settings" type="button" aria-controls="analytics-consent" aria-expanded="false">Analytics settings</button>
+      <span id="analytics-status" class="analytics-status" role="status" aria-live="polite">Google Analytics is off.</span>
+    </div>
+  </footer>
 <section id="analytics-consent" class="analytics-consent" aria-label="Google Analytics settings" hidden>
   <p class="analytics-consent-label">Your choice</p>
   <h2>Allow Google Analytics?</h2>

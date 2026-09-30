@@ -1,8 +1,8 @@
 .analytics-tools {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px 16px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px 20px;
   color: var(--muted);
   font-size: 12px;
 }
@@ -14,12 +14,13 @@
   background: transparent;
   color: var(--accent);
   font: inherit;
+  font-size: 14px;
   text-decoration: underline;
   text-underline-offset: 4px;
   cursor: pointer;
 }
 .analytics-settings:hover { color: var(--ink); }
-.analytics-status { line-height: 1.6; }
+.analytics-status { min-width: 0; line-height: 1.6; overflow-wrap: anywhere; }
 .analytics-consent {
   position: fixed;
   z-index: 20;
@@ -80,4 +81,7 @@
   .analytics-consent { padding: 20px; }
   .analytics-consent h2 { font-size: 23px; }
   .analytics-consent-actions { grid-template-columns: 1fr; gap: 10px; }
+}
+@media (max-width: 820px) {
+  .analytics-tools { grid-template-columns: minmax(0, 1fr); justify-items: start; gap: 0; }
 }
