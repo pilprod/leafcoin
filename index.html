@@ -33,11 +33,11 @@
   <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml" sizes="any">
   <link rel="apple-touch-icon" href="assets/ios_ligth_leafcoin.png">
   <link rel="preload" href="assets/fonts/ibm-plex-sans.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260930-menu">
   <link rel="stylesheet" href="gallery.css">
   <link rel="stylesheet" href="section-illustrations.css">
   <link rel="stylesheet" href="analytics-ui.css">
-  <script src="site.js" defer></script>
+  <script src="site.js?v=20260930-menu" defer></script>
   <script src="gallery.js" defer></script>
   <script src="analytics.js" defer></script>
   <script type="application/ld+json">
@@ -81,14 +81,20 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-toolbar">
     <a class="site-brand" href="./" aria-label="Leafcoin — Home"><img src="assets/leafcoin_revert.svg" width="36" height="36" alt="" aria-hidden="true">Leafcoin<span aria-hidden="true">.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#concept">Concept</a>
-      <a href="#architecture">Architecture</a>
-      <a href="#calibration">ML calibration</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#prototype">Prototype</a>
-    </nav>
-    <a class="creator-link" href="https://papou.work/">Creator’s CV</a>
+    <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu">
+      <span class="menu-toggle-label">Menu</span>
+      <span class="menu-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <div class="toolbar-links" id="site-menu">
+      <nav aria-label="Main navigation">
+        <a href="#concept">Concept</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#calibration">ML calibration</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#prototype">Prototype</a>
+      </nav>
+      <a class="creator-link" href="https://papou.work/">Creator’s CV</a>
+    </div>
   </header>
 
   <main id="main" class="document">
