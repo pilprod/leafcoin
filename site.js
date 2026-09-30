@@ -30,7 +30,13 @@
       toggle.focus();
     }
   });
-  mobile.addEventListener("change", () => setOpen(false));
+  mobile.addEventListener("change", event => {
+    const focusInMenu = menu.contains(document.activeElement);
+    const focusOnToggle = document.activeElement === toggle;
+    setOpen(false);
+    if (event.matches && focusInMenu) toggle.focus();
+    if (!event.matches && focusOnToggle) menu.querySelector("a")?.focus();
+  });
   toolbar.setAttribute("data-menu-ready", "true");
 })();
 
