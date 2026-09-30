@@ -16,6 +16,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 SKIP_DIRECTORIES = {".git", ".github", "scripts", "work", "__pycache__"}
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+IMAGE_NS = "http://www.google.com/schemas/sitemap-image/1.1"
 
 
 def require(condition, message):
@@ -36,13 +37,21 @@ class Page(HTMLParser):
         self.references = []
         self.idrefs = []
         self.jsonld = []
+        self.images = []
+        self.content_blocks = []
         self._title = False
         self._json = None
+        self._main = False
+        self._blocks = []
         self.feed(source)
         self.close()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "main":
+            self._main = True
+        if self._main and tag in ("h1", "h2", "h3", "p", "summary", "figcaption", "dt", "dd"):
+            self._blocks.append({"tag": tag, "text": []})
         if tag == "html":
             self.lang = attrs.get("lang", "")
         if tag == "title":
@@ -72,6 +81,8 @@ class Page(HTMLParser):
                                        for item in attrs["srcset"].split(",") if item.strip())
         if tag == "img":
             require("alt" in attrs, f"{self.path}: image has no alt attribute")
+            if self._main:
+                self.images.append(attrs)
         if tag == "script" and attrs.get("type", "").lower() == "application/ld+json":
             self._json = []
 
@@ -80,6 +91,15 @@ class Page(HTMLParser):
         self.handle_endtag(tag)
 
     def handle_endtag(self, tag):
+        for index in range(len(self._blocks) - 1, -1, -1):
+            if self._blocks[index]["tag"] == tag:
+                block = self._blocks.pop(index)
+                text = " ".join(" ".join(block["text"]).split())
+                if text:
+                    self.content_blocks.append(text)
+                break
+        if tag == "main":
+            self._main = False
         if tag == "title":
             self._title = False
         if tag == "script" and self._json is not None:
@@ -94,6 +114,8 @@ class Page(HTMLParser):
             self.title.append(value)
         if self._json is not None:
             self._json.append(value)
+        for block in self._blocks:
+            block["text"].append(value)
 
     def metadata(self, name):
         values = self.meta.get(name, [])
@@ -164,6 +186,17 @@ class Site:
         if fragment and PurePosixPath(path).suffix.lower() in (".html", ".htm"):
             require(fragment in self.page(path).ids,
                     f"{source}: missing fragment {reference!r}")
+        elif fragment and PurePosixPath(path).suffix.lower() in (".md", ".txt"):
+            markdown = self.resource(path).decode("utf-8")
+            identifiers = set(re.findall(r"<a\s+id=['\"]([^'\"]+)['\"]", markdown))
+            counts = {}
+            for heading in re.findall(r"^#{1,6}\s+(.+?)\s*#*\s*$", markdown, flags=re.M):
+                label = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", heading)
+                slug = re.sub(r"[^\w\- ]", "", label.casefold()).replace(" ", "-")
+                count = counts.get(slug, 0)
+                identifiers.add(slug + (f"-{count}" if count else ""))
+                counts[slug] = count + 1
+            require(fragment in identifiers, f"{source}: missing Markdown fragment {reference!r}")
 
 
 def jsonld_nodes(block):
@@ -237,11 +270,15 @@ def check_discovery(site):
     require(urljoin(site.canonical, "sitemap.xml") in (robots.site_maps() or []),
             "robots.txt sitemap URL differs from the canonical base")
     for bot in ("Googlebot", "bingbot", "OAI-SearchBot"):
-        require(robots.can_fetch(bot, site.canonical), f"robots.txt blocks {bot}")
+        for path in ["", "index.md", "llms.txt", "llms-full.txt", "concept.jsonld", *site.resources]:
+            require(robots.can_fetch(bot, urljoin(site.canonical, path)),
+                    f"Declared robots.txt rules block {bot} from {path or '/'}")
     sitemap = ET.fromstring(site.resource("sitemap.xml"))
     require(sitemap.tag == f"{{{SITEMAP_NS}}}urlset", "Invalid sitemap namespace or root")
     locations = []
     for entry in sitemap.findall(f"{{{SITEMAP_NS}}}url"):
+        require(len(entry.findall(f"{{{SITEMAP_NS}}}loc")) == 1,
+                "Each sitemap entry must have exactly one URL")
         location = entry.findtext(f"{{{SITEMAP_NS}}}loc", "")
         parsed = urlsplit(location)
         require(parsed.scheme == "https" and parsed.netloc and not parsed.fragment,
@@ -253,6 +290,24 @@ def check_discovery(site):
         if modified:
             date = dt.datetime.fromisoformat(modified.replace("Z", "+00:00")).date()
             require(date <= dt.datetime.now(dt.timezone.utc).date(), f"Future sitemap date: {modified}")
+        image_nodes = entry.findall(f"{{{IMAGE_NS}}}image")
+        require(all(len(node.findall(f"{{{IMAGE_NS}}}loc")) == 1 for node in image_nodes),
+                f"Each sitemap image must have exactly one URL: {location}")
+        image_locations = [node.findtext(f"{{{IMAGE_NS}}}loc", "") for node in image_nodes]
+        require(len(image_locations) == len(set(image_locations)), f"Duplicate sitemap image for {location}")
+        for image in image_locations:
+            require(urlsplit(image).scheme == "https" and site.local_target(image) is not None,
+                    f"Sitemap image must be an absolute same-site HTTPS URL: {image!r}")
+            site.check_reference(image)
+        target = site.local_target(location)
+        if target and target[0] in site.pages:
+            page = site.pages[target[0]]
+            expected = {urljoin(location, image.get("src", "")) for image in page.images}
+            require(expected <= set(image_locations), f"Visible content images missing from sitemap: {location}")
+            allowed = expected | {urljoin(location, reference) for reference in page.references
+                                  if PurePosixPath(urlsplit(reference).path).suffix.lower()
+                                  in (".avif", ".gif", ".jpg", ".jpeg", ".png", ".svg", ".webp")}
+            require(set(image_locations) <= allowed, f"Sitemap includes images not referenced by {location}")
     require(locations and len(locations) == len(set(locations)), "Sitemap is empty or has duplicate URLs")
     for page in site.pages.values():
         require(page.canonicals[0] in locations, f"{page.path}: canonical missing from sitemap")
@@ -260,6 +315,63 @@ def check_discovery(site):
     require(llms.startswith("# ") and site.canonical in llms, "llms.txt needs a title and canonical site URL")
     for reference in re.findall(r"\]\(([^)]+)\)", llms):
         site.check_reference(reference)
+    check_concept_resources(site)
+
+
+def normalize_text(value):
+    value = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", value)
+    return " ".join(re.sub(r"[\W_]+", " ", value.casefold()).split())
+
+
+def check_concept_resources(site):
+    markdown = site.resource("index.md").decode("utf-8")
+    full = site.resource("llms-full.txt").decode("utf-8")
+    require(markdown == full, "index.md and llms-full.txt differ")
+    require(markdown.startswith("# ") and site.canonical in markdown,
+            "Full concept Markdown needs a title and canonical URL")
+    normalized = normalize_text(markdown)
+    for block in site.page("index.html").content_blocks:
+        require(normalize_text(block) in normalized,
+                f"Full concept Markdown omits or changes visible copy: {block[:100]!r}")
+    for reference in re.findall(r"\]\(([^)]+)\)", markdown):
+        site.check_reference(reference)
+    graph = json.loads(site.resource("concept.jsonld"))
+    nodes = jsonld_nodes(graph)
+    identifiers = [node.get("@id") for node in nodes]
+    require(all(identifiers) and len(identifiers) == len(set(identifiers)),
+            "concept.jsonld has missing or duplicate entity IDs")
+    concept = next((node for node in nodes if node.get("@id") == site.canonical + "#concept"), None)
+    require(concept and concept.get("@type") == "CreativeWork"
+            and "concept" in concept.get("creativeWorkStatus", "").lower(),
+            "Structured Leafcoin entity must remain a CreativeWork with concept status")
+    require(concept.get("url") == site.canonical, "Structured concept URL differs from canonical")
+    image_urls = set()
+    repositories = set()
+    for node in nodes:
+        kind = node.get("@type")
+        if kind == "ImageObject":
+            content_url = node.get("contentUrl", "")
+            provenance = node.get("isBasedOn")
+            require(content_url and node.get("caption") and provenance,
+                    "ImageObject needs its image URL, caption and source context")
+            site.check_reference(content_url)
+            if isinstance(provenance, str):
+                site.check_reference(provenance)
+                if "docs/generated-illustrations.md" in provenance:
+                    require(node.get("creativeWorkStatus") == "AI-generated concept illustration",
+                            "Generated illustration must retain explicit AI concept-image status")
+            image_urls.add(content_url)
+        if kind == "SoftwareSourceCode":
+            repository = node.get("codeRepository", "")
+            require(repository.startswith("https://github.com/") and node.get("description"),
+                    "SoftwareSourceCode needs its repository and scope description")
+            repositories.add(repository)
+    homepage = site.page("index.html")
+    expected_images = {urljoin(site.canonical, image.get("src", "")) for image in homepage.images}
+    require(expected_images <= image_urls, "concept.jsonld omits visible content image relationships")
+    expected_repositories = {reference.rstrip("/") for reference in homepage.references
+                             if re.fullmatch(r"https://github\.com/[^/]+/[^/#?]+/?", reference)}
+    require(expected_repositories <= repositories, "concept.jsonld omits linked repository relationships")
 
 
 def main():
@@ -285,7 +397,7 @@ def main():
     require((ROOT / ".nojekyll").is_file(), "Missing .nojekyll for static GitHub Pages publication")
     mode = f"published site at {args.url}" if args.url else "local site"
     print(f"PASS: {mode} — {len(site.pages)} page(s), {len(site.resources)} resources, "
-          "metadata, JSON-LD, IDs, links, assets, robots, sitemap and llms.txt")
+          "metadata, JSON-LD, IDs, links, assets, declared robots rules, sitemap and full concept resources")
 
 
 if __name__ == "__main__":

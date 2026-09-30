@@ -4,27 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leafcoin — A concept for verifiable agriculture</title>
-  <meta name="description" content="Leafcoin explores aeroponic farming, IoT telemetry, AI assistance and blockchain verification for a more transparent agricultural ecosystem in Thailand.">
+  <meta name="description" content="Leafcoin is an agricultural technology concept exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records.">
   <meta name="author" content="Ilya Papou">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f7f9fb" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#131c27" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5faf7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#081411" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Leafcoin">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Leafcoin — A concept for verifiable agriculture">
-  <meta property="og:description" content="From farm telemetry to traceable products: an IoT, AI and blockchain concept rooted in aeroponics research.">
+  <meta property="og:description" content="From farm telemetry to traceable products: an IoT, ML calibration and blockchain concept rooted in aeroponics research.">
   <meta property="og:url" content="https://pilprod.github.io/leafcoin/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://pilprod.github.io/leafcoin/assets/images/hero-home-lab.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Leafcoin — A concept for verifiable agriculture">
-  <meta name="twitter:description" content="From farm telemetry to traceable products: an IoT, AI and blockchain concept rooted in aeroponics research.">
+  <meta name="twitter:description" content="From farm telemetry to traceable products: an IoT, ML calibration and blockchain concept rooted in aeroponics research.">
+  <meta name="twitter:image" content="https://pilprod.github.io/leafcoin/assets/images/hero-home-lab.jpg">
+  <meta name="twitter:image:alt" content="AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.">
   <link rel="canonical" href="https://pilprod.github.io/leafcoin/">
   <link rel="describedby" href="llms.txt" type="text/plain" title="Leafcoin concept overview">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" href="index.md" type="text/markdown" title="Leafcoin full concept in Markdown">
+  <link rel="describedby" href="concept.jsonld" type="application/ld+json" title="Leafcoin concept and source relationships">
+  <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml" sizes="any">
+  <link rel="apple-touch-icon" href="assets/ios_ligth_leafcoin.png">
   <link rel="preload" href="assets/fonts/ibm-plex-sans.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="section-illustrations.css">
+  <link rel="stylesheet" href="analytics-ui.css">
   <script src="site.js" defer></script>
+  <script src="gallery.js" defer></script>
+  <script src="analytics.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -41,7 +56,8 @@
           "@type": "CreativeWork",
           "@id": "https://pilprod.github.io/leafcoin/#concept",
           "name": "Leafcoin — A concept for verifiable agriculture",
-          "description": "A concept connecting aeroponics, IoT data, AI assistance and blockchain verification. The proposed ecosystem is not a launched financial service.",
+          "description": "An agricultural technology concept exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records. Besu with QBFT is being considered for a permissioned EVM network in the proposed architecture.",
+          "creativeWorkStatus": "Concept / personal R&D",
           "url": "https://pilprod.github.io/leafcoin/",
           "inLanguage": "en",
           "isPartOf": {"@id": "https://pilprod.github.io/leafcoin/#website"},
@@ -64,10 +80,11 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-toolbar">
-    <a class="site-brand" href="./" aria-label="Leafcoin — Home">Leafcoin<span aria-hidden="true">.</span></a>
+    <a class="site-brand" href="./" aria-label="Leafcoin — Home"><img src="assets/leafcoin_revert.svg" width="36" height="36" alt="" aria-hidden="true">Leafcoin<span aria-hidden="true">.</span></a>
     <nav aria-label="Main navigation">
       <a href="#concept">Concept</a>
       <a href="#architecture">Architecture</a>
+      <a href="#calibration">ML calibration</a>
       <a href="#roadmap">Roadmap</a>
       <a href="#prototype">Prototype</a>
     </nav>
@@ -77,10 +94,10 @@
   <main id="main" class="document">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Agrotech · IoT · Digital assets</p>
-        <h1 id="hero-title">A concept for<br>verifiable<br><span>agriculture.</span></h1>
-        <p class="hero-description">Connecting aeroponic farms, IoT telemetry, AI assistance and blockchain records.</p>
-        <p class="hero-context">An exploration of how real production data could support a more transparent agricultural ecosystem in Thailand.</p>
+        <p class="eyebrow">Agrotech / Personal R&amp;D</p>
+        <h1 id="hero-title">Real crops.<br><span>Verifiable data.</span></h1>
+        <p class="hero-description">Exploring connections between aeroponic farming, IoT telemetry, ML-assisted calibration and blockchain records.</p>
+        <p class="hero-context">An exploration of how production data could support a more transparent agricultural ecosystem.</p>
         <div class="hero-links">
           <a class="primary-link" href="#architecture">Explore the architecture</a>
           <a class="text-link" href="#prototype">View the prototype</a>
@@ -91,22 +108,28 @@
         </dl>
       </div>
       <figure class="hero-figure">
-        <img src="assets/images/root-chamber.webp" width="1536" height="2048" fetchpriority="high" decoding="async" alt="Plant roots hanging above the internal tubing of the personal aeroponics lab’s root chamber.">
-        <figcaption><span class="photo-label">From the lab</span><span>Root chamber · Home Aeroponics<br><a href="https://papou.work/portfolio.html#photo-root-chamber">Original photograph &amp; context</a></span></figcaption>
+        <img src="assets/images/hero-home-lab.jpg" width="1536" height="1024" fetchpriority="high" decoding="async" alt="AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.">
+        <figcaption><span class="photo-label">Home aeroponics</span><span><a href="docs/generated-illustrations.md#hero">AI-generated concept illustration</a></span></figcaption>
       </figure>
     </section>
+
+    <div class="research-layers" aria-label="Proposed ecosystem layers"><span class="eyebrow">A proposed ecosystem</span><ul><li>Aeroponics</li><li>IoT sensing</li><li>ML calibration</li><li>Ledger records</li><li>Product passports</li></ul></div>
 
     <section id="concept" class="content-section" aria-labelledby="concept-title">
       <div class="section-label"><span>01 / Concept</span><p>Real production.<br>Useful evidence.</p></div>
       <div class="section-content">
         <h2 id="concept-title">Start with the farm.</h2>
         <p class="section-intro">Before a digital asset can represent anything meaningful, the underlying production needs to be observable. Leafcoin starts with growing conditions, crop records and the quality of the data.</p>
+        <figure class="section-illustration">
+          <img src="assets/images/section-concept.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="AI-generated concept illustration of an aeroponic growing module with leafy plants, a mist chamber, reservoir, pump and sensors.">
+          <figcaption><a class="section-illustration-label" href="docs/generated-illustrations.md#concept">AI-generated concept illustration</a><span>Cultivation and observable growing conditions.</span></figcaption>
+        </figure>
         <div class="principles">
-          <article><h3>Grow with better visibility</h3><p>Bring temperature, humidity, light, pH and nutrient readings together. Help operators spot changing conditions and make informed adjustments.</p></article>
-          <article><h3>Trace every batch</h3><p>Connect seed origin, growing conditions, crop cycles and harvest records in a product passport that can be accessed through a QR code.</p></article>
-          <article><h3>Verify the record</h3><p>Keep the detailed data in controlled storage. Anchor report fingerprints on a ledger so readers can check whether a record has changed.</p></article>
+          <article><h3>Grow with better visibility</h3><p>The proposed monitoring layer would bring temperature, humidity, light, pH and nutrient readings together to help operators assess growing conditions.</p></article>
+          <article><h3>Trace every batch</h3><p>A proposed product passport would connect seed origin, growing conditions, crop cycles and harvest records, with access through a QR code.</p></article>
+          <article><h3>Verify the record</h3><p>The proposed verification layer would anchor report fingerprints on a ledger so readers could check whether a recorded report has changed.</p></article>
         </div>
-        <p class="scope-note">Leafcoin is a proposed ecosystem. The public lab materials document personal prototypes; they do not establish a deployed farm network, issued token or licensed financial service.</p>
+        <p class="scope-note">Leafcoin is presented here as a concept and personal R&amp;D project. The public lab materials document historical prototypes. The architecture and roadmap describe proposed work; implementation status beyond those materials is not established here.</p>
       </div>
     </section>
 
@@ -114,43 +137,69 @@
       <div class="section-label"><span>02 / Architecture</span><p>From a reading<br>to a verifiable record.</p></div>
       <div class="section-content">
         <h2 id="architecture-title">A data layer before a token layer.</h2>
-        <p class="section-intro">The proposed flow separates collection, storage and verification. Sensitive telemetry stays off-chain; the ledger holds evidence of the record’s integrity.</p>
+        <p class="section-intro">The proposed architecture separates data collection, off-chain storage and ledger-based integrity checks. Raw telemetry would remain off-chain, while the ledger would hold report hashes.</p>
+        <figure class="section-illustration">
+          <img src="assets/images/section-architecture.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="AI-generated concept illustration linking crop sensors, a gateway, off-chain storage, ledger modules and a batch passport.">
+          <figcaption><a class="section-illustration-label" href="docs/generated-illustrations.md#architecture">AI-generated concept illustration</a><span>A proposed path from measurements to verifiable records.</span></figcaption>
+        </figure>
         <ol class="data-flow" aria-label="Proposed data flow">
           <li><span>01</span><strong>Measure</strong><small>Farm sensors</small></li>
           <li><span>02</span><strong>Validate</strong><small>Quality checks</small></li>
           <li><span>03</span><strong>Store</strong><small>Off-chain data</small></li>
           <li><span>04</span><strong>Verify</strong><small>Report hashes</small></li>
-          <li><span>05</span><strong>Use</strong><small>AI &amp; passports</small></li>
+          <li><span>05</span><strong>Use</strong><small>ML &amp; passports</small></li>
         </ol>
         <div class="architecture-details">
           <details open>
             <summary><span>Collection &amp; data quality</span><span class="detail-category">IoT</span></summary>
-            <div class="detail-copy"><p>Timestamp readings and transport them through MQTT. Flag missing samples, outliers and calibration issues before they enter reports or training data. Keep crop-cycle and device context alongside each reading.</p></div>
+            <div class="detail-copy"><p>The proposed collection layer would timestamp readings and transport them through MQTT, retaining crop-cycle and device context. Data-quality checks would flag missing samples, outliers and calibration issues before readings are used in reports or model evaluation.</p></div>
           </details>
           <details>
             <summary><span>Storage &amp; integrity</span><span class="detail-category">Ledger</span></summary>
-            <div class="detail-copy"><p>Store raw telemetry in an access-controlled repository. Periodically calculate a report’s cryptographic hash and record it on a ledger. A matching hash shows that the report has not changed since it was recorded; it does not prove the sensor reading was correct.</p><p>The original concept proposes GoQuorum. The ledger choice, operating model and verification design would need evaluation during the MVP.</p></div>
+            <div class="detail-copy"><p>The proposed design would store raw telemetry off-chain in an access-controlled repository and record report hashes on a ledger. A matching hash can indicate that a report has not changed since it was recorded; it does not establish the accuracy of the underlying sensor readings.</p><p>Besu with QBFT consensus is being considered as an option for a permissioned EVM network. Network membership, validator governance, operation and verification design would require evaluation.</p><p>Permissioning and consensus do not by themselves guarantee transaction confidentiality. Data visibility, access controls and any confidentiality mechanism would require separate design and validation.</p></div>
           </details>
           <details>
-            <summary><span>Recommendations &amp; traceability</span><span class="detail-category">AI / QR</span></summary>
-            <div class="detail-copy"><p>Use validated data to explore forecasts and cultivation recommendations, with an operator reviewing actions before they affect the farm. Version datasets and models so recommendations can be investigated.</p><p>A batch passport would bring together seed origin, growing conditions, nutrient records, crop-cycle dates and harvest history. Public summaries and private operational data would have separate access rules.</p></div>
+            <summary><span>Recommendations &amp; traceability</span><span class="detail-category">ML / QR</span></summary>
+            <div class="detail-copy"><p>The research direction includes evaluating ML models for forecasts and cultivation recommendations using validated data, with operator review before any cultivation changes. Dataset and model versioning would support investigation of recommendations.</p><p>A proposed batch passport would bring together seed origin, growing conditions, nutrient records, crop-cycle dates and harvest history. Which records could be shared, and with whom, would depend on access rules defined and validated for the implementation.</p></div>
           </details>
           <details>
             <summary><span>Future digital-asset integrations</span><span class="detail-category">Research</span></summary>
-            <div class="detail-copy"><p>Explore whether verified production records could support asset-linked services. Token design, asset rights, custody, valuation and redemption remain research questions.</p><p>Any financial integration would depend on legal review and suitable licensed partners. Thailand is the target context of the original concept; no regulatory approval or partner participation is claimed.</p></div>
+            <div class="detail-copy"><p>The concept explores whether verifiable production records could support asset-linked services. Token design, asset rights, custody, valuation and redemption are research questions.</p><p>The feasibility of any financial integration would require evaluation of applicable rules, responsibilities and any necessary authorisations. Partnership, investment and approval status are not established by the materials presented here.</p></div>
           </details>
         </div>
       </div>
     </section>
 
+    <section id="calibration" class="content-section" aria-labelledby="calibration-title">
+      <div class="section-label"><span>03 / ML calibration</span><p>Observe.<br>Adjust. Repeat.</p></div>
+      <div class="section-content">
+        <h2 id="calibration-title">Learn from each growing cycle.</h2>
+        <p class="section-intro">A proposed research loop would use repeated cultivation iterations to evaluate irrigation schedules and nutrient-solution composition against observed plant responses.</p>
+        <figure class="section-illustration">
+          <img src="assets/images/section-calibration.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="AI-generated concept illustration of three comparable cultivation experiments with irrigation equipment, nutrient dosing reservoirs and sensing probes.">
+          <figcaption><a class="section-illustration-label" href="docs/generated-illustrations.md#calibration">AI-generated concept illustration</a><span>Repeated experiments for irrigation and nutrient-solution research.</span></figcaption>
+        </figure>
+        <div class="principles">
+          <article><h3>Record each iteration</h3><p>Each experiment would record the solution recipe, dosing, irrigation intervals and duration, pH, electrical conductivity, water temperature, growing conditions and crop stage. Plant observations and crop outcomes would provide context for comparison.</p></article>
+          <article><h3>Evaluate bounded adjustments</h3><p>ML models could be evaluated for suggesting small changes to irrigation settings and solution composition. An operator would review each proposal against predefined experimental limits before a new iteration.</p></article>
+          <article><h3>Repeat and compare</h3><p>Successive iterations would compare predictions with observed responses under comparable conditions. Later iterations would be reserved for validation, with recipe, parameter and model versions retained so results could be traced.</p></article>
+        </div>
+        <p class="scope-note">This is a proposed research direction. Repeated measurements and experiments would be needed to establish model quality and useful operating limits. Sensor calibration would remain a separate requirement.</p>
+      </div>
+    </section>
+
     <section id="roadmap" class="content-section" aria-labelledby="roadmap-title">
-      <div class="section-label"><span>03 / Roadmap</span><p>Build in stages.<br>Validate each step.</p></div>
+      <div class="section-label"><span>04 / Roadmap</span><p>Build in stages.<br>Validate each step.</p></div>
       <div class="section-content">
         <h2 id="roadmap-title">A staged path from lab to ecosystem.</h2>
-        <p class="section-intro">A proposed sequence, with progress tied to evidence rather than fixed launch dates.</p>
+        <p class="section-intro">A proposed research sequence. Each stage would require validation; no completion status or launch dates are specified here.</p>
+        <figure class="section-illustration">
+          <img src="assets/images/section-roadmap.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="AI-generated concept illustration of four connected research stages combining crops, sensing, evaluation and additional growing modules.">
+          <figcaption><a class="section-illustration-label" href="docs/generated-illustrations.md#roadmap">AI-generated concept illustration</a><span>A proposed research sequence, with validation at each stage.</span></figcaption>
+        </figure>
         <ol class="roadmap">
           <li><span class="phase-number">01</span><div><h3>Telemetry MVP</h3><p>Connect a pilot farm, validate readings and build monitoring views. Test report fingerprints and a basic batch passport.</p><p class="phase-check">Validate: sensor coverage, data quality and record verification.</p></div></li>
-          <li><span class="phase-number">02</span><div><h3>Supervised AI</h3><p>Evaluate forecasts and recommendations against recorded crop outcomes. Keep operators in control of cultivation changes.</p><p class="phase-check">Validate: model quality, reproducibility and operator review.</p></div></li>
+          <li><span class="phase-number">02</span><div><h3>Operator-reviewed ML</h3><p>Evaluate forecasts and recommendations against recorded crop outcomes. Keep operators in control of cultivation changes.</p><p class="phase-check">Validate: model quality, reproducibility and operator review.</p></div></li>
           <li><span class="phase-number">03</span><div><h3>Regulated integrations</h3><p>Research asset-linked services and partner requirements. Define legal responsibilities and user rights before building financial flows.</p><p class="phase-check">Validate: feasibility, partner scope and the regulatory path.</p></div></li>
           <li><span class="phase-number">04</span><div><h3>Additional farms &amp; crops</h3><p>Extend the system only after the pilot is useful and repeatable. Adapt monitoring and models to new sites and crops.</p><p class="phase-check">Validate: repeatable operations and sustainable unit economics.</p></div></li>
         </ol>
@@ -158,20 +207,163 @@
     </section>
 
     <section id="prototype" class="content-section prototype-section" aria-labelledby="prototype-title">
-      <div class="section-label"><span>04 / Prototype</span><p>The work<br>behind the idea.</p></div>
+      <div class="section-label"><span>05 / Prototype</span><p>The work<br>behind the idea.</p></div>
       <div class="section-content">
         <h2 id="prototype-title">Rooted in hands-on research.</h2>
         <p class="section-intro">The concept grew out of Home Aeroponics, a personal IoT and automation lab. Its public repositories preserve parts of that work.</p>
+        <div class="evidence-gallery" data-lab-gallery role="region" aria-roledescription="carousel" aria-label="Aeroponics lab photographs">
+          <div class="gallery-toolbar">
+            <div class="gallery-meta">
+              <p class="gallery-kicker">LAB ARCHIVE / 9 IMAGES</p>
+              <p class="gallery-count" data-gallery-counter role="status" aria-live="polite" aria-atomic="true">1 / 9</p>
+            </div>
+            <div class="gallery-controls" data-gallery-controls hidden>
+              <button class="gallery-control" type="button" data-gallery-previous aria-controls="lab-gallery-track" aria-label="Previous lab photograph"><span aria-hidden="true">←</span> Previous</button>
+              <button class="gallery-control" type="button" data-gallery-next aria-controls="lab-gallery-track" aria-label="Next lab photograph">Next <span aria-hidden="true">→</span></button>
+            </div>
+          </div>
+          <ol class="gallery-track" id="lab-gallery-track" data-gallery-track tabindex="0" aria-label="Lab image gallery" aria-describedby="lab-gallery-help">
+            <li class="gallery-slide" data-gallery-slide aria-label="1 of 9: Electronics workbench">
+              <figure aria-labelledby="lab-photo-electronics-workbench">
+                <a class="gallery-media" href="assets/images/electronics-workbench.jpg" aria-label="Open full image: Electronics workbench">
+                  <img src="assets/images/electronics-workbench.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="Development boards, sensors, wiring and soldering tools during prototyping.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-electronics-workbench">Electronics workbench</h3>
+                  <p>Development boards, sensors, wiring and soldering tools during prototyping.</p>
+                  <small class="gallery-retouch">AI-retouched background / identifying areas.</small>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/electronics-workbench.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="2 of 9: Breadboard prototype">
+              <figure aria-labelledby="lab-photo-breadboard-prototype">
+                <a class="gallery-media" href="assets/images/breadboard-prototype-privacy-20260909.jpg" aria-label="Open full image: Breadboard prototype">
+                  <img src="assets/images/breadboard-prototype-privacy-20260909.jpg" width="1024" height="768" loading="lazy" decoding="async" alt="Breadboard-mounted sensor modules and jumper wiring during controller prototyping.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-breadboard-prototype">Breadboard prototype</h3>
+                  <p>Breadboard-mounted sensor modules and jumper wiring during controller prototyping.</p>
+                  <small class="gallery-retouch">Patterned wallpaper replaced with a neutral wall using AI assistance for privacy.</small>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/83f7e6a2a1ab138aa541010033e774c1c7a1783b/docs/images/breadboard-prototype-privacy-20260909.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="3 of 9: Power shield">
+              <figure aria-labelledby="lab-photo-power-shield">
+                <a class="gallery-media gallery-media--portrait" href="assets/images/power-shield.jpg" aria-label="Open full image: Power shield" style="--gallery-image: url('assets/images/power-shield.jpg')">
+                  <img src="assets/images/power-shield.jpg" width="1086" height="1448" loading="lazy" decoding="async" alt="A commercial power shield integrated into the electronics assembly.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-power-shield">Power shield</h3>
+                  <p>A commercial power shield integrated into the electronics assembly.</p>
+                  <small class="gallery-retouch">AI-retouched background / identifying areas.</small>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/power-shield.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="4 of 9: Enclosure camera">
+              <figure aria-labelledby="lab-photo-enclosure-camera">
+                <a class="gallery-media gallery-media--portrait" href="assets/images/enclosure-camera.jpg" aria-label="Open full image: Enclosure camera" style="--gallery-image: url('assets/images/enclosure-camera.jpg')">
+                  <img src="assets/images/enclosure-camera.jpg" width="1086" height="1448" loading="lazy" decoding="async" alt="Camera placement within the experimental installation.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-enclosure-camera">Enclosure camera</h3>
+                  <p>Camera placement within the experimental installation.</p>
+                  <small class="gallery-retouch">AI-retouched background / identifying areas.</small>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/enclosure-camera.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="5 of 9: Water system">
+              <figure aria-labelledby="lab-photo-water-system">
+                <a class="gallery-media gallery-media--portrait" href="assets/images/water-system.jpg" aria-label="Open full image: Water system" style="--gallery-image: url('assets/images/water-system.jpg')">
+                  <img src="assets/images/water-system.jpg" width="1085" height="1450" loading="lazy" decoding="async" alt="Reservoirs, dosing pumps, valves, tubing and circulation plumbing.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-water-system">Water system</h3>
+                  <p>Reservoirs, dosing pumps, valves, tubing and circulation plumbing.</p>
+                  <small class="gallery-retouch">AI-retouched background / identifying areas.</small>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/water-system.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="6 of 9: Lighting and ventilation">
+              <figure aria-labelledby="lab-photo-lighting-ventilation">
+                <a class="gallery-media gallery-media--portrait" href="assets/images/lighting-ventilation.jpg" aria-label="Open full image: Lighting and ventilation" style="--gallery-image: url('assets/images/lighting-ventilation.jpg')">
+                  <img src="assets/images/lighting-ventilation.jpg" width="1086" height="1448" loading="lazy" decoding="async" alt="Suspended fixtures, ventilation equipment and wiring inside the enclosure.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-lighting-ventilation">Lighting and ventilation</h3>
+                  <p>Suspended fixtures, ventilation equipment and wiring inside the enclosure.</p>
+                  <small class="gallery-retouch">AI-retouched background / identifying areas.</small>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/lighting-ventilation.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="7 of 9: Home Assistant dashboard">
+              <figure aria-labelledby="lab-photo-home-assistant-dashboard">
+                <a class="gallery-media" href="assets/images/home-assistant-dashboard-privacy-20260909.jpg" aria-label="Open full image: Home Assistant dashboard">
+                  <img src="assets/images/home-assistant-dashboard-privacy-20260909.jpg" width="1024" height="768" loading="lazy" decoding="async" alt="Climate and water measurements, lighting controls and device states.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-home-assistant-dashboard">Home Assistant dashboard</h3>
+                  <p>Climate and water measurements, lighting controls and device states.</p>
+                  <small class="gallery-retouch">Patterned wallpaper replaced with a neutral wall using AI assistance for privacy.</small>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/994f20e27f54e8f3659731089f2d0208cead39c1/docs/images/home-assistant-dashboard-privacy-20260909.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="8 of 9: Wiring and I/O diagram">
+              <figure aria-labelledby="lab-photo-wiring-diagram">
+                <a class="gallery-media gallery-media--diagram" href="assets/images/wiring-diagram.jpg" aria-label="Open full image: Wiring and I/O diagram">
+                  <img src="assets/images/wiring-diagram.jpg" width="1024" height="768" loading="lazy" decoding="async" alt="Original component-connection drawing from system design.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-wiring-diagram">Wiring and I/O diagram</h3>
+                  <p>Original component-connection drawing from system design.</p>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/wiring-diagram.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide aria-label="9 of 9: Root chamber">
+              <figure aria-labelledby="lab-photo-root-chamber">
+                <a class="gallery-media gallery-media--portrait" href="assets/images/root-chamber-original-1536.jpg" aria-label="Open full image: Root chamber" style="--gallery-image: url('assets/images/root-chamber.webp')">
+                  <img src="assets/images/root-chamber.webp" width="1536" height="2048" loading="lazy" decoding="async" alt="Suspended roots and internal tubing in the chamber.">
+                </a>
+                <figcaption>
+                  <h3 id="lab-photo-root-chamber">Root chamber</h3>
+                  <p>Suspended roots and internal tubing in the chamber.</p>
+                  <a class="gallery-source" href="https://github.com/pilprod/aeroponics-iot-control/blob/7c0c97df694f764d4c7354408b18146c63ca5864/docs/images/root-chamber.jpg">Published source</a>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+          <p class="gallery-help" id="lab-gallery-help">Swipe or scroll to browse. Focus the gallery to use Left/Right arrows, Home or End.</p>
+        </div>
         <div class="source-list">
           <article><div><p class="eyebrow">Control layer</p><h3><a href="https://github.com/pilprod/aeroponics-iot-control">Aeroponics IoT control</a></h3><p>Historical Python and MQTT controller examples, with monitoring and integration context.</p></div><span class="source-type">GitHub</span></article>
           <article><div><p class="eyebrow">Device layer</p><h3><a href="https://github.com/pilprod/aeroponics-sensor-firmware">Aeroponics sensor firmware</a></h3><p>Archived Arduino experiments for sensing, telemetry and relay control.</p></div><span class="source-type">GitHub</span></article>
           <article><div><p class="eyebrow">Physical prototype</p><h3><a href="https://papou.work/portfolio.html#home">Home Aeroponics lab</a></h3><p>Photographs and project context from the broader historical installation.</p></div><span class="source-type">Portfolio</span></article>
         </div>
-        <p class="scope-note">These are archival examples, not a complete Leafcoin implementation. Build, runtime and hardware limitations are documented in the repositories.</p>
+        <p class="scope-note">These archival materials provide context for the personal lab work. They do not establish the implementation status of the wider Leafcoin concept. Build, runtime and hardware limitations are documented in the repositories.</p>
         <div class="creator"><div><p class="eyebrow">Concept creator</p><h3>Ilya Papou</h3><p>Platform / SRE engineer · Personal R&amp;D</p></div><div class="creator-links"><a href="https://papou.work/">CV &amp; experience</a><a href="https://github.com/pilprod/leafcoin">Website source</a></div></div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><p>Leafcoin<span aria-hidden="true">.</span> <span class="footer-context">A concept for verifiable agriculture.</span></p><a href="#main">Back to top</a></footer>
+  <footer class="site-footer"><p>Leafcoin<span aria-hidden="true">.</span> <span class="footer-context">A concept for verifiable agriculture.</span></p><div class="footer-links"><a href="https://old.leafcoin.org/">Original version</a><a href="#main">Back to top</a></div><div id="analytics-tools" class="analytics-tools" hidden>
+  <button id="analytics-settings" class="analytics-settings" type="button" aria-controls="analytics-consent" aria-expanded="false">Analytics settings</button>
+  <span id="analytics-status" class="analytics-status" role="status" aria-live="polite">Google Analytics is off.</span>
+</div></footer>
+<section id="analytics-consent" class="analytics-consent" aria-label="Google Analytics settings" hidden>
+  <p class="analytics-consent-label">Your choice</p>
+  <h2>Allow Google Analytics?</h2>
+  <p>Google Analytics uses cookies to measure visits to this site. It stays off until you allow it. Your choice lasts 180 days and can be changed in Analytics settings at any time.</p>
+  <p class="analytics-consent-note">On leafcoin.org, Cloudflare separately measures page performance without cookies, with EU visitors excluded. These buttons control Google Analytics.</p>
+  <div class="analytics-consent-actions">
+    <button id="analytics-decline" type="button">Decline Google Analytics</button>
+    <button id="analytics-allow" type="button">Allow Google Analytics</button>
+  </div>
+</section>
 </body>
 </html>

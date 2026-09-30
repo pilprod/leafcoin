@@ -1,4 +1,12 @@
+# Leafcoin: proposed agriculture, IoT, ML calibration and ledger concept.
+# Human-readable concept: https://pilprod.github.io/leafcoin/
+# Agent-readable companions: index.md, llms.txt, llms-full.txt, concept.jsonld.
+# A robots.txt policy takes effect when served at the origin root.
 User-agent: *
+Allow: /
+
+# ChatGPT Search access; this rule is independent of training controls.
+User-agent: OAI-SearchBot
 Allow: /
 
 Sitemap: https://pilprod.github.io/leafcoin/sitemap.xml

@@ -1,0 +1,83 @@
+.analytics-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.analytics-tools[hidden], .analytics-consent[hidden] { display: none; }
+.analytics-settings {
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.analytics-settings:hover { color: var(--ink); }
+.analytics-status { line-height: 1.6; }
+.analytics-consent {
+  position: fixed;
+  z-index: 20;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  width: min(580px, calc(100% - 32px));
+  max-height: calc(100vh - 32px - env(safe-area-inset-bottom, 0px));
+  max-height: calc(100dvh - 32px - env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--page);
+  color: var(--text);
+  box-shadow: 0 10px 45px rgb(0 0 0 / 15%);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.analytics-consent-label {
+  color: var(--accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  letter-spacing: .7px;
+}
+.analytics-consent h2 {
+  margin: 8px 0 14px;
+  color: var(--ink);
+  font-size: 25px;
+  line-height: 1.25;
+  letter-spacing: -.5px;
+}
+.analytics-consent-note { margin-top: 12px; color: var(--muted); font-size: 12px; }
+.analytics-consent-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.analytics-consent-actions button {
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.analytics-consent-actions button:hover { background: var(--surface); color: var(--ink); }
+.analytics-settings:focus-visible, .analytics-consent-actions button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+@media (max-width: 480px) {
+  .analytics-consent { padding: 20px; }
+  .analytics-consent h2 { font-size: 23px; }
+  .analytics-consent-actions { grid-template-columns: 1fr; gap: 10px; }
+}

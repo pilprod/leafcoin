@@ -1,38 +1,27 @@
 # Leafcoin
 
-> A concept for verifiable agriculture, connecting aeroponic farms, IoT telemetry, AI assistance and blockchain records.
+> An agricultural technology concept exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records.
 
-Leafcoin explores how real production data could support a more transparent agricultural ecosystem in Thailand. This is a concept site, not evidence of a launched ecosystem. The linked controller code, sensor firmware and historical lab photographs belong to a separate Home Aeroponics personal R&D prototype.
+Leafcoin is presented as a concept and personal R&D project. The public Home Aeroponics materials document historical prototypes. The architecture and roadmap describe proposed work; implementation status beyond those materials is not established here. Besu with QBFT consensus is being considered as an option for a permissioned EVM network. Network governance, data visibility and any confidentiality mechanism would require separate evaluation. Token design and financial-integration feasibility remain research questions.
 
-## Site
+A proposed ML research loop would use repeated cultivation iterations to evaluate irrigation schedules and nutrient-solution composition against observed plant responses, with operator review of suggested adjustments.
 
-- [Leafcoin](https://pilprod.github.io/leafcoin/): The current concept site.
-- [Concept](https://pilprod.github.io/leafcoin/#concept): Grow with better visibility, trace every batch and verify the record.
-- [Architecture](https://pilprod.github.io/leafcoin/#architecture): A proposed path from telemetry to a product passport.
-- [Roadmap](https://pilprod.github.io/leafcoin/#roadmap): Proposed development stages.
-- [Prototype](https://pilprod.github.io/leafcoin/#prototype): Controller code, sensor firmware and historical lab photographs.
+## Concept resources
 
-## Proposed architecture
+- [Complete concept in Markdown](https://pilprod.github.io/leafcoin/index.md): Faithful text of the current homepage, including architecture details, proposed ML calibration research, proposed stages, prototype scope and image context.
+- [Complete text in one file](https://pilprod.github.io/leafcoin/llms-full.txt): Convenience copy of the same Markdown.
+- [Structured concept graph](https://pilprod.github.io/leafcoin/concept.jsonld): Distinct concept, creator, historical prototype, repository, image and source identities.
+- [Human-readable homepage](https://pilprod.github.io/leafcoin/): The canonical visual presentation.
 
-Farm devices collect telemetry. Detailed records remain in off-chain storage; a report hash could be recorded on a ledger to help verify a batch's record. A product passport would connect a batch to its supporting records. AI assistance would support decisions with operator approval.
+## Prototype evidence
 
-GoQuorum is a candidate from the original concept. The final ledger has not been selected. A verifiable record does not by itself establish the accuracy of the original sensor readings or a product's quality.
+- [Aeroponics IoT control](https://github.com/pilprod/aeroponics-iot-control): Historical Python and MQTT controller examples with monitoring and integration context.
+- [Aeroponics sensor firmware](https://github.com/pilprod/aeroponics-sensor-firmware): Archived Arduino experiments for sensing, telemetry and relay control.
+- [Home Aeroponics lab](https://papou.work/portfolio.html#home): Context and photographs from the broader historical personal installation; repository build, runtime and hardware limitations remain relevant.
 
-## Proposed roadmap
+## Optional
 
-1. Telemetry MVP: collect and inspect farm measurements.
-2. Supervised AI: introduce assistance with operator review and approval.
-3. Regulated integrations research: investigate requirements and feasible integrations.
-4. Additional farms: explore extending the system after the initial work is validated.
-
-These are proposed stages, not completed milestones or regulatory approvals.
-
-## Prototype evidence and source context
-
-- [Home Aeroponics portfolio](https://papou.work/portfolio.html#home): Personal R&D context and historical lab photographs.
-- [Controller code](https://github.com/pilprod/aeroponics-iot-control): Aeroponics automation prototype repository.
-- [Sensor firmware](https://github.com/pilprod/aeroponics-sensor-firmware): Prototype sensor firmware repository.
 - [Site source](https://github.com/pilprod/leafcoin): Static website repository.
-- [Original concept](https://leafcoin.org/): The concept used as the source for this redesign.
-
-The hero photograph shows a real root chamber from the historical lab. It comes from the CV portfolio's original, unretouched photograph. Prototype materials do not imply a deployed Leafcoin ledger, issued token, financial approval or independently verified production results.
+- [Creator's CV](https://papou.work/): Ilya Papou's professional profile and personal R&D context.
+- [Original Leafcoin presentation](https://leafcoin.org/): Source concept context. The current site's concept status and scope statements govern interpretation of the redesign.
+- [AI illustration prompts and provenance](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md): Five generated concept visuals, including the home-lab hero and four proposed research illustrations, distinct from the historical prototype photographs.
