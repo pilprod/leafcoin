@@ -3,8 +3,8 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://pilprod.github.io/leafcoin/#website",
-      "url": "https://pilprod.github.io/leafcoin/",
+      "@id": "https://leafcoin.org/#website",
+      "url": "https://leafcoin.org/",
       "name": "Leafcoin",
       "inLanguage": "en",
       "creator": {
@@ -13,26 +13,26 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://pilprod.github.io/leafcoin/#webpage",
-      "url": "https://pilprod.github.io/leafcoin/",
+      "@id": "https://leafcoin.org/#webpage",
+      "url": "https://leafcoin.org/",
       "name": "Leafcoin — A concept for verifiable agriculture",
       "inLanguage": "en",
       "isPartOf": {
-        "@id": "https://pilprod.github.io/leafcoin/#website"
+        "@id": "https://leafcoin.org/#website"
       },
       "mainEntity": {
-        "@id": "https://pilprod.github.io/leafcoin/#concept"
+        "@id": "https://leafcoin.org/#concept"
       },
       "encoding": {
         "@type": "MediaObject",
         "encodingFormat": "text/markdown",
-        "contentUrl": "https://pilprod.github.io/leafcoin/index.md"
+        "contentUrl": "https://leafcoin.org/index.md"
       }
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://pilprod.github.io/leafcoin/#concept",
-      "url": "https://pilprod.github.io/leafcoin/",
+      "@id": "https://leafcoin.org/#concept",
+      "url": "https://leafcoin.org/",
       "name": "Leafcoin — A concept for verifiable agriculture",
       "description": "An agricultural technology concept exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records. Besu with QBFT is being considered for a permissioned EVM network in the proposed architecture.",
       "creativeWorkStatus": "Concept / personal R&D",
@@ -41,63 +41,63 @@
         "@id": "https://papou.work/#person"
       },
       "isPartOf": {
-        "@id": "https://pilprod.github.io/leafcoin/#website"
+        "@id": "https://leafcoin.org/#website"
       },
       "isBasedOn": [
         {
           "@id": "https://papou.work/portfolio.html#home"
         },
         {
-          "@id": "https://leafcoin.org/#original-presentation"
+          "@id": "https://old.leafcoin.org/#original-presentation"
         }
       ],
       "image": [
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-hero-home-lab"
+          "@id": "https://leafcoin.org/#image-hero-home-lab"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-section-concept"
+          "@id": "https://leafcoin.org/#image-section-concept"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-section-architecture"
+          "@id": "https://leafcoin.org/#image-section-architecture"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-section-calibration"
+          "@id": "https://leafcoin.org/#image-section-calibration"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-section-roadmap"
+          "@id": "https://leafcoin.org/#image-section-roadmap"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-electronics-workbench"
+          "@id": "https://leafcoin.org/#image-electronics-workbench"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-breadboard-prototype-privacy-20260909"
+          "@id": "https://leafcoin.org/#image-breadboard-prototype-privacy-20260909"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-power-shield"
+          "@id": "https://leafcoin.org/#image-power-shield"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-enclosure-camera"
+          "@id": "https://leafcoin.org/#image-enclosure-camera"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-water-system"
+          "@id": "https://leafcoin.org/#image-water-system"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-lighting-ventilation"
+          "@id": "https://leafcoin.org/#image-lighting-ventilation"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-home-assistant-dashboard-privacy-20260909"
+          "@id": "https://leafcoin.org/#image-home-assistant-dashboard-privacy-20260909"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-wiring-diagram"
+          "@id": "https://leafcoin.org/#image-wiring-diagram"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-root-chamber"
+          "@id": "https://leafcoin.org/#image-root-chamber"
         }
       ],
       "subjectOf": [
         {
-          "@id": "https://pilprod.github.io/leafcoin/#webpage"
+          "@id": "https://leafcoin.org/#webpage"
         },
         {
           "@id": "https://github.com/pilprod/leafcoin#source-code"
@@ -105,13 +105,13 @@
       ],
       "hasPart": [
         {
-          "@id": "https://pilprod.github.io/leafcoin/#architecture"
+          "@id": "https://leafcoin.org/#architecture"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#calibration"
+          "@id": "https://leafcoin.org/#calibration"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#roadmap"
+          "@id": "https://leafcoin.org/#roadmap"
         }
       ]
     },
@@ -134,31 +134,31 @@
       "description": "The concept grew out of Home Aeroponics, a personal IoT and automation lab. Its public repositories preserve parts of that work. These archival materials provide context for the personal lab work. They do not establish the implementation status of the wider Leafcoin concept. Build, runtime and hardware limitations are documented in the repositories.",
       "subjectOf": [
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-electronics-workbench"
+          "@id": "https://leafcoin.org/#image-electronics-workbench"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-breadboard-prototype-privacy-20260909"
+          "@id": "https://leafcoin.org/#image-breadboard-prototype-privacy-20260909"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-power-shield"
+          "@id": "https://leafcoin.org/#image-power-shield"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-enclosure-camera"
+          "@id": "https://leafcoin.org/#image-enclosure-camera"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-water-system"
+          "@id": "https://leafcoin.org/#image-water-system"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-lighting-ventilation"
+          "@id": "https://leafcoin.org/#image-lighting-ventilation"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-home-assistant-dashboard-privacy-20260909"
+          "@id": "https://leafcoin.org/#image-home-assistant-dashboard-privacy-20260909"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-wiring-diagram"
+          "@id": "https://leafcoin.org/#image-wiring-diagram"
         },
         {
-          "@id": "https://pilprod.github.io/leafcoin/#image-root-chamber"
+          "@id": "https://leafcoin.org/#image-root-chamber"
         }
       ],
       "hasPart": [
@@ -172,8 +172,8 @@
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://leafcoin.org/#original-presentation",
-      "url": "https://leafcoin.org/",
+      "@id": "https://old.leafcoin.org/#original-presentation",
+      "url": "https://old.leafcoin.org/",
       "name": "Original Leafcoin concept presentation",
       "creativeWorkStatus": "Source concept presentation",
       "description": "The original concept presentation used as source context for this redesign. Its historical presentation is distinct from the current site’s concept and prototype scope statements."
@@ -210,20 +210,20 @@
       "codeRepository": "https://github.com/pilprod/leafcoin",
       "description": "Static website source for the Leafcoin concept presentation.",
       "isPartOf": {
-        "@id": "https://pilprod.github.io/leafcoin/#concept"
+        "@id": "https://leafcoin.org/#concept"
       },
       "creativeWorkStatus": "Static concept website"
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-hero-home-lab",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/hero-home-lab.jpg",
+      "@id": "https://leafcoin.org/#image-hero-home-lab",
+      "contentUrl": "https://leafcoin.org/assets/images/hero-home-lab.jpg",
       "name": "AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.",
       "caption": "Home aeroponics AI-generated concept illustration",
       "inLanguage": "en",
-      "isBasedOn": "https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#hero",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#hero",
       "about": {
-        "@id": "https://pilprod.github.io/leafcoin/#concept"
+        "@id": "https://leafcoin.org/#concept"
       },
       "creativeWorkStatus": "AI-generated concept illustration",
       "width": 1536,
@@ -231,14 +231,14 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-section-concept",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/section-concept.jpg",
+      "@id": "https://leafcoin.org/#image-section-concept",
+      "contentUrl": "https://leafcoin.org/assets/images/section-concept.jpg",
       "name": "AI-generated concept illustration of an aeroponic growing module with leafy plants, a mist chamber, reservoir, pump and sensors.",
       "caption": "AI-generated concept illustration Cultivation and observable growing conditions.",
       "inLanguage": "en",
-      "isBasedOn": "https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#concept",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#concept",
       "about": {
-        "@id": "https://pilprod.github.io/leafcoin/#concept"
+        "@id": "https://leafcoin.org/#concept"
       },
       "creativeWorkStatus": "AI-generated concept illustration",
       "width": 1536,
@@ -246,14 +246,14 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-section-architecture",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/section-architecture.jpg",
+      "@id": "https://leafcoin.org/#image-section-architecture",
+      "contentUrl": "https://leafcoin.org/assets/images/section-architecture.jpg",
       "name": "AI-generated concept illustration linking crop sensors, a gateway, off-chain storage, ledger modules and a batch passport.",
       "caption": "AI-generated concept illustration A proposed path from measurements to verifiable records.",
       "inLanguage": "en",
-      "isBasedOn": "https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#architecture",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#architecture",
       "about": {
-        "@id": "https://pilprod.github.io/leafcoin/#architecture"
+        "@id": "https://leafcoin.org/#architecture"
       },
       "creativeWorkStatus": "AI-generated concept illustration",
       "width": 1536,
@@ -261,14 +261,14 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-section-calibration",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/section-calibration.jpg",
+      "@id": "https://leafcoin.org/#image-section-calibration",
+      "contentUrl": "https://leafcoin.org/assets/images/section-calibration.jpg",
       "name": "AI-generated concept illustration of three comparable cultivation experiments with irrigation equipment, nutrient dosing reservoirs and sensing probes.",
       "caption": "AI-generated concept illustration Repeated experiments for irrigation and nutrient-solution research.",
       "inLanguage": "en",
-      "isBasedOn": "https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#calibration",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#calibration",
       "about": {
-        "@id": "https://pilprod.github.io/leafcoin/#calibration"
+        "@id": "https://leafcoin.org/#calibration"
       },
       "creativeWorkStatus": "AI-generated concept illustration",
       "width": 1536,
@@ -276,14 +276,14 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-section-roadmap",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/section-roadmap.jpg",
+      "@id": "https://leafcoin.org/#image-section-roadmap",
+      "contentUrl": "https://leafcoin.org/assets/images/section-roadmap.jpg",
       "name": "AI-generated concept illustration of four connected research stages combining crops, sensing, evaluation and additional growing modules.",
       "caption": "AI-generated concept illustration A proposed research sequence, with validation at each stage.",
       "inLanguage": "en",
-      "isBasedOn": "https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#roadmap",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#roadmap",
       "about": {
-        "@id": "https://pilprod.github.io/leafcoin/#roadmap"
+        "@id": "https://leafcoin.org/#roadmap"
       },
       "creativeWorkStatus": "AI-generated concept illustration",
       "width": 1536,
@@ -291,8 +291,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-electronics-workbench",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/electronics-workbench.jpg",
+      "@id": "https://leafcoin.org/#image-electronics-workbench",
+      "contentUrl": "https://leafcoin.org/assets/images/electronics-workbench.jpg",
       "name": "Development boards, sensors, wiring and soldering tools during prototyping.",
       "caption": "Electronics workbench Development boards, sensors, wiring and soldering tools during prototyping. AI-retouched background / identifying areas. Published source",
       "inLanguage": "en",
@@ -305,8 +305,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-breadboard-prototype-privacy-20260909",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/breadboard-prototype-privacy-20260909.jpg",
+      "@id": "https://leafcoin.org/#image-breadboard-prototype-privacy-20260909",
+      "contentUrl": "https://leafcoin.org/assets/images/breadboard-prototype-privacy-20260909.jpg",
       "name": "Breadboard-mounted sensor modules and jumper wiring during controller prototyping.",
       "caption": "Breadboard prototype Breadboard-mounted sensor modules and jumper wiring during controller prototyping. Patterned wallpaper replaced with a neutral wall using AI assistance for privacy. Published source",
       "inLanguage": "en",
@@ -319,8 +319,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-power-shield",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/power-shield.jpg",
+      "@id": "https://leafcoin.org/#image-power-shield",
+      "contentUrl": "https://leafcoin.org/assets/images/power-shield.jpg",
       "name": "A commercial power shield integrated into the electronics assembly.",
       "caption": "Power shield A commercial power shield integrated into the electronics assembly. AI-retouched background / identifying areas. Published source",
       "inLanguage": "en",
@@ -333,8 +333,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-enclosure-camera",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/enclosure-camera.jpg",
+      "@id": "https://leafcoin.org/#image-enclosure-camera",
+      "contentUrl": "https://leafcoin.org/assets/images/enclosure-camera.jpg",
       "name": "Camera placement within the experimental installation.",
       "caption": "Enclosure camera Camera placement within the experimental installation. AI-retouched background / identifying areas. Published source",
       "inLanguage": "en",
@@ -347,8 +347,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-water-system",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/water-system.jpg",
+      "@id": "https://leafcoin.org/#image-water-system",
+      "contentUrl": "https://leafcoin.org/assets/images/water-system.jpg",
       "name": "Reservoirs, dosing pumps, valves, tubing and circulation plumbing.",
       "caption": "Water system Reservoirs, dosing pumps, valves, tubing and circulation plumbing. AI-retouched background / identifying areas. Published source",
       "inLanguage": "en",
@@ -361,8 +361,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-lighting-ventilation",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/lighting-ventilation.jpg",
+      "@id": "https://leafcoin.org/#image-lighting-ventilation",
+      "contentUrl": "https://leafcoin.org/assets/images/lighting-ventilation.jpg",
       "name": "Suspended fixtures, ventilation equipment and wiring inside the enclosure.",
       "caption": "Lighting and ventilation Suspended fixtures, ventilation equipment and wiring inside the enclosure. AI-retouched background / identifying areas. Published source",
       "inLanguage": "en",
@@ -375,8 +375,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-home-assistant-dashboard-privacy-20260909",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/home-assistant-dashboard-privacy-20260909.jpg",
+      "@id": "https://leafcoin.org/#image-home-assistant-dashboard-privacy-20260909",
+      "contentUrl": "https://leafcoin.org/assets/images/home-assistant-dashboard-privacy-20260909.jpg",
       "name": "Climate and water measurements, lighting controls and device states.",
       "caption": "Home Assistant dashboard Climate and water measurements, lighting controls and device states. Patterned wallpaper replaced with a neutral wall using AI assistance for privacy. Published source",
       "inLanguage": "en",
@@ -389,8 +389,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-wiring-diagram",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/wiring-diagram.jpg",
+      "@id": "https://leafcoin.org/#image-wiring-diagram",
+      "contentUrl": "https://leafcoin.org/assets/images/wiring-diagram.jpg",
       "name": "Original component-connection drawing from system design.",
       "caption": "Wiring and I/O diagram Original component-connection drawing from system design. Published source",
       "inLanguage": "en",
@@ -403,8 +403,8 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://pilprod.github.io/leafcoin/#image-root-chamber",
-      "contentUrl": "https://pilprod.github.io/leafcoin/assets/images/root-chamber.webp",
+      "@id": "https://leafcoin.org/#image-root-chamber",
+      "contentUrl": "https://leafcoin.org/assets/images/root-chamber.webp",
       "name": "Suspended roots and internal tubing in the chamber.",
       "caption": "Root chamber Suspended roots and internal tubing in the chamber. Published source",
       "inLanguage": "en",
@@ -417,38 +417,38 @@
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://pilprod.github.io/leafcoin/#architecture",
-      "url": "https://pilprod.github.io/leafcoin/#architecture",
+      "@id": "https://leafcoin.org/#architecture",
+      "url": "https://leafcoin.org/#architecture",
       "name": "A data layer before a token layer.",
       "description": "The proposed architecture separates data collection, off-chain storage and ledger-based integrity checks. Raw telemetry would remain off-chain, while the ledger would hold report hashes.",
       "creativeWorkStatus": "Proposed concept component",
       "inLanguage": "en",
       "isPartOf": {
-        "@id": "https://pilprod.github.io/leafcoin/#concept"
+        "@id": "https://leafcoin.org/#concept"
       }
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://pilprod.github.io/leafcoin/#calibration",
-      "url": "https://pilprod.github.io/leafcoin/#calibration",
+      "@id": "https://leafcoin.org/#calibration",
+      "url": "https://leafcoin.org/#calibration",
       "name": "Learn from each growing cycle.",
       "description": "A proposed research loop would use repeated cultivation iterations to evaluate irrigation schedules and nutrient-solution composition against observed plant responses. This is a proposed research direction. Repeated measurements and experiments would be needed to establish model quality and useful operating limits. Sensor calibration would remain a separate requirement.",
       "creativeWorkStatus": "Proposed concept component",
       "inLanguage": "en",
       "isPartOf": {
-        "@id": "https://pilprod.github.io/leafcoin/#concept"
+        "@id": "https://leafcoin.org/#concept"
       }
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://pilprod.github.io/leafcoin/#roadmap",
-      "url": "https://pilprod.github.io/leafcoin/#roadmap",
+      "@id": "https://leafcoin.org/#roadmap",
+      "url": "https://leafcoin.org/#roadmap",
       "name": "A staged path from lab to ecosystem.",
       "description": "A proposed research sequence. Each stage would require validation; no completion status or launch dates are specified here.",
       "creativeWorkStatus": "Proposed concept component",
       "inLanguage": "en",
       "isPartOf": {
-        "@id": "https://pilprod.github.io/leafcoin/#concept"
+        "@id": "https://leafcoin.org/#concept"
       }
     }
   ]

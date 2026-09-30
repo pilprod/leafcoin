@@ -395,6 +395,10 @@ def main():
     check_css(site)
     check_discovery(site)
     require((ROOT / ".nojekyll").is_file(), "Missing .nojekyll for static GitHub Pages publication")
+    cname = ROOT / "CNAME"
+    if cname.is_file():
+        require(cname.read_text().strip() == urlsplit(site.canonical).hostname,
+                "CNAME does not match the canonical hostname")
     mode = f"published site at {args.url}" if args.url else "local site"
     print(f"PASS: {mode} — {len(site.pages)} page(s), {len(site.resources)} resources, "
           "metadata, JSON-LD, IDs, links, assets, declared robots rules, sitemap and full concept resources")

@@ -8,10 +8,10 @@ A proposed ML research loop would use repeated cultivation iterations to evaluat
 
 ## Concept resources
 
-- [Complete concept in Markdown](https://pilprod.github.io/leafcoin/index.md): Faithful text of the current homepage, including architecture details, proposed ML calibration research, proposed stages, prototype scope and image context.
-- [Complete text in one file](https://pilprod.github.io/leafcoin/llms-full.txt): Convenience copy of the same Markdown.
-- [Structured concept graph](https://pilprod.github.io/leafcoin/concept.jsonld): Distinct concept, creator, historical prototype, repository, image and source identities.
-- [Human-readable homepage](https://pilprod.github.io/leafcoin/): The canonical visual presentation.
+- [Complete concept in Markdown](https://leafcoin.org/index.md): Faithful text of the current homepage, including architecture details, proposed ML calibration research, proposed stages, prototype scope and image context.
+- [Complete text in one file](https://leafcoin.org/llms-full.txt): Convenience copy of the same Markdown.
+- [Structured concept graph](https://leafcoin.org/concept.jsonld): Distinct concept, creator, historical prototype, repository, image and source identities.
+- [Human-readable homepage](https://leafcoin.org/): The canonical visual presentation.
 
 ## Prototype evidence
 
@@ -23,5 +23,5 @@ A proposed ML research loop would use repeated cultivation iterations to evaluat
 
 - [Site source](https://github.com/pilprod/leafcoin): Static website repository.
 - [Creator's CV](https://papou.work/): Ilya Papou's professional profile and personal R&D context.
-- [Original Leafcoin presentation](https://leafcoin.org/): Source concept context. The current site's concept status and scope statements govern interpretation of the redesign.
-- [AI illustration prompts and provenance](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md): Five generated concept visuals, including the home-lab hero and four proposed research illustrations, distinct from the historical prototype photographs.
+- [Original Leafcoin presentation](https://old.leafcoin.org/): Source concept context at the designated archive URL. The current site's concept status and scope statements govern interpretation of the redesign.
+- [AI illustration prompts and provenance](https://leafcoin.org/docs/generated-illustrations.md): Five generated concept visuals, including the home-lab hero and four proposed research illustrations, distinct from the historical prototype photographs.

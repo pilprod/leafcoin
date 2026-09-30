@@ -1,8 +1,8 @@
 # Leafcoin — A concept for verifiable agriculture
 
-Canonical presentation: [Leafcoin](https://pilprod.github.io/leafcoin/).
+Canonical presentation: [Leafcoin](https://leafcoin.org/).
 
-This Markdown preserves the current homepage’s concept, including all expandable architecture details, the proposed roadmap, archival prototype scope and displayed image captions. [Structured relationships](https://pilprod.github.io/leafcoin/concept.jsonld) identify the concept, prototype, repositories and images separately.
+This Markdown preserves the current homepage’s concept, including all expandable architecture details, the proposed roadmap, archival prototype scope and displayed image captions. [Structured relationships](https://leafcoin.org/concept.jsonld) identify the concept, prototype, repositories and images separately.
 
 Agrotech / Personal R&D
 
@@ -12,16 +12,16 @@ Exploring connections between aeroponic farming, IoT telemetry, ML-assisted cali
 
 An exploration of how production data could support a more transparent agricultural ecosystem.
 
-[Explore the architecture](https://pilprod.github.io/leafcoin/#architecture)
+[Explore the architecture](https://leafcoin.org/#architecture)
 
-[View the prototype](https://pilprod.github.io/leafcoin/#prototype)
+[View the prototype](https://leafcoin.org/#prototype)
 
 - **Status**: Concept & personal R&D
 - **Foundation**: Home Aeroponics lab
 
-![AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.](https://pilprod.github.io/leafcoin/assets/images/hero-home-lab.jpg)
+![AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.](https://leafcoin.org/assets/images/hero-home-lab.jpg)
 
-Home aeroponics [AI-generated concept illustration](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#hero)
+Home aeroponics [AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#hero)
 
 A proposed ecosystem
 
@@ -39,9 +39,9 @@ Real production. Useful evidence.
 
 Before a digital asset can represent anything meaningful, the underlying production needs to be observable. Leafcoin starts with growing conditions, crop records and the quality of the data.
 
-![AI-generated concept illustration of an aeroponic growing module with leafy plants, a mist chamber, reservoir, pump and sensors.](https://pilprod.github.io/leafcoin/assets/images/section-concept.jpg)
+![AI-generated concept illustration of an aeroponic growing module with leafy plants, a mist chamber, reservoir, pump and sensors.](https://leafcoin.org/assets/images/section-concept.jpg)
 
-[AI-generated concept illustration](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#concept) Cultivation and observable growing conditions.
+[AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#concept) Cultivation and observable growing conditions.
 
 #### Grow with better visibility
 
@@ -65,9 +65,9 @@ From a reading to a verifiable record.
 
 The proposed architecture separates data collection, off-chain storage and ledger-based integrity checks. Raw telemetry would remain off-chain, while the ledger would hold report hashes.
 
-![AI-generated concept illustration linking crop sensors, a gateway, off-chain storage, ledger modules and a batch passport.](https://pilprod.github.io/leafcoin/assets/images/section-architecture.jpg)
+![AI-generated concept illustration linking crop sensors, a gateway, off-chain storage, ledger modules and a batch passport.](https://leafcoin.org/assets/images/section-architecture.jpg)
 
-[AI-generated concept illustration](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#architecture) A proposed path from measurements to verifiable records.
+[AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#architecture) A proposed path from measurements to verifiable records.
 
 1. **Measure** — Farm sensors
 2. **Validate** — Quality checks
@@ -107,9 +107,9 @@ Observe. Adjust. Repeat.
 
 A proposed research loop would use repeated cultivation iterations to evaluate irrigation schedules and nutrient-solution composition against observed plant responses.
 
-![AI-generated concept illustration of three comparable cultivation experiments with irrigation equipment, nutrient dosing reservoirs and sensing probes.](https://pilprod.github.io/leafcoin/assets/images/section-calibration.jpg)
+![AI-generated concept illustration of three comparable cultivation experiments with irrigation equipment, nutrient dosing reservoirs and sensing probes.](https://leafcoin.org/assets/images/section-calibration.jpg)
 
-[AI-generated concept illustration](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#calibration) Repeated experiments for irrigation and nutrient-solution research.
+[AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#calibration) Repeated experiments for irrigation and nutrient-solution research.
 
 #### Record each iteration
 
@@ -133,9 +133,9 @@ Build in stages. Validate each step.
 
 A proposed research sequence. Each stage would require validation; no completion status or launch dates are specified here.
 
-![AI-generated concept illustration of four connected research stages combining crops, sensing, evaluation and additional growing modules.](https://pilprod.github.io/leafcoin/assets/images/section-roadmap.jpg)
+![AI-generated concept illustration of four connected research stages combining crops, sensing, evaluation and additional growing modules.](https://leafcoin.org/assets/images/section-roadmap.jpg)
 
-[AI-generated concept illustration](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md#roadmap) A proposed research sequence, with validation at each stage.
+[AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#roadmap) A proposed research sequence, with validation at each stage.
 
 #### 01 — Telemetry MVP
 
@@ -175,7 +175,7 @@ LAB ARCHIVE / 9 IMAGES
 
 ### Historical lab images
 
-![Development boards, sensors, wiring and soldering tools during prototyping.](https://pilprod.github.io/leafcoin/assets/images/electronics-workbench.jpg)
+![Development boards, sensors, wiring and soldering tools during prototyping.](https://leafcoin.org/assets/images/electronics-workbench.jpg)
 
 #### Electronics workbench
 
@@ -185,9 +185,9 @@ Development boards, sensors, wiring and soldering tools during prototyping.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/electronics-workbench.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/electronics-workbench.jpg).
+[Full image](https://leafcoin.org/assets/images/electronics-workbench.jpg).
 
-![Breadboard-mounted sensor modules and jumper wiring during controller prototyping.](https://pilprod.github.io/leafcoin/assets/images/breadboard-prototype-privacy-20260909.jpg)
+![Breadboard-mounted sensor modules and jumper wiring during controller prototyping.](https://leafcoin.org/assets/images/breadboard-prototype-privacy-20260909.jpg)
 
 #### Breadboard prototype
 
@@ -197,9 +197,9 @@ Breadboard-mounted sensor modules and jumper wiring during controller prototypin
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/83f7e6a2a1ab138aa541010033e774c1c7a1783b/docs/images/breadboard-prototype-privacy-20260909.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/breadboard-prototype-privacy-20260909.jpg).
+[Full image](https://leafcoin.org/assets/images/breadboard-prototype-privacy-20260909.jpg).
 
-![A commercial power shield integrated into the electronics assembly.](https://pilprod.github.io/leafcoin/assets/images/power-shield.jpg)
+![A commercial power shield integrated into the electronics assembly.](https://leafcoin.org/assets/images/power-shield.jpg)
 
 #### Power shield
 
@@ -209,9 +209,9 @@ A commercial power shield integrated into the electronics assembly.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/power-shield.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/power-shield.jpg).
+[Full image](https://leafcoin.org/assets/images/power-shield.jpg).
 
-![Camera placement within the experimental installation.](https://pilprod.github.io/leafcoin/assets/images/enclosure-camera.jpg)
+![Camera placement within the experimental installation.](https://leafcoin.org/assets/images/enclosure-camera.jpg)
 
 #### Enclosure camera
 
@@ -221,9 +221,9 @@ Camera placement within the experimental installation.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/enclosure-camera.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/enclosure-camera.jpg).
+[Full image](https://leafcoin.org/assets/images/enclosure-camera.jpg).
 
-![Reservoirs, dosing pumps, valves, tubing and circulation plumbing.](https://pilprod.github.io/leafcoin/assets/images/water-system.jpg)
+![Reservoirs, dosing pumps, valves, tubing and circulation plumbing.](https://leafcoin.org/assets/images/water-system.jpg)
 
 #### Water system
 
@@ -233,9 +233,9 @@ Reservoirs, dosing pumps, valves, tubing and circulation plumbing.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/water-system.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/water-system.jpg).
+[Full image](https://leafcoin.org/assets/images/water-system.jpg).
 
-![Suspended fixtures, ventilation equipment and wiring inside the enclosure.](https://pilprod.github.io/leafcoin/assets/images/lighting-ventilation.jpg)
+![Suspended fixtures, ventilation equipment and wiring inside the enclosure.](https://leafcoin.org/assets/images/lighting-ventilation.jpg)
 
 #### Lighting and ventilation
 
@@ -245,9 +245,9 @@ Suspended fixtures, ventilation equipment and wiring inside the enclosure.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/lighting-ventilation.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/lighting-ventilation.jpg).
+[Full image](https://leafcoin.org/assets/images/lighting-ventilation.jpg).
 
-![Climate and water measurements, lighting controls and device states.](https://pilprod.github.io/leafcoin/assets/images/home-assistant-dashboard-privacy-20260909.jpg)
+![Climate and water measurements, lighting controls and device states.](https://leafcoin.org/assets/images/home-assistant-dashboard-privacy-20260909.jpg)
 
 #### Home Assistant dashboard
 
@@ -257,9 +257,9 @@ Climate and water measurements, lighting controls and device states.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/994f20e27f54e8f3659731089f2d0208cead39c1/docs/images/home-assistant-dashboard-privacy-20260909.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/home-assistant-dashboard-privacy-20260909.jpg).
+[Full image](https://leafcoin.org/assets/images/home-assistant-dashboard-privacy-20260909.jpg).
 
-![Original component-connection drawing from system design.](https://pilprod.github.io/leafcoin/assets/images/wiring-diagram.jpg)
+![Original component-connection drawing from system design.](https://leafcoin.org/assets/images/wiring-diagram.jpg)
 
 #### Wiring and I/O diagram
 
@@ -267,9 +267,9 @@ Original component-connection drawing from system design.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/wiring-diagram.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/wiring-diagram.jpg).
+[Full image](https://leafcoin.org/assets/images/wiring-diagram.jpg).
 
-![Suspended roots and internal tubing in the chamber.](https://pilprod.github.io/leafcoin/assets/images/root-chamber.webp)
+![Suspended roots and internal tubing in the chamber.](https://leafcoin.org/assets/images/root-chamber.webp)
 
 #### Root chamber
 
@@ -277,7 +277,7 @@ Suspended roots and internal tubing in the chamber.
 
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/7c0c97df694f764d4c7354408b18146c63ca5864/docs/images/root-chamber.jpg)
 
-[Full image](https://pilprod.github.io/leafcoin/assets/images/root-chamber-original-1536.jpg).
+[Full image](https://leafcoin.org/assets/images/root-chamber-original-1536.jpg).
 
 Swipe or scroll to browse. Focus the gallery to use Left/Right arrows, Home or End.
 
@@ -319,15 +319,15 @@ Platform / SRE engineer · Personal R&D
 
 ## Site assets and source context
 
-- [Supplied SVG brand mark](https://pilprod.github.io/leafcoin/assets/leafcoin_revert.svg)
-- [Supplied SVG favicon](https://pilprod.github.io/leafcoin/assets/favicon.svg)
-- [Supplied touch icon](https://pilprod.github.io/leafcoin/assets/ios_ligth_leafcoin.png)
-- [IBM Plex font license](https://pilprod.github.io/leafcoin/assets/fonts/OFL.txt): SIL Open Font License 1.1.
-- [Original Leafcoin presentation](https://leafcoin.org/): The source concept context used for the redesign.
+- [Supplied SVG brand mark](https://leafcoin.org/assets/leafcoin_revert.svg)
+- [Supplied SVG favicon](https://leafcoin.org/assets/favicon.svg)
+- [Supplied touch icon](https://leafcoin.org/assets/ios_ligth_leafcoin.png)
+- [IBM Plex font license](https://leafcoin.org/assets/fonts/OFL.txt): SIL Open Font License 1.1.
+- [Original Leafcoin presentation](https://old.leafcoin.org/): The source concept context used for the redesign, at the designated archive URL.
 
 The five AI-generated concept illustrations are separate from the historical Home Aeroponics photographs. The photograph captions identify privacy retouching. Use the page’s scope statements and repository documentation when interpreting prototype evidence.
 
-[Generated-illustration prompts and provenance](https://pilprod.github.io/leafcoin/docs/generated-illustrations.md): The home-lab hero and four section illustrations are AI-generated concept visuals. The provenance record associates each image with its prompt and the proposed subject it depicts.
+[Generated-illustration prompts and provenance](https://leafcoin.org/docs/generated-illustrations.md): The home-lab hero and four section illustrations are AI-generated concept visuals. The provenance record associates each image with its prompt and the proposed subject it depicts.
 
 ## Footer reference
 

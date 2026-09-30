@@ -1,49 +1,49 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://pilprod.github.io/leafcoin/</loc>
+    <loc>https://leafcoin.org/</loc>
     <lastmod>2026-09-30</lastmod>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/hero-home-lab.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/hero-home-lab.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/section-concept.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/section-concept.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/section-architecture.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/section-architecture.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/section-calibration.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/section-calibration.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/section-roadmap.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/section-roadmap.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/electronics-workbench.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/electronics-workbench.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/breadboard-prototype-privacy-20260909.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/breadboard-prototype-privacy-20260909.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/power-shield.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/power-shield.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/enclosure-camera.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/enclosure-camera.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/water-system.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/water-system.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/lighting-ventilation.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/lighting-ventilation.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/home-assistant-dashboard-privacy-20260909.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/home-assistant-dashboard-privacy-20260909.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/wiring-diagram.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/wiring-diagram.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://pilprod.github.io/leafcoin/assets/images/root-chamber.webp</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/root-chamber.webp</image:loc>
     </image:image>
   </url>
 </urlset>
