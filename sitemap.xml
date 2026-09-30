@@ -28,16 +28,16 @@
       <image:loc>https://leafcoin.org/assets/images/power-shield.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/enclosure-camera.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://leafcoin.org/assets/images/water-system.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://leafcoin.org/assets/images/lighting-ventilation.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://leafcoin.org/assets/images/home-assistant-dashboard-privacy-20260909.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/enclosure-camera.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/water-system.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://leafcoin.org/assets/images/wiring-diagram.jpg</image:loc>

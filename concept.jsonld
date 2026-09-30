@@ -77,16 +77,16 @@
           "@id": "https://leafcoin.org/#image-power-shield"
         },
         {
-          "@id": "https://leafcoin.org/#image-enclosure-camera"
-        },
-        {
-          "@id": "https://leafcoin.org/#image-water-system"
-        },
-        {
           "@id": "https://leafcoin.org/#image-lighting-ventilation"
         },
         {
           "@id": "https://leafcoin.org/#image-home-assistant-dashboard-privacy-20260909"
+        },
+        {
+          "@id": "https://leafcoin.org/#image-enclosure-camera"
+        },
+        {
+          "@id": "https://leafcoin.org/#image-water-system"
         },
         {
           "@id": "https://leafcoin.org/#image-wiring-diagram"
@@ -143,16 +143,16 @@
           "@id": "https://leafcoin.org/#image-power-shield"
         },
         {
-          "@id": "https://leafcoin.org/#image-enclosure-camera"
-        },
-        {
-          "@id": "https://leafcoin.org/#image-water-system"
-        },
-        {
           "@id": "https://leafcoin.org/#image-lighting-ventilation"
         },
         {
           "@id": "https://leafcoin.org/#image-home-assistant-dashboard-privacy-20260909"
+        },
+        {
+          "@id": "https://leafcoin.org/#image-enclosure-camera"
+        },
+        {
+          "@id": "https://leafcoin.org/#image-water-system"
         },
         {
           "@id": "https://leafcoin.org/#image-wiring-diagram"
@@ -333,34 +333,6 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://leafcoin.org/#image-enclosure-camera",
-      "contentUrl": "https://leafcoin.org/assets/images/enclosure-camera.jpg",
-      "name": "Camera placement within the experimental installation.",
-      "caption": "Enclosure camera Camera placement within the experimental installation. AI-retouched background / identifying areas. Published source",
-      "inLanguage": "en",
-      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/enclosure-camera.jpg",
-      "about": {
-        "@id": "https://papou.work/portfolio.html#home"
-      },
-      "width": 1086,
-      "height": 1448
-    },
-    {
-      "@type": "ImageObject",
-      "@id": "https://leafcoin.org/#image-water-system",
-      "contentUrl": "https://leafcoin.org/assets/images/water-system.jpg",
-      "name": "Reservoirs, dosing pumps, valves, tubing and circulation plumbing.",
-      "caption": "Water system Reservoirs, dosing pumps, valves, tubing and circulation plumbing. AI-retouched background / identifying areas. Published source",
-      "inLanguage": "en",
-      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/water-system.jpg",
-      "about": {
-        "@id": "https://papou.work/portfolio.html#home"
-      },
-      "width": 1085,
-      "height": 1450
-    },
-    {
-      "@type": "ImageObject",
       "@id": "https://leafcoin.org/#image-lighting-ventilation",
       "contentUrl": "https://leafcoin.org/assets/images/lighting-ventilation.jpg",
       "name": "Suspended fixtures, ventilation equipment and wiring inside the enclosure.",
@@ -386,6 +358,34 @@
       },
       "width": 1024,
       "height": 768
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/#image-enclosure-camera",
+      "contentUrl": "https://leafcoin.org/assets/images/enclosure-camera.jpg",
+      "name": "Camera placement within the experimental installation.",
+      "caption": "Enclosure camera Camera placement within the experimental installation. AI-retouched background / identifying areas. Published source",
+      "inLanguage": "en",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/enclosure-camera.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/#image-water-system",
+      "contentUrl": "https://leafcoin.org/assets/images/water-system.jpg",
+      "name": "Reservoirs, dosing pumps, valves, tubing and circulation plumbing.",
+      "caption": "Water system Reservoirs, dosing pumps, valves, tubing and circulation plumbing. AI-retouched background / identifying areas. Published source",
+      "inLanguage": "en",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/water-system.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1085,
+      "height": 1450
     },
     {
       "@type": "ImageObject",

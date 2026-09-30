@@ -8,17 +8,21 @@ Only `https://leafcoin.org/` and `https://pilprod.github.io/leafcoin/` are measu
 
 Advertising consent remains denied. Google signals and advertising personalization are disabled in the tag configuration. In the existing GA4 account, **Enhanced measurement was switched OFF and the saved state was verified**. Google signals and user-provided data collection were already disabled and remain disabled. Enhanced measurement must remain OFF to prevent automatic scroll, outbound-click and history events from bypassing the reviewed fields.
 
-Existing account retention settings were preserved: event data retention **2 months**, user data retention **14 months**, and **Reset user data on new activity ON**. The 180-day browser consent choice is separate from these server-side retention settings. Code and account configuration checks do not establish that the new published site has delivered data; collection still requires verification after publication.
+Existing account retention settings were preserved: event data retention **2 months**, user data retention **14 months**, and **Reset user data on new activity ON**. The 180-day browser consent choice is separate from these server-side retention settings.
+
+Collection from the published site was verified after explicit Google Analytics approval in Chrome. GA4 Realtime displayed the exact new page title, **Leafcoin — A concept for verifiable agriculture**, with **11 views** at verification time. This confirms collection for the tested consented visits; it is a verification snapshot, not a measure of complete traffic coverage.
 
 Withdrawal disables the property, deletes visible first-party `_ga` cookies at the current host and supported paths, and reloads to unload the Google tag. If a stale saved approval cannot be overwritten or overridden in session storage, the controller disables Google for the current page without reloading into that approval. Choices and withdrawals are synchronized across tabs on the same origin.
 
 Withdrawal stops future collection from that browser; it does not delete previously collected data from Google Analytics.
 
-Cloudflare Web Analytics is configured separately through Cloudflare. The existing automatic setup, **Enable, excluding visitor data in the EU**, is configured. [Cloudflare's automatic setup](https://developers.cloudflare.com/web-analytics/get-started/) injects its beacon into proxied site responses and excludes EU visitors in this mode. Beacon installation and delivery on the new published site still require a live check. No manual Cloudflare beacon has been added for the GitHub Pages preview.
+Cloudflare Web Analytics is configured separately through Cloudflare. All four web A records, four AAAA records and the `www` record are proxied. The automatic setup, **Enable, excluding visitor data in the EU**, was saved and its persisted state verified. [Cloudflare's automatic setup](https://developers.cloudflare.com/web-analytics/get-started/) injects its beacon into proxied site responses and excludes EU visitors in this mode.
 
-The Cloudflare site tag is not its public beacon token. Do not add a guessed token or a manual beacon alongside automatic injection; only one installation should run on each public page. The Google consent controls do not control the separate Cloudflare beacon, which does not use analytics cookies.
+Automatic injection was verified in the full HTML returned by Cloudflare to a browser user agent: it contained a module beacon with subresource integrity and the public token `0f85ce25778449cf9ec15ab46a31f3e9`. No manual Cloudflare script is present in this repository or installed for the GitHub Pages preview.
 
-Search Console is separate from analytics. The current Google account has delegated ownership, and an additional manual DNS TXT verification record has been added. Direct ownership verification is pending. Do not mark the Search Console migration complete until ownership verification and the canonical sitemap submission are confirmed.
+The Cloudflare site tag is not its public beacon token. Do not add a guessed token or a manual beacon alongside automatic injection; only one installation should run on each public page. The separate Cloudflare beacon does not use analytics cookies and does not wait for Google Analytics consent. The site's **Allow Google Analytics** and **Decline Google Analytics** buttons control Google alone.
+
+Search Console is separate from analytics. Ownership of the Leafcoin domain property is verified through DNS, and the property is linked to the existing Leafcoin GA4 property. The submitted canonical sitemap was processed with **Success**, confirmed in the current Search Console interface. Live URL Inspection confirmed that Google can access the published page and that it is eligible for indexing. The **Request indexing** action completed with an **Indexing requested** confirmation. Sitemap processing and an accepted request do not establish that every page or image has been indexed; use indexing reports to check those outcomes.
 
 Run the dependency-free checks from the repository root:
 
@@ -26,4 +30,4 @@ Run the dependency-free checks from the repository root:
 node scripts/check_analytics.cjs
 ```
 
-The checks exercise fresh visits, refusal, approval, exact origins and routes, URL redaction, storage failures, expiry, withdrawal, duplicate execution and cross-tab changes without making network requests. After publication, verify one Cloudflare beacon, no Google requests before approval, one explicit Google pageview after approval, and dashboard receipt. A tag installed in source does not establish that data was received.
+All 18 dependency-free checks pass. They exercise fresh visits, refusal, approval, exact origins and routes, URL redaction, storage failures, expiry, withdrawal, duplicate execution, cross-tab changes and the published HTML controls without making network requests. After future changes, verify one Cloudflare beacon on a visit outside the excluded traffic, no Google requests before approval, one explicit Google pageview after approval, and dashboard receipt. Keep the browser checks separate from static source validation.

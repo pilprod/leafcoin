@@ -211,30 +211,6 @@ A commercial power shield integrated into the electronics assembly.
 
 [Full image](https://leafcoin.org/assets/images/power-shield.jpg).
 
-![Camera placement within the experimental installation.](https://leafcoin.org/assets/images/enclosure-camera.jpg)
-
-#### Enclosure camera
-
-Camera placement within the experimental installation.
-
-*AI-retouched background / identifying areas.*
-
-[Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/enclosure-camera.jpg)
-
-[Full image](https://leafcoin.org/assets/images/enclosure-camera.jpg).
-
-![Reservoirs, dosing pumps, valves, tubing and circulation plumbing.](https://leafcoin.org/assets/images/water-system.jpg)
-
-#### Water system
-
-Reservoirs, dosing pumps, valves, tubing and circulation plumbing.
-
-*AI-retouched background / identifying areas.*
-
-[Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/water-system.jpg)
-
-[Full image](https://leafcoin.org/assets/images/water-system.jpg).
-
 ![Suspended fixtures, ventilation equipment and wiring inside the enclosure.](https://leafcoin.org/assets/images/lighting-ventilation.jpg)
 
 #### Lighting and ventilation
@@ -258,6 +234,30 @@ Climate and water measurements, lighting controls and device states.
 [Published source](https://github.com/pilprod/aeroponics-iot-control/blob/994f20e27f54e8f3659731089f2d0208cead39c1/docs/images/home-assistant-dashboard-privacy-20260909.jpg)
 
 [Full image](https://leafcoin.org/assets/images/home-assistant-dashboard-privacy-20260909.jpg).
+
+![Camera placement within the experimental installation.](https://leafcoin.org/assets/images/enclosure-camera.jpg)
+
+#### Enclosure camera
+
+Camera placement within the experimental installation.
+
+*AI-retouched background / identifying areas.*
+
+[Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/enclosure-camera.jpg)
+
+[Full image](https://leafcoin.org/assets/images/enclosure-camera.jpg).
+
+![Reservoirs, dosing pumps, valves, tubing and circulation plumbing.](https://leafcoin.org/assets/images/water-system.jpg)
+
+#### Water system
+
+Reservoirs, dosing pumps, valves, tubing and circulation plumbing.
+
+*AI-retouched background / identifying areas.*
+
+[Published source](https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/water-system.jpg)
+
+[Full image](https://leafcoin.org/assets/images/water-system.jpg).
 
 ![Original component-connection drawing from system design.](https://leafcoin.org/assets/images/wiring-diagram.jpg)
 
