@@ -49,6 +49,7 @@ function browser(options = {}) {
     };
   }
   if (options.sessionStorageGetterBlocked) Object.defineProperty(window, "sessionStorage", {get() {throw Error("Session storage blocked");}});
+  if (options.fetch) window.fetch = options.fetch;
   const document = {
     documentElement: {lang: options.lang || 'en'},
     referrer: options.referrer ?? "https://alice:password@example.org/private?email=referrer@example.com#hidden",
@@ -64,7 +65,7 @@ function browser(options = {}) {
     }
   };
   class Clock extends Date { static now() { return state.now; } }
-  const context = vm.createContext({ window, document, URL, Date: Clock });
+  const context = vm.createContext({ window, document, URL, Date: Clock, AbortController });
   vm.runInContext(source, context, { filename: "analytics.js" });
   return {
     state, window, document, elements, storage, cookies,
@@ -304,4 +305,123 @@ test("all published pages include one controller and the consent controls", () =
   }
 });
 
-console.log(`\n${passed} analytics checks passed. No network requests were made.`);
+
+async function regionalTests() {
+  const flush = async () => { for (let i = 0; i < 8; i++) await Promise.resolve(); };
+  const response = country => ({ok:true,headers:{get:()=>"text/plain; charset=UTF-8"},text:async()=>"ip=192.0.2.123\nloc="+country+"\n"});
+  async function regionalTest(name, run) { await run(); passed++; console.log("PASS:", name); }
+
+  await regionalTest("all 27 EU countries wait for approval", async () => {
+    for (const country of "AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE".split(" ")) {
+      const app = browser({fetch:async()=>response(country)});
+      await flush();
+      assert.equal(app.state.scripts.length, 0, country);
+      assert.equal(app.window.dataLayer, undefined, country);
+      app.click("analytics-allow");
+      assert.equal(app.state.scripts.length, 1, country);
+    }
+  });
+  await regionalTest("verified non-EU visitors start automatically without storing approval or resetting cookies", async () => {
+    for (const country of ["US","AR","RU","GB","NO","CA","JP","AU","XK"]) {
+      const app = browser({cookies:{_ga:"existing"},fetch:async(url, options)=>{
+        assert.equal(url,"/cdn-cgi/trace");
+        assert.equal(options.cache,"no-store");
+        assert.equal(options.credentials,"omit");
+        assert.equal(options.redirect,"error");
+        return response(country);
+      }});
+      assert.equal(app.state.scripts.length,0,"wait for region confirmation");
+      await flush();
+      assert.equal(app.state.scripts.length,1,country);
+      assert.equal(app.cookies.get("_ga"),"existing",country);
+      assert.equal(app.storage.has(KEY),false,"automatic policy is not explicit approval");
+      assert.equal(app.elements["analytics-consent"].hidden,true,country);
+      assert.equal(app.commands().filter(x=>x[0]==="event"&&x[1]==="page_view").length,1);
+      assert.doesNotMatch(JSON.stringify(app.commands()),/192\.0\.2\.123|loc=/);
+      app.click("analytics-allow");
+      assert.equal(app.state.scripts.length,1,"no duplicate on later approval");
+    }
+  });
+  await regionalTest("saved and newly selected refusal override non-EU automatic collection", async () => {
+    const saved = browser({saved:{value:"denied",expiresAt:NOW+LIFETIME},fetch:async()=>response("US")});
+    await flush();
+    assert.equal(saved.state.scripts.length,0);
+    const app = browser({fetch:async()=>response("US")});
+    await flush();
+    app.click("analytics-decline");
+    assert.equal(app.window["ga-disable-"+ID],true);
+    assert.equal(app.state.reloads,1);
+    assert.equal(app.stored().value,"denied");
+    const next = browser({saved:app.stored(),fetch:async()=>response("US")});
+    await flush();
+    assert.equal(next.state.scripts.length,0);
+  });
+  await regionalTest("non-EU refusal with unwritable storage stays disabled without reloading into the default", async () => {
+    for (const options of [{storageBlocked:true},{storageReadOnly:true}]) {
+      const app=browser({...options,fetch:async()=>response("US")});await flush();
+      assert.equal(app.state.scripts.length,1);
+      app.click("analytics-decline");
+      assert.equal(app.window["ga-disable-"+ID],true);
+      assert.equal(app.state.reloads,0,"a reload would lose the unsaved refusal");
+      assert.match(app.elements["analytics-status"].textContent,/off for this visit/);
+    }
+  });
+  await regionalTest("unsaved withdrawal during lookup cannot reload into a non-EU default", async () => {
+    let resolve;
+    const app=browser({storageBlocked:true,fetch:()=>new Promise(r=>{resolve=r;})});
+    app.click("analytics-allow");
+    app.click("analytics-decline");
+    assert.equal(app.state.reloads,0);
+    assert.equal(app.window["ga-disable-"+ID],true);
+    resolve(response("AR"));await flush();
+    assert.equal(app.state.scripts.length,1,"only the previously approved tag was added");
+    assert.equal(app.window["ga-disable-"+ID],true);
+    assert.match(app.elements["analytics-status"].textContent,/off for this visit/);
+  });
+  await regionalTest("a refusal made during region lookup is respected when it resolves", async () => {
+    let resolve;
+    const app=browser({fetch:()=>new Promise(r=>{resolve=r;})});
+    app.click("analytics-decline");
+    resolve(response("US"));
+    await flush();
+    assert.equal(app.state.scripts.length,0);
+    assert.equal(app.stored().value,"denied");
+  });
+  await regionalTest("unavailable, invalid or redirected region responses stay opt-in", async () => {
+    const replies=[
+      async()=>{throw Error("network blocked");},
+      async()=>({...response("US"),ok:false}),
+      async()=>({...response("US"),headers:{get:()=>"text/html"}}),
+      async()=>response("XX"),async()=>response("ZZ"),async()=>response("T1"),
+      async()=>({...response("US"),text:async()=>"loc=US\nloc=DE\n"}),
+    ];
+    for(const fetch of replies){
+      const app=browser({fetch});await flush();
+      assert.equal(app.state.scripts.length,0);
+      assert.equal(app.elements["analytics-consent"].hidden,false);
+      app.click("analytics-allow");
+      assert.equal(app.state.scripts.length,1,"explicit approval remains available");
+    }
+    const timeout=browser({fetch:(_,options)=>new Promise((_,reject)=>options.signal.addEventListener("abort",()=>reject(Error("aborted"))))});
+    const timer=[...timeout.state.timers.values()].find(t=>t.delay===2000);
+    assert(timer);timer.callback();await flush();
+    assert.equal(timeout.state.scripts.length,0);
+    assert.equal(timeout.elements["analytics-consent"].hidden,false);
+  });
+  await regionalTest("region confirmation cannot enable preview or unreviewed routes", async () => {
+    for(const url of ["http://localhost:8000/","https://example.invalid/","https://leafcoin.org/other.html"]){
+      let called=false;const app=browser({url,fetch:async()=>{called=true;return response("US");}});
+      await flush();assert.equal(called,false);assert.equal(app.state.scripts.length,0);
+    }
+  });
+  await regionalTest("cross-tab refusal stops a regional default and cannot be restored on reload", async () => {
+    const app=browser({fetch:async()=>response("US")});await flush();
+    app.storageEvent({value:"denied",expiresAt:NOW+LIFETIME});
+    assert.equal(app.window["ga-disable-"+ID],true);
+    assert.equal(app.state.reloads,1);
+    const next=browser({saved:app.stored(),fetch:async()=>response("US")});await flush();
+    assert.equal(next.state.scripts.length,0);
+  });
+  console.log(`\n${passed} analytics checks passed. No network requests were made.`);
+}
+regionalTests().catch(error=>{console.error(error);process.exitCode=1;});

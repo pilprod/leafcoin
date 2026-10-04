@@ -19,3 +19,5 @@ jobs:
           persist-credentials: false
       - name: Validate HTML, local resources and discovery metadata
         run: python3 scripts/check_site.py
+      - name: Validate regional analytics and visitor choices
+        run: node scripts/check_analytics.cjs
