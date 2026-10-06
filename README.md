@@ -42,6 +42,8 @@ The apex has the four GitHub Pages IPv4 records and four IPv6 records; `www` is 
 
 The sitemap lists the canonical homepage and its displayed content images. It omits section fragments and duplicate Markdown versions as separate search results. Keep `lastmod` tied to substantive content changes.
 
+The homepage declares a stable 96x96 PNG favicon at `assets/favicon-96.png` and a multi-size fallback at `favicon.ico`, both rendered from the existing `assets/favicon.svg`. These formats meet [Google Search's favicon format guidance](https://developers.google.com/search/docs/appearance/favicon-in-search); the SVG and supplied Apple touch icon remain available. Search appearance updates after Google recrawls and processes the homepage and icon, and is not guaranteed.
+
 `llms.txt` is a concise resource index. `index.md` contains the complete visible concept, including architecture details, proposed ML irrigation/nutrient-solution calibration research, roadmap, prototype scope and image provenance. `llms-full.txt` is a convenience copy of that same Markdown. `concept.jsonld` relates the proposed concept and calibration research, creator, historical prototype, public repositories, AI concept illustrations and lab photographs.
 
 After changing the main copy, gallery order, images or repository links in `index.html`, regenerate the full Markdown, structured graph and sitemap from the current DOM, then validate:
