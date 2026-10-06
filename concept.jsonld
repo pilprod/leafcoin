@@ -34,7 +34,7 @@
       "@id": "https://leafcoin.org/#concept",
       "url": "https://leafcoin.org/",
       "name": "Leafcoin — A concept for verifiable agriculture",
-      "description": "An agricultural technology concept exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records. Besu with QBFT is being considered for a permissioned EVM network in the proposed architecture.",
+      "description": "Leafcoin (leafcoin.org) is a personal agrotech R&D concept by Ilya Papou, exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records. Besu with QBFT is being considered for a permissioned EVM network in the proposed architecture.",
       "creativeWorkStatus": "Concept / personal R&D",
       "inLanguage": "en",
       "creator": {
