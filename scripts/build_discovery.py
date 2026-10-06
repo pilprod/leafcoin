@@ -277,7 +277,7 @@ for script in descendants(dom.root, 'script'):
             if node.get('@id') == canonical + '#concept':
                 embedded_concept = node
 graph = {'@context': 'https://schema.org', '@graph': [
-    {'@type': 'WebSite', '@id': canonical+'#website', 'url': canonical, 'name': 'Leafcoin',
+    {'@type': 'WebSite', '@id': canonical+'#website', 'url': canonical, 'name': 'Leafcoin', 'alternateName': 'leafcoin.org',
      'inLanguage': 'en', 'creator': {'@id': person_id}},
     {'@type': 'WebPage', '@id': canonical+'#webpage', 'url': canonical, 'name': title,
      'inLanguage': 'en', 'isPartOf': {'@id': canonical+'#website'},

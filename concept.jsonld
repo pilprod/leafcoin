@@ -6,6 +6,7 @@
       "@id": "https://leafcoin.org/#website",
       "url": "https://leafcoin.org/",
       "name": "Leafcoin",
+      "alternateName": "leafcoin.org",
       "inLanguage": "en",
       "creator": {
         "@id": "https://papou.work/#person"
@@ -34,7 +35,7 @@
       "@id": "https://leafcoin.org/#concept",
       "url": "https://leafcoin.org/",
       "name": "Leafcoin — A concept for verifiable agriculture",
-      "description": "Leafcoin (leafcoin.org) is a personal agrotech R&D concept by Ilya Papou, exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records. Besu with QBFT is being considered for a permissioned EVM network in the proposed architecture.",
+      "description": "Leafcoin is a personal agrotech R&D concept by Ilya Papou, exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records. Besu with QBFT is being considered for a permissioned EVM network in the proposed architecture.",
       "creativeWorkStatus": "Concept / personal R&D",
       "inLanguage": "en",
       "creator": {
@@ -218,7 +219,7 @@
       "@type": "ImageObject",
       "@id": "https://leafcoin.org/#image-hero-home-lab",
       "contentUrl": "https://leafcoin.org/assets/images/hero-home-lab.jpg",
-      "name": "AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.",
+      "name": "AI-generated concept illustration for Leafcoin (leafcoin.org): a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.",
       "caption": "Home aeroponics AI-generated concept illustration",
       "inLanguage": "en",
       "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#hero",

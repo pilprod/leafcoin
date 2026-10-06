@@ -8,7 +8,7 @@ Agrotech / Personal R&D
 
 ## Real crops. Verifiable data.
 
-Leafcoin (leafcoin.org) is a personal agrotech R&D concept by Ilya Papou, exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records.
+Leafcoin is a personal agrotech R&D concept by Ilya Papou, exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records.
 
 An exploration of how production data could support a more transparent agricultural ecosystem.
 
@@ -19,7 +19,7 @@ An exploration of how production data could support a more transparent agricultu
 - **Status**: Concept & personal R&D
 - **Foundation**: Home Aeroponics lab
 
-![AI-generated concept illustration of a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.](https://leafcoin.org/assets/images/hero-home-lab.jpg)
+![AI-generated concept illustration for Leafcoin (leafcoin.org): a compact home aeroponics lab with plants, grow lighting, a nutrient reservoir and a controller.](https://leafcoin.org/assets/images/hero-home-lab.jpg)
 
 Home aeroponics [AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#hero)
 
