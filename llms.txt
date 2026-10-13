@@ -6,10 +6,23 @@ Leafcoin is presented as a concept and personal R&D project. The public Home Aer
 
 A proposed ML research loop would use repeated cultivation iterations to evaluate irrigation schedules and nutrient-solution composition against observed plant responses, with operator review of suggested adjustments.
 
+## Aeroponics learning library
+
+These educational guides cite original research and institutional guidance. Findings from other studies are distinct from Leafcoin’s proposed research. Follow each article’s canonical HTML or complete Markdown; do not infer measured Leafcoin results from general agricultural literature.
+
+- [Article library](https://leafcoin.org/articles/): Reading order and guide summaries.
+- [What is aeroponics?](https://leafcoin.org/articles/what-is-aeroponics.html): Definitions, system components and the relationship to hydroponics and vertical farming. [Markdown](https://leafcoin.org/articles/what-is-aeroponics.md).
+- [Aeroponics vs hydroponics](https://leafcoin.org/articles/aeroponics-vs-hydroponics.html): Potential advantages, experimental limits and fair comparison. [Markdown](https://leafcoin.org/articles/aeroponics-vs-hydroponics.md).
+- [Aeroponic system control](https://leafcoin.org/articles/aeroponic-system-control.html): Delivery, solution chemistry, sensing and a proposed ML research loop. [Markdown](https://leafcoin.org/articles/aeroponic-system-control.md).
+- [Future of aeroponics](https://leafcoin.org/articles/future-of-aeroponics.html): Propagation, resource accounting, economics and possible data-driven agriculture. [Markdown](https://leafcoin.org/articles/future-of-aeroponics.md).
+- [All four articles as text](https://leafcoin.org/articles/llms-full.txt): Complete articles with source links and scope statements.
+- [Whole-site text](https://leafcoin.org/llms-full.txt): Current concept presentation followed by the complete article library.
+- [Library relationships](https://leafcoin.org/articles/library.jsonld): Collection, reading order and publisher identity.
+
 ## Concept resources
 
 - [Complete concept in Markdown](https://leafcoin.org/index.md): Faithful text of the current homepage, including architecture details, proposed ML calibration research, proposed stages, prototype scope and image context.
-- [Complete text in one file](https://leafcoin.org/llms-full.txt): Convenience copy of the same Markdown.
+- [Complete text in one file](https://leafcoin.org/llms-full.txt): Complete concept followed by the educational article library.
 - [Structured concept graph](https://leafcoin.org/concept.jsonld): Distinct concept, creator, historical prototype, repository, image and source identities.
 - [Human-readable homepage](https://leafcoin.org/): The canonical visual presentation.
 

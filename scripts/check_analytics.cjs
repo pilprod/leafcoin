@@ -10,6 +10,13 @@ const ID = "G-SV3XY3N6NE";
 const KEY = "leafcoin.analytics-consent.v1";
 const LIFETIME = 180 * 24 * 60 * 60 * 1000;
 const NOW = Date.parse("2026-09-30T12:00:00Z");
+const root = path.join(__dirname, "..");
+const articleData = JSON.parse(fs.readFileSync(path.join(root, "articles/content.json"), "utf8"));
+const publishedRoutes = [
+  ["", "index.html"],
+  ["articles/", "articles/index.html"],
+  ...articleData.articles.map(article => ["articles/" + article.slug + ".html", "articles/" + article.slug + ".html"])
+];
 
 class Element {
   constructor() { this.hidden = true; this.listeners = {}; this.attributes = {}; }
@@ -231,16 +238,19 @@ test("session fallback overrides a stale permanent grant before reloading", () =
 
 
 test("only reviewed routes collect, with index.html normalized on each origin", () => {
-  const routes = [
-    ["https://leafcoin.org/", "https://leafcoin.org/"],
-    ["https://leafcoin.org/index.html", "https://leafcoin.org/"],
-    ["https://pilprod.github.io/leafcoin/", "https://pilprod.github.io/leafcoin/"],
-    ["https://pilprod.github.io/leafcoin/index.html", "https://pilprod.github.io/leafcoin/"]
-  ];
-  for (const [input, canonical] of routes) {
+  const routes = [];
+  for (const origin of ["https://leafcoin.org/", "https://pilprod.github.io/leafcoin/"]) {
+    for (const [route, file] of publishedRoutes) {
+      const title = fs.readFileSync(path.join(root, file), "utf8").match(/<title>([^<]+)<\/title>/)[1];
+      routes.push([origin + route, origin + route, title]);
+      if (route === "" || route.endsWith("/")) routes.push([origin + route + "index.html", origin + route, title]);
+    }
+  }
+  for (const [input, canonical, title] of routes) {
     const app = browser({ url: input + "?email=private@example.com#secret", saved: {value: "granted", expiresAt: NOW + LIFETIME} });
     const config = app.commands().find(([type]) => type === "config")[2];
     assert.equal(config.page_location, canonical);
+    assert.equal(config.page_title, title, input);
     assert.equal(config.cookie_domain, new URL(input).hostname);
     assert.equal(config.cookie_path, input.includes("github.io") ? "/leafcoin/" : "/");
     assert.equal(config.cookie_expires, LIFETIME / 1000);
@@ -248,7 +258,7 @@ test("only reviewed routes collect, with index.html normalized on each origin", 
     assert.equal(config.cookie_flags, "SameSite=Lax;Secure");
     assert.doesNotMatch(JSON.stringify(app.commands()), /private@|secret/);
   }
-  for (const url of ["https://leafcoin.org/private-path", "https://leafcoin.org/leafcoin/", "https://pilprod.github.io/", "https://pilprod.github.io/other/", "https://pilprod.github.io/leafcoin", "https://pilprod.github.io/leafcoin/private"]) {
+  for (const url of ["https://leafcoin.org/private-path", "https://leafcoin.org/leafcoin/", "https://leafcoin.org/articles/private.html", "https://leafcoin.org/articles/what-is-aeroponics.md", "https://pilprod.github.io/", "https://pilprod.github.io/other/", "https://pilprod.github.io/leafcoin", "https://pilprod.github.io/leafcoin/private", "https://pilprod.github.io/leafcoin/articles/private.html"]) {
     const app = browser({url, saved: {value: "granted", expiresAt: NOW + LIFETIME}});
     app.click("analytics-allow");
     assert.equal(app.state.scripts.length, 0, url);
@@ -294,9 +304,9 @@ test("Google cookies on the GitHub project path are cleared on withdrawal", () =
 });
 
 test("all published pages include one controller and the consent controls", () => {
-  for (const file of ["index.html"]) {
+  for (const [, file] of publishedRoutes) {
     const html = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
-    assert.equal((html.match(/<script\b[^>]*src="analytics\.js(?:\?[^"<>]*)?"/g) || []).length, 1, file);
+    assert.equal((html.match(/<script\b[^>]*src="(?:\.\.\/)?analytics\.js(?:\?[^"<>]*)?"/g) || []).length, 1, file);
     assert.doesNotMatch(html, /<script\b[^>]*src=["'][^"']*(?:googletagmanager|google-analytics)\.com/i, "Google must be loaded by the opt-in controller");
     assert.doesNotMatch(html, /\bgtag\s*\(/, "No second Google installation in the HTML");
     for (const id of ["analytics-tools", "analytics-status", "analytics-consent", "analytics-settings", "analytics-allow", "analytics-decline"]) {
@@ -310,6 +320,25 @@ async function regionalTests() {
   const flush = async () => { for (let i = 0; i < 8; i++) await Promise.resolve(); };
   const response = country => ({ok:true,headers:{get:()=>"text/plain; charset=UTF-8"},text:async()=>"ip=192.0.2.123\nloc="+country+"\n"});
   async function regionalTest(name, run) { await run(); passed++; console.log("PASS:", name); }
+
+  await regionalTest("article visits preserve regional consent and explicit refusal", async () => {
+    for (const [route] of publishedRoutes.filter(([route]) => route.startsWith("articles/"))) {
+      const url = "https://leafcoin.org/" + route + "?email=private@example.com#secret";
+      const outside = browser({url, fetch:async()=>response("AR")});
+      await flush();
+      assert.equal(outside.state.scripts.length, 1, route);
+      assert.equal(outside.commands().find(([type]) => type === "config")[2].page_location, "https://leafcoin.org/" + route);
+      assert.doesNotMatch(JSON.stringify(outside.commands()), /private@|secret|loc=/);
+      const eu = browser({url, fetch:async()=>response("DE")});
+      await flush();
+      assert.equal(eu.state.scripts.length, 0, route);
+      eu.click("analytics-allow");
+      assert.equal(eu.state.scripts.length, 1, route);
+      const refused = browser({url, saved:{value:"denied",expiresAt:NOW+LIFETIME}, fetch:async()=>response("AR")});
+      await flush();
+      assert.equal(refused.state.scripts.length, 0, route);
+    }
+  });
 
   await regionalTest("all 27 EU countries wait for approval", async () => {
     for (const country of "AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE".split(" ")) {

@@ -317,6 +317,40 @@ Platform / SRE engineer · Personal R&D
 
 [Website source](https://github.com/pilprod/leafcoin)
 
+## 06 / Articles
+
+Understand the roots. Evaluate the system.
+
+### What happens below the leaves?
+
+Explore how aeroponics works, where it can improve on other growing methods, and what makes a system reliable. Four guides with research sources and practical tradeoffs.
+
+01 / Fundamentals
+
+#### [What is aeroponics? How roots grow without soil](https://leafcoin.org/articles/what-is-aeroponics.html)
+
+Learn how aeroponics feeds suspended roots with nutrient mist, what a system contains, and how it differs from hydroponics and vertical farming.
+
+02 / Comparison
+
+#### [Aeroponics vs hydroponics: advantages, limits and the right comparison](https://leafcoin.org/articles/aeroponics-vs-hydroponics.html)
+
+Compare aeroponics with NFT and deep water culture: root oxygen, water use, maintenance, failure tolerance and what crop experiments actually show.
+
+03 / Control & learning
+
+#### [Why aeroponic systems are difficult to manage, and where ML could help](https://leafcoin.org/articles/aeroponic-system-control.html)
+
+Understand nozzle failures, irrigation timing, pH and EC, sensor drift and a proposed ML loop for improving nutrient and watering decisions across trials.
+
+04 / Future agriculture
+
+#### [How aeroponics could change agriculture, and what must happen first](https://leafcoin.org/articles/future-of-aeroponics.html)
+
+Explore aeroponics in propagation, controlled growing and data-driven agriculture, with realistic limits around energy, maintenance, economics and scale.
+
+[Explore all aeroponics articles](https://leafcoin.org/articles/index.html)
+
 ## Site assets and source context
 
 - [Supplied SVG brand mark](https://leafcoin.org/assets/leafcoin_revert.svg)

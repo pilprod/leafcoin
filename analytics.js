@@ -17,14 +17,25 @@
   window.__leafcoinAnalyticsLoaded = true;
 
   // Only these reviewed public routes are measured. Never send the raw URL.
-  const pages = new Map([
-    ["https://leafcoin.org/", "https://leafcoin.org/"],
-    ["https://leafcoin.org/index.html", "https://leafcoin.org/"],
-    ["https://pilprod.github.io/leafcoin/", "https://pilprod.github.io/leafcoin/"],
-    ["https://pilprod.github.io/leafcoin/index.html", "https://pilprod.github.io/leafcoin/"]
-  ]);
+  const reviewedPages = [
+    ["", "Leafcoin: Real crops. Verifiable data."],
+    ["articles/", "Aeroponics Guides: Methods, Control and Future | Leafcoin"],
+    ["articles/what-is-aeroponics.html", "What Is Aeroponics? How It Works | Leafcoin"],
+    ["articles/aeroponics-vs-hydroponics.html", "Aeroponics vs Hydroponics: Benefits and Limits | Leafcoin"],
+    ["articles/aeroponic-system-control.html", "Aeroponic System Control: Sensors, Irrigation and ML | Leafcoin"],
+    ["articles/future-of-aeroponics.html", "The Future of Aeroponics: Opportunities and Limits | Leafcoin"]
+  ];
+  const pages = new Map();
+  for (const origin of ["https://leafcoin.org/", "https://pilprod.github.io/leafcoin/"]) {
+    for (const [path, title] of reviewedPages) {
+      const page = { location: origin + path, title };
+      pages.set(page.location, page);
+      if (path === "" || path.endsWith("/")) pages.set(page.location + "index.html", page);
+    }
+  }
   const url = new URL(window.location.href);
-  const pageLocation = pages.get(url.origin + url.pathname);
+  const page = pages.get(url.origin + url.pathname);
+  const pageLocation = page?.location;
   const cookiePath = url.origin === "https://pilprod.github.io" ? "/leafcoin/" : "/";
   const denied = {
     analytics_storage: "denied",
@@ -162,7 +173,7 @@
       cookie_flags: "SameSite=Lax;Secure",
       page_location: pageLocation,
       page_referrer: safeReferrer(),
-      page_title: "Leafcoin: Real crops. Verifiable data."
+      page_title: page.title
     });
     window.gtag("event", "page_view", { send_to: measurementId });
     if (!scriptAdded) {

@@ -316,6 +316,44 @@ def check_discovery(site):
     for reference in re.findall(r"\]\(([^)]+)\)", llms):
         site.check_reference(reference)
     check_concept_resources(site)
+    check_article_resources(site)
+
+
+
+def check_article_resources(site):
+    data = json.loads((ROOT / "articles/content.json").read_text())
+    library = site.resource("articles/llms-full.txt").decode("utf-8")
+    for article in data["articles"]:
+        path = "articles/" + article["slug"] + ".html"
+        page = site.page(path)
+        markdown = site.resource("articles/" + article["slug"] + ".md").decode("utf-8")
+        require(markdown in library, path + ": complete Markdown missing from library text")
+        nodes = [node for block in page.jsonld for node in jsonld_nodes(block)]
+        structured = next((node for node in nodes if node.get("@type") == "Article"), None)
+        require(structured and structured.get("headline") == article["title"], path + ": Article headline mismatch")
+        require(structured.get("description") == page.metadata("description"), path + ": Article description mismatch")
+        require(structured.get("datePublished") == data["published"] and structured.get("dateModified") == data["modified"], path + ": article dates differ")
+        require(structured.get("mainEntityOfPage", {}).get("@id") == page.canonicals[0] + "#webpage", path + ": article canonical relationship differs")
+        expected_sources = {data["sources"][key]["url"] for key in article["sources"]}
+        require({item["url"] for item in structured.get("citation", [])} == expected_sources, path + ": citation graph differs from reviewed sources")
+        require(expected_sources <= set(page.references), path + ": source links missing from visible page")
+        texts = [article["title"], article["summary"]]
+        for section in article["sections"]:
+            texts.extend([section["title"], *section["paragraphs"], *section.get("bullets", []), *section.get("ordered", [])])
+            if "table" in section:
+                texts.extend(cell for row in section["table"]["rows"] for cell in row)
+        for question in article["questions"]:
+            texts.extend([question["question"], question["answer"]])
+        html_source = site.resource(path).decode("utf-8")
+        visible = normalize_text(re.sub(r"<[^>]+>", " ", re.sub(r"<script[\s\S]*?</script>", "", html_source)))
+        md_text = normalize_text(markdown)
+        graph_text = normalize_text(structured.get("articleBody", ""))
+        for text in texts:
+            normalized = normalize_text(text)
+            require(normalized in visible and normalized in md_text and normalized in graph_text,
+                    path + ": visible, Markdown or structured article omits reviewed text: " + text[:80])
+        for reference in re.findall(r"\]\(([^)]+)\)", markdown):
+            site.check_reference(reference, path)
 
 
 def normalize_text(value):
@@ -326,7 +364,8 @@ def normalize_text(value):
 def check_concept_resources(site):
     markdown = site.resource("index.md").decode("utf-8")
     full = site.resource("llms-full.txt").decode("utf-8")
-    require(markdown == full, "index.md and llms-full.txt differ")
+    library = site.resource("articles/llms-full.txt").decode("utf-8")
+    require(full == markdown + "\n\n" + library, "Whole-site text must preserve the exact concept and article-library text")
     require(markdown.startswith("# ") and site.canonical in markdown,
             "Full concept Markdown needs a title and canonical URL")
     normalized = normalize_text(markdown)

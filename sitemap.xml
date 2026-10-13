@@ -46,4 +46,48 @@
       <image:loc>https://leafcoin.org/assets/images/root-chamber.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://leafcoin.org/articles/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-concept.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-architecture.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-calibration.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-roadmap.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://leafcoin.org/articles/what-is-aeroponics.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-concept.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://leafcoin.org/articles/aeroponics-vs-hydroponics.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-architecture.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://leafcoin.org/articles/aeroponic-system-control.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-calibration.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://leafcoin.org/articles/future-of-aeroponics.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/section-roadmap.jpg</image:loc>
+    </image:image>
+  </url>
 </urlset>

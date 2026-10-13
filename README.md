@@ -8,7 +8,7 @@ The production site is published at [leafcoin.org](https://leafcoin.org/) over H
 
 ## Local preview
 
-There is no build step or package installation. From the repository root:
+The committed HTML can be served directly without package installation. From the repository root:
 
 ```sh
 python3 -m http.server 8000
@@ -40,24 +40,29 @@ The apex has the four GitHub Pages IPv4 records and four IPv6 records; `www` is 
 
 ## Search and agent discovery
 
-The sitemap lists the canonical homepage and its displayed content images. It omits section fragments and duplicate Markdown versions as separate search results. Keep `lastmod` tied to substantive content changes.
+The sitemap lists six canonical pages: the homepage, the learning library and four articles. It includes their displayed cover/content images and omits section fragments and duplicate Markdown versions as separate search results. Keep `lastmod` tied to substantive content changes.
 
 The homepage declares one stable 96x96 PNG favicon at `assets/favicon-96.png`, rendered from the existing `assets/favicon.svg`. This removes competing SVG/ICO declarations and uses a format supported by [Google Search's favicon guidance](https://developers.google.com/search/docs/appearance/favicon-in-search). The source SVG, multi-size `favicon.ico` and supplied Apple touch icon remain available. Search appearance updates after Google recrawls and processes the homepage and icon, and is not guaranteed.
 
-`llms.txt` is a concise resource index. `index.md` contains the complete visible concept, including architecture details, proposed ML irrigation/nutrient-solution calibration research, roadmap, prototype scope and image provenance. `llms-full.txt` is a convenience copy of that same Markdown. `concept.jsonld` relates the proposed concept and calibration research, creator, historical prototype, public repositories, AI concept illustrations and lab photographs.
+`llms.txt` is a concise resource index. `index.md` contains the complete visible concept, including architecture details, proposed ML irrigation/nutrient-solution calibration research, roadmap, prototype scope and image provenance. Root `llms-full.txt` combines that concept text with all four full articles and their sources. `concept.jsonld` relates the proposed concept and calibration research, creator, historical prototype, public repositories, AI concept illustrations, lab photographs and the learning library.
 
-After changing the main copy, gallery order, images or repository links in `index.html`, regenerate the full Markdown, structured graph and sitemap from the current DOM, then validate:
+The [learning library](https://leafcoin.org/articles/) covers aeroponics fundamentals, comparison with hydroponic systems, control and proposed ML calibration, and future agricultural applications. `articles/content.json` is the reviewed English source. Each generated HTML article includes a short answer, a contents list, FAQs, attributed original sources, related articles, a canonical URL, social metadata, Article/Breadcrumb structured data and a complete Markdown alternative. `articles/llms-full.txt` combines all four articles; `articles/library.jsonld` describes the collection. Existing AI concept illustrations remain labelled and linked to their provenance.
+
+After changing homepage/shared navigation or `articles/content.json`, rebuild the articles first, then regenerate the full Markdown, structured graph and sitemap from the current DOM and validate:
 
 ```sh
+python3 scripts/build_articles.py
 python3 scripts/build_discovery.py
+python3 scripts/build_articles.py --check
 python3 scripts/check_site.py
+node scripts/check_analytics.cjs
 ```
 
-The generator uses only the Python standard library and preserves the sitemap's existing `lastmod`. Update that date only for substantive content changes. Review the generated diff before publishing; the checker verifies content coverage but does not detect a stale gallery order by itself.
+Both generators use only the Python standard library. The discovery generator preserves the homepage's existing `lastmod`; article dates come from the reviewed content metadata. Update dates only for substantive content changes. Review the generated diff before publishing. Checks verify that article copy, visible sources, full Markdown and structured article text agree. Analytics explicitly allows the six public pages on the custom domain and GitHub project origin; unreviewed paths and local previews stay disabled.
 
 This repository's `robots.txt` is served at the `leafcoin.org` origin root. During the GitHub project preview, `/leafcoin/robots.txt` is only a companion; effective crawler rules are read at `https://pilprod.github.io/robots.txt`, outside this repository's path.
 
-Search Console domain ownership is verified through the added DNS TXT record, and the existing GA4 property is linked to Search Console. The canonical [sitemap](https://leafcoin.org/sitemap.xml) has been processed successfully with **1 discovered page**. Google's live URL test reported the homepage available and indexable, and an indexing request was submitted. These checks do not confirm that the page has been indexed; use URL Inspection to check its current index status.
+In the 2026-09-30 setup, Search Console domain ownership was verified through the added DNS TXT record, and the existing GA4 property was linked to Search Console. The canonical [sitemap](https://leafcoin.org/sitemap.xml) was processed with **1 discovered page** before the learning library existed. Google's live URL test reported the homepage available and indexable, and an indexing request was submitted. This historical snapshot does not establish the current indexing status of new articles; use URL Inspection for current evidence.
 
 These resources aid discovery and interpretation; indexing, rich results and AI citations are determined by the services. References: [Google sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), [image sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps), [structured-data guidelines](https://developers.google.com/search/docs/appearance/structured-data/sd-policies), [OpenAI crawler controls](https://developers.openai.com/api/docs/bots) and the [llms.txt proposal](https://llmstxt.org/).
 

@@ -186,7 +186,8 @@ if footer:
         markdown += '\n## Footer reference\n\n' + ''.join('- ' + inline(link) + '\n' for link in footer_links)
 markdown = re.sub(r'\n{3,}', '\n\n', markdown).strip() + '\n'
 (OUTPUT/'index.md').write_text(markdown)
-(OUTPUT/'llms-full.txt').write_text(markdown)
+library_text = (ROOT/'articles/llms-full.txt').read_text()
+(OUTPUT/'llms-full.txt').write_text(markdown + '\n\n' + library_text)
 
 person_id = 'https://papou.work/#person'
 prototype_id = 'https://papou.work/portfolio.html#home'
@@ -317,6 +318,21 @@ for section in descendants(main, 'section'):
                             'isPartOf': {'@id': canonical+'#concept'}})
 graph['@graph'].extend(component_nodes)
 graph['@graph'][2]['hasPart'] = [{'@id': node['@id']} for node in component_nodes]
+library_data = json.loads((ROOT/'articles/content.json').read_text())
+library_url = canonical + 'articles/'
+graph['@graph'][0]['hasPart'] = [{'@id': library_url + '#library'}]
+graph['@graph'].append({'@type': 'CollectionPage', '@id': library_url + '#library',
+                       'url': library_url, 'name': 'Leafcoin learning library', 'inLanguage': 'en',
+                       'isPartOf': {'@id': canonical + '#website'},
+                       'hasPart': [{'@id': library_url + article['slug'] + '.html#article'}
+                                   for article in library_data['articles']]})
+for article in library_data['articles']:
+    article_url = library_url + article['slug'] + '.html'
+    graph['@graph'].append({'@type': 'Article', '@id': article_url + '#article', 'url': article_url,
+                           'headline': article['title'], 'description': article['description'],
+                           'inLanguage': 'en', 'author': {'@id': person_id},
+                           'datePublished': library_data['published'], 'dateModified': library_data['modified'],
+                           'isPartOf': {'@id': library_url + '#library'}})
 (OUTPUT/'concept.jsonld').write_text(json.dumps(graph, ensure_ascii=False, indent=2)+'\n')
 
 S = 'http://www.sitemaps.org/schemas/sitemap/0.9'
@@ -333,6 +349,18 @@ if modified:
 for image in images:
     item = ET.SubElement(entry, f'{{{I}}}image')
     ET.SubElement(item, f'{{{I}}}loc').text = image['contentUrl']
+for article_path, article_url in [('articles/index.html', library_url),
+                                 *[(f"articles/{article['slug']}.html", library_url + article['slug'] + '.html')
+                                   for article in library_data['articles']]]:
+    article_dom = DOM((ROOT/article_path).read_text())
+    article_main = descendants(article_dom.root, 'main')[0]
+    article_entry = ET.SubElement(sitemap, f'{{{S}}}url')
+    ET.SubElement(article_entry, f'{{{S}}}loc').text = article_url
+    ET.SubElement(article_entry, f'{{{S}}}lastmod').text = library_data['modified']
+    for image_url in dict.fromkeys(urljoin(article_url, node.attrs['src'])
+                                 for node in descendants(article_main, 'img')):
+        image_entry = ET.SubElement(article_entry, f'{{{I}}}image')
+        ET.SubElement(image_entry, f'{{{I}}}loc').text = image_url
 ET.indent(sitemap, space='  ')
 (OUTPUT/'sitemap.xml').write_bytes(ET.tostring(sitemap, encoding='utf-8', xml_declaration=True)+b'\n')
 print(f'Generated full concept text, {len(graph["@graph"])} graph entities and {len(images)} sitemap image entries.')

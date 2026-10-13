@@ -10,7 +10,12 @@
       "inLanguage": "en",
       "creator": {
         "@id": "https://papou.work/#person"
-      }
+      },
+      "hasPart": [
+        {
+          "@id": "https://leafcoin.org/articles/#library"
+        }
+      ]
     },
     {
       "@type": "WebPage",
@@ -450,6 +455,94 @@
       "inLanguage": "en",
       "isPartOf": {
         "@id": "https://leafcoin.org/#concept"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://leafcoin.org/articles/#library",
+      "url": "https://leafcoin.org/articles/",
+      "name": "Leafcoin learning library",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/#website"
+      },
+      "hasPart": [
+        {
+          "@id": "https://leafcoin.org/articles/what-is-aeroponics.html#article"
+        },
+        {
+          "@id": "https://leafcoin.org/articles/aeroponics-vs-hydroponics.html#article"
+        },
+        {
+          "@id": "https://leafcoin.org/articles/aeroponic-system-control.html#article"
+        },
+        {
+          "@id": "https://leafcoin.org/articles/future-of-aeroponics.html#article"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/articles/what-is-aeroponics.html#article",
+      "url": "https://leafcoin.org/articles/what-is-aeroponics.html",
+      "headline": "What is aeroponics? How roots grow without soil",
+      "description": "Learn how aeroponics feeds suspended roots with nutrient mist, what a system contains, and how it differs from hydroponics and vertical farming.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/articles/#library"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/articles/aeroponics-vs-hydroponics.html#article",
+      "url": "https://leafcoin.org/articles/aeroponics-vs-hydroponics.html",
+      "headline": "Aeroponics vs hydroponics: advantages, limits and the right comparison",
+      "description": "Compare aeroponics with NFT and deep water culture: root oxygen, water use, maintenance, failure tolerance and what crop experiments actually show.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/articles/#library"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/articles/aeroponic-system-control.html#article",
+      "url": "https://leafcoin.org/articles/aeroponic-system-control.html",
+      "headline": "Why aeroponic systems are difficult to manage, and where ML could help",
+      "description": "Understand nozzle failures, irrigation timing, pH and EC, sensor drift and a proposed ML loop for improving nutrient and watering decisions across trials.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/articles/#library"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/articles/future-of-aeroponics.html#article",
+      "url": "https://leafcoin.org/articles/future-of-aeroponics.html",
+      "headline": "How aeroponics could change agriculture, and what must happen first",
+      "description": "Explore aeroponics in propagation, controlled growing and data-driven agriculture, with realistic limits around energy, maintenance, economics and scale.",
+      "inLanguage": "en",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/articles/#library"
       }
     }
   ]

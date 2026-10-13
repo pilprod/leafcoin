@@ -1,0 +1,88 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://leafcoin.org/#website",
+      "url": "https://leafcoin.org/",
+      "name": "Leafcoin",
+      "alternateName": "leafcoin.org",
+      "publisher": {
+        "@id": "https://papou.work/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://papou.work/#person",
+      "name": "Ilya Papou",
+      "url": "https://papou.work/"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://leafcoin.org/articles/#library",
+      "url": "https://leafcoin.org/articles/",
+      "name": "Aeroponics Guides: Methods, Control and Future | Leafcoin",
+      "description": "Research-based guides to aeroponics, hydroponic comparisons, system control and the future of agriculture, with sources and practical tradeoffs.",
+      "inLanguage": "en",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/#website"
+      },
+      "publisher": {
+        "@id": "https://papou.work/#person"
+      },
+      "mainEntity": {
+        "@id": "https://leafcoin.org/articles/#reading-order"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://leafcoin.org/articles/#reading-order",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "What is aeroponics? How roots grow without soil",
+          "url": "https://leafcoin.org/articles/what-is-aeroponics.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aeroponics vs hydroponics: advantages, limits and the right comparison",
+          "url": "https://leafcoin.org/articles/aeroponics-vs-hydroponics.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Why aeroponic systems are difficult to manage, and where ML could help",
+          "url": "https://leafcoin.org/articles/aeroponic-system-control.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How aeroponics could change agriculture, and what must happen first",
+          "url": "https://leafcoin.org/articles/future-of-aeroponics.html"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://leafcoin.org/articles/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Leafcoin",
+          "item": "https://leafcoin.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://leafcoin.org/articles/"
+        }
+      ]
+    }
+  ]
+}
