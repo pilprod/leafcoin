@@ -2,7 +2,7 @@
 
 Canonical article: https://leafcoin.org/articles/aeroponic-system-control.html
 
-By Ilya Papou · Published 2026-10-13 · 5 min read
+By Ilya Papou · Published 2026-10-13 · 6 min read
 
 An aeroponic system must coordinate physical nutrient delivery, root-zone conditions, solution chemistry and dependable sensing. The most useful control signal is evidence that the intended action happened. ML could help compare repeated growing trials, while basic irrigation and protective limits remain deterministic.
 
@@ -21,6 +21,14 @@ A misting schedule cannot be evaluated independently of the spray apparatus. In 
 A separate fluid-dynamics preprint measured spray geometry and droplet behavior at different inlet pressures. It is useful physical research, not proof of commercial crop performance. [Narasegowda and Kumar, 2022 preprint](https://arxiv.org/abs/2202.08773).
 
 As an engineering implication, record nozzle identity, pressure settings, pulse duration and observed delivery alongside plant responses. A label such as “irrigation increased” is too vague to reproduce an experiment. Root development and equipment changes should also be recorded because yesterday’s distribution may not describe today’s chamber.
+
+### Delivery happens at the roots
+
+![AI-generated concept illustration. A spray nozzle directs clear droplets toward suspended roots inside an air-filled chamber.](https://leafcoin.org/assets/images/article-nozzle-roots-detail.jpg)
+
+An educational close-up of spray reaching roots. The illustration does not specify a nozzle pressure, droplet size or universal irrigation interval.
+
+[AI image provenance](https://leafcoin.org/docs/generated-illustrations.md#article-nozzle-roots-detail)
 
 ## EC and pH answer different questions
 
@@ -49,6 +57,22 @@ One possible experiment would hold a baseline treatment and compare a bounded ch
 3. Compare a controlled change with the baseline, using repetition and comparable conditions.
 4. Train or evaluate a model on completed trials, with separate evaluation data.
 5. Review suggested adjustments with an operator and test them within defined limits.
+
+### Learn from repeated growing trials
+
+![Define a crop and baseline, observe consistent measurements, compare repeated controlled trials, evaluate a model using separate data, and have an operator review a bounded adjustment before testing again. This describes proposed Leafcoin research, not a deployed optimization system.](https://leafcoin.org/assets/diagrams/ml-calibration-loop.svg)
+
+A proposed research loop. Model suggestions would be reviewed and tested within defined bounds; protective control remains deterministic.
+
+Define a crop and baseline, observe consistent measurements, compare repeated controlled trials, evaluate a model using separate data, and have an operator review a bounded adjustment before testing again. This describes proposed Leafcoin research, not a deployed optimization system.
+
+- **Define a baseline**: Crop, outcomes and operating bounds.
+- **Observe consistently**: Measurements plus maintenance records.
+- **Compare trials**: Controlled changes across repeated cycles.
+- **Evaluate a model**: Separate evaluation data and a simple baseline.
+- **Operator review**: Bound the adjustment and test the next cycle.
+
+Repeat comparable trials. Protective control stays local and deterministic.
 
 ## Keep learning separate from protective control
 

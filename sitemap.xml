@@ -50,44 +50,62 @@
     <loc>https://leafcoin.org/articles/</loc>
     <lastmod>2026-10-13</lastmod>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-concept.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-aeroponics-cutaway.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-architecture.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-growing-methods.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-calibration.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-control-workbench.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-roadmap.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-future-nursery.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://leafcoin.org/articles/what-is-aeroponics.html</loc>
     <lastmod>2026-10-13</lastmod>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-concept.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-aeroponics-cutaway.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/diagrams/delivery-loop.svg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://leafcoin.org/articles/aeroponics-vs-hydroponics.html</loc>
     <lastmod>2026-10-13</lastmod>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-architecture.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-growing-methods.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/diagrams/root-zones.svg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://leafcoin.org/articles/aeroponic-system-control.html</loc>
     <lastmod>2026-10-13</lastmod>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-calibration.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-control-workbench.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/article-nozzle-roots-detail.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/diagrams/ml-calibration-loop.svg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://leafcoin.org/articles/future-of-aeroponics.html</loc>
     <lastmod>2026-10-13</lastmod>
     <image:image>
-      <image:loc>https://leafcoin.org/assets/images/section-roadmap.jpg</image:loc>
+      <image:loc>https://leafcoin.org/assets/images/article-future-nursery.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/images/article-seed-potato-propagation.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://leafcoin.org/assets/diagrams/future-decision-loop.svg</image:loc>
     </image:image>
   </url>
 </urlset>

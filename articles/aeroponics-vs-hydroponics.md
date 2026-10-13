@@ -12,6 +12,18 @@ A comparison against “hydroponics” is incomplete unless it names the alterna
 
 For a useful decision, compare an aeroponic design with the actual system you might otherwise operate. A well-managed DWC installation and a poorly maintained NFT channel are not interchangeable baselines. Nor should a greenhouse trial be compared with an indoor farm without accounting for their lighting and climate systems.
 
+### Three ways to supply the root zone
+
+![Aeroponics supplies suspended roots with spray. Nutrient film technique (NFT) brings a shallow flow through a channel. Deep water culture (DWC) places roots in an aerated solution. Crop performance still depends on the complete design and operation.](https://leafcoin.org/assets/diagrams/root-zones.svg)
+
+Compare the growing method, not just the name. These are simplified root-zone arrangements, not a ranking of crop performance.
+
+Aeroponics supplies suspended roots with spray. Nutrient film technique (NFT) brings a shallow flow through a channel. Deep water culture (DWC) places roots in an aerated solution. Crop performance still depends on the complete design and operation.
+
+- **Aeroponics**: Roots in air. Supplied by spray.
+- **NFT**: Roots touch a shallow flowing nutrient film.
+- **Deep water culture**: Roots in solution. Aeration supplies oxygen.
+
 ## Where aeroponics may have an advantage
 
 An air-filled chamber gives a designer direct access to the root environment. It can make roots easier to inspect and allows the water-delivery pattern to be studied separately from a large surrounding body of solution. These are useful design opportunities, particularly for root observation and some propagation tasks.

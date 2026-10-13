@@ -14,6 +14,14 @@ Seed potato minituber production is one documented application of aeroponics. Th
 
 A plausible expansion would begin with similarly specific jobs: observing roots, comparing treatments or producing a crop where the operating model makes sense. Those possibilities need testing for each crop and market.
 
+### A specific propagation application
+
+![AI-generated concept illustration. A concept cutaway of a small aeroponic potato propagation module with minitubers, suspended roots and a separate nutrient reservoir.](https://leafcoin.org/assets/images/article-seed-potato-propagation.jpg)
+
+Seed potato minituber propagation is one documented application. This concept illustration gives crop-specific context; it is not a report of Leafcoin production.
+
+[AI image provenance](https://leafcoin.org/docs/generated-illustrations.md#article-seed-potato-propagation)
+
 ## Water efficiency needs a whole-system boundary
 
 Aeroponics can offer useful control over where nutrient solution is delivered. A lettuce experiment comparing aeroponics and NFT found improved water-use efficiency for its selected aeroponic treatments. That outcome supports investigation of the technique, not an unconditional prediction for every future farm. [El-Demerdash et al., 2026](https://www.nature.com/articles/s41598-026-41347-z).
@@ -57,6 +65,21 @@ The following is a decision framework proposed by Leafcoin for evaluating future
 - Resource accounting: water, energy and materials measured across the crop cycle.
 - Economics: labor, replacement parts, losses and saleable output included in the assessment.
 - Evidence: documented methods, consistent observations and comparisons that others can inspect.
+
+### From a growing idea to a useful application
+
+![Check whether the crop and task suit the system, repeat growing cycles to examine reliability, account for water, energy, labor and losses, then review practical and economic feasibility. Revise and repeat when the evidence is insufficient.](https://leafcoin.org/assets/diagrams/future-decision-loop.svg)
+
+A conditional evaluation path. Measured outcomes and operating costs guide the next experiment; this is not a launch schedule.
+
+Check whether the crop and task suit the system, repeat growing cycles to examine reliability, account for water, energy, labor and losses, then review practical and economic feasibility. Revise and repeat when the evidence is insufficient.
+
+- **Check crop fit**: Choose the crop and production task.
+- **Repeat growing cycles**: Examine reliability and acceptable output.
+- **Account for inputs**: Water, energy, labor maintenance and losses.
+- **Review feasibility**: Evaluate practical fit and the economic case.
+
+Evidence guides the next decision. Revise and repeat when needed.
 
 ## A complementary future is still a meaningful one
 

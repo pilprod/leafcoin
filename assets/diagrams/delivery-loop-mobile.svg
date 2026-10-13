@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="843" viewBox="0 0 320 843" role="img" aria-labelledby="title description">
+<title id="title">Follow the nutrient-delivery loop</title><desc id="description">Nutrient solution leaves the reservoir, passes through a pump and filter, reaches nozzles and suspended roots, then drains back to the reservoir. The physical delivery path and return path both need attention.</desc>
+<style>
+:root { --bg:#f5faf7; --card:#e9f3ed; --ink:#12201a; --muted:#486054;
+  --line:#b8cfc0; --accent:#146442; --water:#298b97; --root:#8c744f; }
+@media (prefers-color-scheme:dark) { :root { --bg:#081411; --card:#10271d;
+  --ink:#effcf3; --muted:#bed2c6; --line:#315b43; --accent:#9deb8f;
+  --water:#75cbd0; --root:#dcc9a4; } }
+text { font-family:Arial,sans-serif; fill:var(--ink); }
+.label { font-size:21px; font-weight:600; }
+.body { font-size:17px; fill:var(--muted); }
+.small { font-size:16px; fill:var(--muted); }
+.card { fill:var(--card); stroke:var(--line); stroke-width:1.5; }
+.arrow { fill:none; stroke:var(--accent); stroke-width:2.5; }
+.return { stroke-dasharray:5 6; }
+.wire { fill:none; stroke:var(--muted); stroke-width:2.5; }
+.roots { fill:none; stroke:var(--root); stroke-width:2; }
+.water { fill:var(--water); fill-opacity:.14; stroke:var(--water); stroke-width:2; }
+.leaf { fill:var(--accent); }
+.label {font-size:22px} .body {font-size:20px} .small {font-size:19px}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="var(--accent)"/></marker></defs>
+<rect width="320" height="843" rx="16" fill="var(--bg)"/><rect class="card" x="24" y="20" width="272" height="145" rx="12"/><circle cx="52" cy="48" r="12" fill="var(--accent)"/><text x="52" y="53" text-anchor="middle" fill="var(--bg)" style="fill:var(--bg);font-size:14px;font-weight:700">1</text><text class="label" x="42" y="90">Nutrient reservoir</text><text class="body" x="42" y="127">Water and dissolved</text><text class="body" x="42" y="149">mineral nutrients</text><path class="arrow" marker-end="url(#arrow)" d="M160.0 173 V200"/><rect class="card" x="24" y="210" width="272" height="145" rx="12"/><circle cx="52" cy="238" r="12" fill="var(--accent)"/><text x="52" y="243" text-anchor="middle" fill="var(--bg)" style="fill:var(--bg);font-size:14px;font-weight:700">2</text><text class="label" x="42" y="280">Pump and filter</text><text class="body" x="42" y="317">Move solution through</text><text class="body" x="42" y="339">a maintained supply path</text><path class="arrow" marker-end="url(#arrow)" d="M160.0 363 V390"/><rect class="card" x="24" y="400" width="272" height="145" rx="12"/><circle cx="52" cy="428" r="12" fill="var(--accent)"/><text x="52" y="433" text-anchor="middle" fill="var(--bg)" style="fill:var(--bg);font-size:14px;font-weight:700">3</text><text class="label" x="42" y="470">Nozzles and roots</text><text class="body" x="42" y="507">Spray wets roots</text><text class="body" x="42" y="529">suspended in air</text><path class="arrow" marker-end="url(#arrow)" d="M160.0 553 V580"/><rect class="card" x="24" y="590" width="272" height="145" rx="12"/><circle cx="52" cy="618" r="12" fill="var(--accent)"/><text x="52" y="623" text-anchor="middle" fill="var(--bg)" style="fill:var(--bg);font-size:14px;font-weight:700">4</text><text class="label" x="42" y="660">Drain and return</text><text class="body" x="42" y="697">Unused solution returns</text><text class="body" x="42" y="719">to the reservoir</text><path class="arrow return" marker-end="url(#arrow)" d="M21 662.5 H10 V92.5 H20"/><text class="small" x="24" y="788">Recirculating example:</text><text class="small" x="24" y="811">delivery and drainage must</text><text class="small" x="24" y="834">both work.</text></svg>

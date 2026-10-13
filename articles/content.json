@@ -76,9 +76,9 @@
       "seo_title": "What Is Aeroponics? How It Works | Leafcoin",
       "description": "Learn how aeroponics feeds suspended roots with nutrient mist, what a system contains, and how it differs from hydroponics and vertical farming.",
       "category": "01 / Fundamentals",
-      "image": "section-concept.jpg",
-      "image_alt": "Concept illustration of plants supported above an aeroponic root chamber, with a reservoir, pump and sensors.",
-      "provenance": "concept",
+      "image": "article-aeroponics-cutaway.jpg",
+      "image_alt": "A tabletop aeroponic module with suspended roots, directed spray, a separate reservoir and a drain.",
+      "provenance": "article-aeroponics-cutaway",
       "summary": "Aeroponics is a soilless growing method in which roots hang in an air-filled chamber and receive water and dissolved nutrients through spray or mist. It changes how the root zone is supplied; it does not remove a plant’s need for light, nutrients, oxygen or careful management.",
       "sections": [
         {
@@ -103,6 +103,47 @@
             "Nutrient reservoir: contains the water and dissolved nutrients.",
             "Delivery and drainage: pumps, filters, nozzles, tubing and a return path where used.",
             "Measurement and control: observes conditions and coordinates equipment."
+          ],
+          "figures": [
+            {
+              "kind": "diagram",
+              "id": "delivery-loop",
+              "title": "Follow the nutrient-delivery loop",
+              "layout": "flow",
+              "caption": "A recirculating example. A control command is useful only if solution reaches the roots and can drain correctly.",
+              "description": "Nutrient solution leaves the reservoir, passes through a pump and filter, reaches nozzles and suspended roots, then drains back to the reservoir. The physical delivery path and return path both need attention.",
+              "footer": "Recirculating example: delivery and drainage must both work.",
+              "steps": [
+                {
+                  "title": "Nutrient reservoir",
+                  "lines": [
+                    "Water and dissolved",
+                    "mineral nutrients"
+                  ]
+                },
+                {
+                  "title": "Pump and filter",
+                  "lines": [
+                    "Move solution through",
+                    "a maintained supply path"
+                  ]
+                },
+                {
+                  "title": "Nozzles and roots",
+                  "lines": [
+                    "Spray wets roots",
+                    "suspended in air"
+                  ]
+                },
+                {
+                  "title": "Drain and return",
+                  "lines": [
+                    "Unused solution returns",
+                    "to the reservoir"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -170,9 +211,9 @@
       "seo_title": "Aeroponics vs Hydroponics: Benefits and Limits | Leafcoin",
       "description": "Compare aeroponics with NFT and deep water culture: root oxygen, water use, maintenance, failure tolerance and what crop experiments actually show.",
       "category": "02 / Comparison",
-      "image": "section-architecture.jpg",
-      "image_alt": "Concept illustration connecting cultivation measurements with off-chain data and proposed verifiable records.",
-      "provenance": "architecture",
+      "image": "article-growing-methods.jpg",
+      "image_alt": "Three comparable plant modules reveal aeroponic spray, an NFT channel and aerated deep water culture.",
+      "provenance": "article-growing-methods",
       "summary": "Aeroponics can provide direct access to an air-filled root zone, flexible spray delivery and convenient root inspection. Those opportunities come with dependence on reliable irrigation. It is not universally better than NFT or deep water culture; compare crop output and resource use under the same conditions.",
       "sections": [
         {
@@ -181,6 +222,42 @@
           "paragraphs": [
             "A comparison against “hydroponics” is incomplete unless it names the alternative. Nutrient film technique (NFT), deep water culture (DWC), drip-fed substrates and ebb-and-flow arrangements provide water and oxygen in different ways. Aeroponics is itself commonly classified within this broader soilless family.",
             "For a useful decision, compare an aeroponic design with the actual system you might otherwise operate. A well-managed DWC installation and a poorly maintained NFT channel are not interchangeable baselines. Nor should a greenhouse trial be compared with an indoor farm without accounting for their lighting and climate systems."
+          ],
+          "figures": [
+            {
+              "kind": "diagram",
+              "id": "root-zones",
+              "title": "Three ways to supply the root zone",
+              "layout": "root-zones",
+              "caption": "Compare the growing method, not just the name. These are simplified root-zone arrangements, not a ranking of crop performance.",
+              "description": "Aeroponics supplies suspended roots with spray. Nutrient film technique (NFT) brings a shallow flow through a channel. Deep water culture (DWC) places roots in an aerated solution. Crop performance still depends on the complete design and operation.",
+              "panels": [
+                {
+                  "title": "Aeroponics",
+                  "lines": [
+                    "Roots in air",
+                    "Supplied by spray"
+                  ],
+                  "text": "Roots in air. Supplied by spray"
+                },
+                {
+                  "title": "NFT",
+                  "lines": [
+                    "Roots touch a shallow",
+                    "flowing nutrient film"
+                  ],
+                  "text": "Roots touch a shallow flowing nutrient film"
+                },
+                {
+                  "title": "Deep water culture",
+                  "lines": [
+                    "Roots in solution",
+                    "Aeration supplies oxygen"
+                  ],
+                  "text": "Roots in solution. Aeration supplies oxygen"
+                }
+              ]
+            }
           ]
         },
         {
@@ -291,9 +368,9 @@
       "seo_title": "Aeroponic System Control: Sensors, Irrigation and ML | Leafcoin",
       "description": "Understand nozzle failures, irrigation timing, pH and EC, sensor drift and a proposed ML loop for improving nutrient and watering decisions across trials.",
       "category": "03 / Control & learning",
-      "image": "section-calibration.jpg",
-      "image_alt": "Concept illustration of repeated cultivation experiments, plant observations and proposed ML-assisted calibration.",
-      "provenance": "calibration",
+      "image": "article-control-workbench.jpg",
+      "image_alt": "A home aeroponics workbench with pump, filter, pressure gauge, solution probes and local controller.",
+      "provenance": "article-control-workbench",
       "summary": "An aeroponic system must coordinate physical nutrient delivery, root-zone conditions, solution chemistry and dependable sensing. The most useful control signal is evidence that the intended action happened. ML could help compare repeated growing trials, while basic irrigation and protective limits remain deterministic.",
       "sections": [
         {
@@ -312,6 +389,17 @@
             "A misting schedule cannot be evaluated independently of the spray apparatus. In controlled lettuce research, atomizer choice and spraying interval changed growth and nutrient uptake. [Tunio et al., 2021](https://www.mdpi.com/2073-4395/11/1/97).",
             "A separate fluid-dynamics preprint measured spray geometry and droplet behavior at different inlet pressures. It is useful physical research, not proof of commercial crop performance. [Narasegowda and Kumar, 2022 preprint](https://arxiv.org/abs/2202.08773).",
             "As an engineering implication, record nozzle identity, pressure settings, pulse duration and observed delivery alongside plant responses. A label such as “irrigation increased” is too vague to reproduce an experiment. Root development and equipment changes should also be recorded because yesterday’s distribution may not describe today’s chamber."
+          ],
+          "figures": [
+            {
+              "kind": "image",
+              "id": "nozzle-detail",
+              "image": "article-nozzle-roots-detail.jpg",
+              "title": "Delivery happens at the roots",
+              "alt": "A spray nozzle directs clear droplets toward suspended roots inside an air-filled chamber.",
+              "caption": "An educational close-up of spray reaching roots. The illustration does not specify a nozzle pressure, droplet size or universal irrigation interval.",
+              "provenance": "article-nozzle-roots-detail"
+            }
           ]
         },
         {
@@ -345,6 +433,54 @@
             "Compare a controlled change with the baseline, using repetition and comparable conditions.",
             "Train or evaluate a model on completed trials, with separate evaluation data.",
             "Review suggested adjustments with an operator and test them within defined limits."
+          ],
+          "figures": [
+            {
+              "kind": "diagram",
+              "id": "ml-calibration-loop",
+              "title": "Learn from repeated growing trials",
+              "layout": "flow",
+              "caption": "A proposed research loop. Model suggestions would be reviewed and tested within defined bounds; protective control remains deterministic.",
+              "description": "Define a crop and baseline, observe consistent measurements, compare repeated controlled trials, evaluate a model using separate data, and have an operator review a bounded adjustment before testing again. This describes proposed Leafcoin research, not a deployed optimization system.",
+              "footer": "Repeat comparable trials. Protective control stays local and deterministic.",
+              "steps": [
+                {
+                  "title": "Define a baseline",
+                  "lines": [
+                    "Crop, outcomes and",
+                    "operating bounds"
+                  ]
+                },
+                {
+                  "title": "Observe consistently",
+                  "lines": [
+                    "Measurements plus",
+                    "maintenance records"
+                  ]
+                },
+                {
+                  "title": "Compare trials",
+                  "lines": [
+                    "Controlled changes",
+                    "across repeated cycles"
+                  ]
+                },
+                {
+                  "title": "Evaluate a model",
+                  "lines": [
+                    "Separate evaluation data",
+                    "and a simple baseline"
+                  ]
+                },
+                {
+                  "title": "Operator review",
+                  "lines": [
+                    "Bound the adjustment",
+                    "and test the next cycle"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -390,9 +526,9 @@
       "seo_title": "The Future of Aeroponics: Opportunities and Limits | Leafcoin",
       "description": "Explore aeroponics in propagation, controlled growing and data-driven agriculture, with realistic limits around energy, maintenance, economics and scale.",
       "category": "04 / Future agriculture",
-      "image": "section-roadmap.jpg",
-      "image_alt": "Concept illustration of a proposed progression from a compact growing lab to connected cultivation modules.",
-      "provenance": "roadmap",
+      "image": "article-future-nursery.jpg",
+      "image_alt": "A modest growing research space with propagation trays, accessible cultivation modules and simple monitoring.",
+      "provenance": "article-future-nursery",
       "summary": "Aeroponics could contribute to specialized crop production, propagation and better-observed growing experiments. Its impact will depend on crop suitability, reliable operation, water and energy accounting, economics and reproducible evidence. It is more credible as a complementary tool than as a guaranteed replacement for agriculture as a whole.",
       "sections": [
         {
@@ -402,6 +538,17 @@
             "The useful future question is not whether plants can grow without soil. It is where a particular growing method solves a real production problem. A propagation nursery, a greenhouse producing fresh leaves and an indoor research cabinet have different goals and constraints.",
             "Seed potato minituber production is one documented application of aeroponics. The International Potato Center’s technical manual discusses its use within a seed-production system. That is a concrete agricultural role, rather than a prediction that all potato or staple-food production will move into mist chambers. [CIP’s manual](https://cipotato.org/wp-content/uploads/2014/08/005447.pdf).",
             "A plausible expansion would begin with similarly specific jobs: observing roots, comparing treatments or producing a crop where the operating model makes sense. Those possibilities need testing for each crop and market."
+          ],
+          "figures": [
+            {
+              "kind": "image",
+              "id": "potato-propagation",
+              "image": "article-seed-potato-propagation.jpg",
+              "title": "A specific propagation application",
+              "alt": "A concept cutaway of a small aeroponic potato propagation module with minitubers, suspended roots and a separate nutrient reservoir.",
+              "caption": "Seed potato minituber propagation is one documented application. This concept illustration gives crop-specific context; it is not a report of Leafcoin production.",
+              "provenance": "article-seed-potato-propagation"
+            }
           ]
         },
         {
@@ -453,6 +600,47 @@
             "Resource accounting: water, energy and materials measured across the crop cycle.",
             "Economics: labor, replacement parts, losses and saleable output included in the assessment.",
             "Evidence: documented methods, consistent observations and comparisons that others can inspect."
+          ],
+          "figures": [
+            {
+              "kind": "diagram",
+              "id": "future-decision-loop",
+              "title": "From a growing idea to a useful application",
+              "layout": "flow",
+              "caption": "A conditional evaluation path. Measured outcomes and operating costs guide the next experiment; this is not a launch schedule.",
+              "description": "Check whether the crop and task suit the system, repeat growing cycles to examine reliability, account for water, energy, labor and losses, then review practical and economic feasibility. Revise and repeat when the evidence is insufficient.",
+              "footer": "Evidence guides the next decision. Revise and repeat when needed.",
+              "steps": [
+                {
+                  "title": "Check crop fit",
+                  "lines": [
+                    "Choose the crop",
+                    "and production task"
+                  ]
+                },
+                {
+                  "title": "Repeat growing cycles",
+                  "lines": [
+                    "Examine reliability",
+                    "and acceptable output"
+                  ]
+                },
+                {
+                  "title": "Account for inputs",
+                  "lines": [
+                    "Water, energy, labor",
+                    "maintenance and losses"
+                  ]
+                },
+                {
+                  "title": "Review feasibility",
+                  "lines": [
+                    "Evaluate practical fit",
+                    "and the economic case"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {

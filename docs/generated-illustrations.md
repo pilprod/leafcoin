@@ -1,6 +1,6 @@
 # Generated Leafcoin illustrations
 
-These images are AI-generated concept illustrations. They visualize proposed research and architecture; they are not photographs of an implementation or evidence of results. Generated with the built-in image_gen tool on 2026-09-30. The original PNGs are retained locally under work/generated-images; JPEG exports are used by the website for delivery.
+These images are AI-generated concept illustrations. They visualize proposed research and architecture; they are not photographs of an implementation or evidence of results. The initial set was generated with the built-in image_gen tool on 2026-09-30; the article additions below were generated on 2026-10-13. Original PNGs are retained locally under work/generated-images; optimized JPEG exports are used by the website.
 
 <a id="hero"></a>
 
@@ -61,3 +61,47 @@ Final prompt:
 ```text
 Use case: stylized-concept. Asset type: one illustration for the Leafcoin agrotech concept website. Landscape 3:2 composition. A cohesive premium high-tech + agrotech visual language: realistic miniature crops and finely detailed brushed-metal hardware, translucent green glass and subtle lime-green illuminated data traces, deep forest-green studio background, soft cinematic light, elegant restrained editorial 3D rendering, a slight elevated three-quarter camera angle. Agricultural subject must lead, technology supports it. No text, labels, letters, logos, coin symbols, currencies, padlocks, humans or watermarks. Avoid excessive neon, fantasy robots, exaggerated yields and clutter. This is a conceptual illustration, not evidence of an existing deployment. Primary scene: a gently rising modular research pathway connecting four small physical stations: a monitored crop tray, a sensing and data module, a carefully organized analytic evaluation module, and a group of additional small crop trays. Distinct stages connected by a restrained illuminated line across an elegant dark-green platform. Communicate a proposed gradual research progression and validation, not a completed launch. All stages have equal subtle visual weight, no dates, medals, flags or financial symbols.
 ```
+
+## Article illustrations, 2026-10-13
+
+Six original images generated with the built-in image_gen tool. The exact final prompt set is preserved in [article-image-prompts.json](article-image-prompts.json). Originals are retained locally in `work/generated-images/articles-20261013`; the original tool outputs are also preserved in the Codex generated-images directory. The images use a consistent forest-green, charcoal, natural foliage and warm daylight palette. Cutaways explain concepts rather than prescribing equipment dimensions or operating recipes.
+
+<a id="article-aeroponics-cutaway"></a>
+
+### Aeroponics cutaway
+
+[Website image](../assets/images/article-aeroponics-cutaway.jpg). A small tabletop module with roots suspended in air, spray delivery, drainage and a separate reservoir. Used for the fundamentals article.
+
+<a id="article-growing-methods"></a>
+
+### Growing methods
+
+[Website image](../assets/images/article-growing-methods.jpg). Three similarly sized plants shown in aeroponic, NFT and DWC arrangements. Similar plant size avoids implying that one method guarantees better crop performance. The companion schematic provides simplified labelled root zones.
+
+<a id="article-control-workbench"></a>
+
+### Control workbench
+
+[Website image](../assets/images/article-control-workbench.jpg). Irrigation hardware, pressure gauge, nutrient-solution probes and local control in a modest home research setup. Depicted instruments do not establish measured results or implementation status.
+
+<a id="article-future-nursery"></a>
+
+### Future nursery
+
+[Website image](../assets/images/article-future-nursery.jpg). A plausible small growing and propagation research space. It illustrates a possible setting, not a Leafcoin facility, deployment or partner.
+
+<a id="article-nozzle-roots-detail"></a>
+
+### Nozzle and roots detail
+
+[Website image](../assets/images/article-nozzle-roots-detail.jpg). A close view of irrigation delivery to suspended roots. No numerical nozzle pressure, droplet size, spraying interval or validated coverage is represented.
+
+<a id="article-seed-potato-propagation"></a>
+
+### Seed potato propagation
+
+[Website image](../assets/images/article-seed-potato-propagation.jpg). A crop-specific conceptual cutaway related to the seed potato propagation application discussed in the article and its cited International Potato Center manual. The illustration is not an anatomical reference or a record of Leafcoin yields.
+
+## Educational diagrams
+
+The four diagrams are deterministic SVG schematics, generated from reviewed figure metadata in [articles/content.json](../articles/content.json) using [scripts/article_diagrams.py](../scripts/article_diagrams.py). Each has a wide and a vertical mobile layout, accessible title and description, system-theme colors, and an equivalent visible/text description. They explain the existing article content and do not assert a deployed controller, proven ML result or dated commercial roadmap.

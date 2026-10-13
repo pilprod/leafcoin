@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="352" viewBox="0 0 800 352" role="img" aria-labelledby="title description">
+<title id="title">Three ways to supply the root zone</title><desc id="description">Aeroponics supplies suspended roots with spray. Nutrient film technique (NFT) brings a shallow flow through a channel. Deep water culture (DWC) places roots in an aerated solution. Crop performance still depends on the complete design and operation.</desc>
+<style>
+:root { --bg:#f5faf7; --card:#e9f3ed; --ink:#12201a; --muted:#486054;
+  --line:#b8cfc0; --accent:#146442; --water:#298b97; --root:#8c744f; }
+@media (prefers-color-scheme:dark) { :root { --bg:#081411; --card:#10271d;
+  --ink:#effcf3; --muted:#bed2c6; --line:#315b43; --accent:#9deb8f;
+  --water:#75cbd0; --root:#dcc9a4; } }
+text { font-family:Arial,sans-serif; fill:var(--ink); }
+.label { font-size:21px; font-weight:600; }
+.body { font-size:17px; fill:var(--muted); }
+.small { font-size:16px; fill:var(--muted); }
+.card { fill:var(--card); stroke:var(--line); stroke-width:1.5; }
+.arrow { fill:none; stroke:var(--accent); stroke-width:2.5; }
+.return { stroke-dasharray:5 6; }
+.wire { fill:none; stroke:var(--muted); stroke-width:2.5; }
+.roots { fill:none; stroke:var(--root); stroke-width:2; }
+.water { fill:var(--water); fill-opacity:.14; stroke:var(--water); stroke-width:2; }
+.leaf { fill:var(--accent); }
+</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="var(--accent)"/></marker></defs>
+<rect width="800" height="352" rx="16" fill="var(--bg)"/><rect class="card" x="20" y="16" width="240" height="316" rx="12"/><text class="label" x="38" y="51">Aeroponics</text><rect class="card" x="48" y="142" width="184" height="107" rx="5"/><g transform="translate(140.0 142)"><path class="wire" d="M0 0 V-36"/>
+<path class="leaf" d="M0-12 C-32-6-43-29-35-42 C-12-46 2-28 0-12 Z M0-22 C30-19 43-42 32-51 C10-50-1-38 0-22 Z"/>
+<path class="wire" d="M-18 0 H18 L12 14 H-12 Z"/></g><g transform="translate(140.0 156)"><path class="roots" d="M-7 0 C-20 25-3 44-28 69 M0 0 C12 28-8 45 5 69 M8 0 C31 32 11 53 32 69
+M-12 25 L-32 42 M-14 45 L-38 61 M3 26 L22 43 M0 49 L-16 66 M18 37 L39 52 M23 61 L43 76"/></g><path class="wire" d="M49 180 h18"/><path class="arrow" stroke-dasharray="2 7" d="M68 180 l42-17 M68 180 l42 12 M68 180 l42 35"/><text class="body" x="38" y="285">Roots in air</text><text class="body" x="38" y="308">Supplied by spray</text><rect class="card" x="280" y="16" width="240" height="316" rx="12"/><text class="label" x="298" y="51">NFT</text><rect class="card" x="308" y="142" width="184" height="107" rx="5"/><g transform="translate(400.0 142)"><path class="wire" d="M0 0 V-36"/>
+<path class="leaf" d="M0-12 C-32-6-43-29-35-42 C-12-46 2-28 0-12 Z M0-22 C30-19 43-42 32-51 C10-50-1-38 0-22 Z"/>
+<path class="wire" d="M-18 0 H18 L12 14 H-12 Z"/></g><g transform="translate(400.0 156)"><path class="roots" d="M-7 0 C-20 25-3 44-28 54 M0 0 C12 28-8 45 5 54 M8 0 C31 32 11 53 32 54
+M-12 25 L-32 42 M-14 45 L-38 61 M3 26 L22 43 M0 49 L-16 66 M18 37 L39 52 M23 61 L43 76"/></g><path class="wire" d="M311 210 L489 223"/><path class="water" d="M311 206 L489 219 v4 L311 210 Z"/><path class="arrow" marker-end="url(#arrow)" d="M324 233 h139"/><text class="body" x="298" y="285">Roots touch a shallow</text><text class="body" x="298" y="308">flowing nutrient film</text><rect class="card" x="540" y="16" width="240" height="316" rx="12"/><text class="label" x="558" y="51">Deep water culture</text><rect class="card" x="568" y="142" width="184" height="107" rx="5"/><g transform="translate(660.0 142)"><path class="wire" d="M0 0 V-36"/>
+<path class="leaf" d="M0-12 C-32-6-43-29-35-42 C-12-46 2-28 0-12 Z M0-22 C30-19 43-42 32-51 C10-50-1-38 0-22 Z"/>
+<path class="wire" d="M-18 0 H18 L12 14 H-12 Z"/></g><path class="water" d="M570 168 h180 v79 H570 Z"/><g transform="translate(660.0 156)"><path class="roots" d="M-7 0 C-20 25-3 44-28 67 M0 0 C12 28-8 45 5 67 M8 0 C31 32 11 53 32 67
+M-12 25 L-32 42 M-14 45 L-38 61 M3 26 L22 43 M0 49 L-16 66 M18 37 L39 52 M23 61 L43 76"/></g><rect class="card" x="645.0" y="232" width="30" height="10" rx="4"/><circle cx="660.0" cy="221" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><circle cx="650.0" cy="209" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><circle cx="669.0" cy="199" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><circle cx="663.0" cy="182" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><text class="body" x="558" y="285">Roots in solution</text><text class="body" x="558" y="308">Aeration supplies oxygen</text></svg>

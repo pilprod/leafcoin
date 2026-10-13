@@ -342,6 +342,30 @@ def check_article_resources(site):
             texts.extend([section["title"], *section["paragraphs"], *section.get("bullets", []), *section.get("ordered", [])])
             if "table" in section:
                 texts.extend(cell for row in section["table"]["rows"] for cell in row)
+            for figure in section.get("figures", []):
+                texts.extend([figure["title"],figure["caption"]])
+                require("fig-"+figure["id"] in page.ids, path+": figure anchor missing")
+                if figure["kind"]=="diagram":
+                    texts.append(figure["description"])
+                    labels=[]
+                    for item in figure.get("steps",figure.get("panels",[])):
+                        labels.extend([item["title"],*item["lines"]])
+                    if figure.get("footer"):
+                        labels.append(figure["footer"])
+                    texts.extend(labels)
+                    for suffix in ("", "-mobile"):
+                        svg_path="assets/diagrams/"+figure["id"]+suffix+".svg"
+                        svg=ET.fromstring(site.resource(svg_path))
+                        require(svg.tag=="{http://www.w3.org/2000/svg}svg" and svg.get("viewBox"),svg_path+": invalid SVG")
+                        require(svg.findtext("{http://www.w3.org/2000/svg}title")==figure["title"],svg_path+": missing accessible title")
+                        require(svg.findtext("{http://www.w3.org/2000/svg}desc")==figure["description"],svg_path+": missing accessible description")
+                        svg_text=normalize_text(" ".join("".join(node.itertext()) for node in svg.findall(".//{http://www.w3.org/2000/svg}text")))
+                        for label in labels:
+                            require(normalize_text(label) in svg_text,svg_path+": missing diagram label: "+label)
+                    image_url=site.canonical+"assets/diagrams/"+figure["id"]+".svg"
+                else:
+                    image_url=site.canonical+"assets/images/"+figure["image"]
+                require(any(image.get("contentUrl")==image_url for image in structured.get("image",[])),path+": figure missing from Article image metadata")
         for question in article["questions"]:
             texts.extend([question["question"], question["answer"]])
         html_source = site.resource(path).decode("utf-8")

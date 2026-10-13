@@ -54,6 +54,25 @@
 .article-sources a { overflow-wrap: anywhere; }
 .article-related { padding-top: 30px; border-top: 1px solid var(--line); }
 .article-related > a { display: inline-block; margin-top: 26px; font-size: 15px; }
+.article-inline-image, .article-diagram { margin: 34px 0 28px; }
+.article-inline-image img { width: 100%; height: auto; border-radius: 12px; }
+.article-inline-image figcaption, .article-diagram figcaption { font-size: 14px; line-height: 1.7; color: var(--muted); }
+.article-inline-image figcaption { padding-top: 16px; }
+.article-inline-image figcaption strong { color: var(--ink); font-weight: 500; }
+.article-inline-image figcaption p, .article-diagram figcaption p { margin-top: 10px; }
+.article-inline-image figcaption a { display: inline-block; margin-top: 10px; font-size: 12px; }
+.article-diagram { border: 1px solid var(--line); border-radius: 14px; padding: 22px; background: var(--surface); }
+.article-diagram > .eyebrow { margin: 0 0 12px; }
+.article-diagram h3 { line-height: 1.3; font-size: 24px; margin-bottom: 22px; }
+.article-diagram picture { display: block; }
+.article-diagram img { display: block; width: 100%; height: auto; aspect-ratio: var(--diagram-ratio); border-radius: 12px; }
+.article-diagram figcaption { padding-top: 12px; }
+.diagram-description { margin-top: 18px; border-top: 1px solid var(--line); }
+.diagram-description summary { padding: 12px 0; color: var(--accent); cursor: pointer; }
+.diagram-description summary:focus-visible, .diagram-download:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.diagram-description ol { font-size: 14px; }
+.diagram-description strong { color: var(--ink); font-weight: 500; }
+.diagram-download { display: inline-flex; align-items: center; min-height: 44px; margin-top: 10px; font-size: 13px; }
 .home-guides { padding-bottom: 72px; }
 .home-guide-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 36px; }
 .home-guide-list article { border-top: 1px solid var(--line); padding-top: 22px; }
@@ -86,6 +105,9 @@
   .article-prose { font-size: 17px; }
   .article-prose h2 { font-size: 28px; }
   .article-prose section { margin-bottom: 38px; }
+  .article-diagram { padding: 14px; border-radius: 12px; }
+  .article-diagram h3 { font-size: 22px; }
+  .article-diagram img { aspect-ratio: var(--diagram-mobile-ratio); }
   .article-prose .comparison-hint { display: block; color: var(--muted); font-size: 13px; }
   .comparison-hint + .comparison-scroll { margin-top: 14px; }
   .home-guides { padding-bottom: 38px; }
@@ -99,6 +121,8 @@
   .article-prose h2 { font-size: 18pt; }
   .article-prose h3 { font-size: 14pt; }
   .article-cover { max-width: 150mm; }
+  .article-diagram { break-inside: avoid; }
+  .article-diagram img { aspect-ratio: var(--diagram-ratio); }
   .comparison-scroll { overflow: visible; }
   .comparison-scroll table { min-width: 0; }
 }

@@ -30,6 +30,21 @@ The system therefore has two jobs: keep the plant supplied and keep the growing 
 - Delivery and drainage: pumps, filters, nozzles, tubing and a return path where used.
 - Measurement and control: observes conditions and coordinates equipment.
 
+### Follow the nutrient-delivery loop
+
+![Nutrient solution leaves the reservoir, passes through a pump and filter, reaches nozzles and suspended roots, then drains back to the reservoir. The physical delivery path and return path both need attention.](https://leafcoin.org/assets/diagrams/delivery-loop.svg)
+
+A recirculating example. A control command is useful only if solution reaches the roots and can drain correctly.
+
+Nutrient solution leaves the reservoir, passes through a pump and filter, reaches nozzles and suspended roots, then drains back to the reservoir. The physical delivery path and return path both need attention.
+
+- **Nutrient reservoir**: Water and dissolved mineral nutrients.
+- **Pump and filter**: Move solution through a maintained supply path.
+- **Nozzles and roots**: Spray wets roots suspended in air.
+- **Drain and return**: Unused solution returns to the reservoir.
+
+Recirculating example: delivery and drainage must both work.
+
 ## Not every aeroponic system produces the same mist
 
 The word aeroponics covers several delivery arrangements. Mechanical nozzles may operate at different pressures; other designs use ultrasonic atomization. A label such as high-pressure aeroponics describes an engineering choice, not a complete growing recipe.
@@ -98,6 +113,18 @@ Aeroponics can provide direct access to an air-filled root zone, flexible spray 
 A comparison against “hydroponics” is incomplete unless it names the alternative. Nutrient film technique (NFT), deep water culture (DWC), drip-fed substrates and ebb-and-flow arrangements provide water and oxygen in different ways. Aeroponics is itself commonly classified within this broader soilless family.
 
 For a useful decision, compare an aeroponic design with the actual system you might otherwise operate. A well-managed DWC installation and a poorly maintained NFT channel are not interchangeable baselines. Nor should a greenhouse trial be compared with an indoor farm without accounting for their lighting and climate systems.
+
+### Three ways to supply the root zone
+
+![Aeroponics supplies suspended roots with spray. Nutrient film technique (NFT) brings a shallow flow through a channel. Deep water culture (DWC) places roots in an aerated solution. Crop performance still depends on the complete design and operation.](https://leafcoin.org/assets/diagrams/root-zones.svg)
+
+Compare the growing method, not just the name. These are simplified root-zone arrangements, not a ranking of crop performance.
+
+Aeroponics supplies suspended roots with spray. Nutrient film technique (NFT) brings a shallow flow through a channel. Deep water culture (DWC) places roots in an aerated solution. Crop performance still depends on the complete design and operation.
+
+- **Aeroponics**: Roots in air. Supplied by spray.
+- **NFT**: Roots touch a shallow flowing nutrient film.
+- **Deep water culture**: Roots in solution. Aeration supplies oxygen.
 
 ## Where aeroponics may have an advantage
 
@@ -172,7 +199,7 @@ Original research publications or institutional technical guidance. Experimental
 
 Canonical article: https://leafcoin.org/articles/aeroponic-system-control.html
 
-By Ilya Papou · Published 2026-10-13 · 5 min read
+By Ilya Papou · Published 2026-10-13 · 6 min read
 
 An aeroponic system must coordinate physical nutrient delivery, root-zone conditions, solution chemistry and dependable sensing. The most useful control signal is evidence that the intended action happened. ML could help compare repeated growing trials, while basic irrigation and protective limits remain deterministic.
 
@@ -191,6 +218,14 @@ A misting schedule cannot be evaluated independently of the spray apparatus. In 
 A separate fluid-dynamics preprint measured spray geometry and droplet behavior at different inlet pressures. It is useful physical research, not proof of commercial crop performance. [Narasegowda and Kumar, 2022 preprint](https://arxiv.org/abs/2202.08773).
 
 As an engineering implication, record nozzle identity, pressure settings, pulse duration and observed delivery alongside plant responses. A label such as “irrigation increased” is too vague to reproduce an experiment. Root development and equipment changes should also be recorded because yesterday’s distribution may not describe today’s chamber.
+
+### Delivery happens at the roots
+
+![AI-generated concept illustration. A spray nozzle directs clear droplets toward suspended roots inside an air-filled chamber.](https://leafcoin.org/assets/images/article-nozzle-roots-detail.jpg)
+
+An educational close-up of spray reaching roots. The illustration does not specify a nozzle pressure, droplet size or universal irrigation interval.
+
+[AI image provenance](https://leafcoin.org/docs/generated-illustrations.md#article-nozzle-roots-detail)
 
 ## EC and pH answer different questions
 
@@ -219,6 +254,22 @@ One possible experiment would hold a baseline treatment and compare a bounded ch
 3. Compare a controlled change with the baseline, using repetition and comparable conditions.
 4. Train or evaluate a model on completed trials, with separate evaluation data.
 5. Review suggested adjustments with an operator and test them within defined limits.
+
+### Learn from repeated growing trials
+
+![Define a crop and baseline, observe consistent measurements, compare repeated controlled trials, evaluate a model using separate data, and have an operator review a bounded adjustment before testing again. This describes proposed Leafcoin research, not a deployed optimization system.](https://leafcoin.org/assets/diagrams/ml-calibration-loop.svg)
+
+A proposed research loop. Model suggestions would be reviewed and tested within defined bounds; protective control remains deterministic.
+
+Define a crop and baseline, observe consistent measurements, compare repeated controlled trials, evaluate a model using separate data, and have an operator review a bounded adjustment before testing again. This describes proposed Leafcoin research, not a deployed optimization system.
+
+- **Define a baseline**: Crop, outcomes and operating bounds.
+- **Observe consistently**: Measurements plus maintenance records.
+- **Compare trials**: Controlled changes across repeated cycles.
+- **Evaluate a model**: Separate evaluation data and a simple baseline.
+- **Operator review**: Bound the adjustment and test the next cycle.
+
+Repeat comparable trials. Protective control stays local and deterministic.
 
 ## Keep learning separate from protective control
 
@@ -275,6 +326,14 @@ Seed potato minituber production is one documented application of aeroponics. Th
 
 A plausible expansion would begin with similarly specific jobs: observing roots, comparing treatments or producing a crop where the operating model makes sense. Those possibilities need testing for each crop and market.
 
+### A specific propagation application
+
+![AI-generated concept illustration. A concept cutaway of a small aeroponic potato propagation module with minitubers, suspended roots and a separate nutrient reservoir.](https://leafcoin.org/assets/images/article-seed-potato-propagation.jpg)
+
+Seed potato minituber propagation is one documented application. This concept illustration gives crop-specific context; it is not a report of Leafcoin production.
+
+[AI image provenance](https://leafcoin.org/docs/generated-illustrations.md#article-seed-potato-propagation)
+
 ## Water efficiency needs a whole-system boundary
 
 Aeroponics can offer useful control over where nutrient solution is delivered. A lettuce experiment comparing aeroponics and NFT found improved water-use efficiency for its selected aeroponic treatments. That outcome supports investigation of the technique, not an unconditional prediction for every future farm. [El-Demerdash et al., 2026](https://www.nature.com/articles/s41598-026-41347-z).
@@ -318,6 +377,21 @@ The following is a decision framework proposed by Leafcoin for evaluating future
 - Resource accounting: water, energy and materials measured across the crop cycle.
 - Economics: labor, replacement parts, losses and saleable output included in the assessment.
 - Evidence: documented methods, consistent observations and comparisons that others can inspect.
+
+### From a growing idea to a useful application
+
+![Check whether the crop and task suit the system, repeat growing cycles to examine reliability, account for water, energy, labor and losses, then review practical and economic feasibility. Revise and repeat when the evidence is insufficient.](https://leafcoin.org/assets/diagrams/future-decision-loop.svg)
+
+A conditional evaluation path. Measured outcomes and operating costs guide the next experiment; this is not a launch schedule.
+
+Check whether the crop and task suit the system, repeat growing cycles to examine reliability, account for water, energy, labor and losses, then review practical and economic feasibility. Revise and repeat when the evidence is insufficient.
+
+- **Check crop fit**: Choose the crop and production task.
+- **Repeat growing cycles**: Examine reliability and acceptable output.
+- **Account for inputs**: Water, energy, labor maintenance and losses.
+- **Review feasibility**: Evaluate practical fit and the economic case.
+
+Evidence guides the next decision. Revise and repeat when needed.
 
 ## A complementary future is still a meaningful one
 

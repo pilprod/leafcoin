@@ -26,6 +26,21 @@ The system therefore has two jobs: keep the plant supplied and keep the growing 
 - Delivery and drainage: pumps, filters, nozzles, tubing and a return path where used.
 - Measurement and control: observes conditions and coordinates equipment.
 
+### Follow the nutrient-delivery loop
+
+![Nutrient solution leaves the reservoir, passes through a pump and filter, reaches nozzles and suspended roots, then drains back to the reservoir. The physical delivery path and return path both need attention.](https://leafcoin.org/assets/diagrams/delivery-loop.svg)
+
+A recirculating example. A control command is useful only if solution reaches the roots and can drain correctly.
+
+Nutrient solution leaves the reservoir, passes through a pump and filter, reaches nozzles and suspended roots, then drains back to the reservoir. The physical delivery path and return path both need attention.
+
+- **Nutrient reservoir**: Water and dissolved mineral nutrients.
+- **Pump and filter**: Move solution through a maintained supply path.
+- **Nozzles and roots**: Spray wets roots suspended in air.
+- **Drain and return**: Unused solution returns to the reservoir.
+
+Recirculating example: delivery and drainage must both work.
+
 ## Not every aeroponic system produces the same mist
 
 The word aeroponics covers several delivery arrangements. Mechanical nozzles may operate at different pressures; other designs use ultrasonic atomization. A label such as high-pressure aeroponics describes an engineering choice, not a complete growing recipe.
