@@ -138,13 +138,13 @@ def render(node):
             result = ''
             for index, item in enumerate(items, 1):
                 heading = descendants(item, 'h3')[0]
-                result += f'#### {index:02d} — {inline(heading)}\n\n'
+                result += f'#### {index:02d}: {inline(heading)}\n\n'
                 result += ''.join(render(p) for p in descendants(item, 'p'))
             return result
         if 'data-flow' in classes(node):
             result = ''
             for index, item in enumerate(items, 1):
-                result += f'{index}. {inline(descendants(item, "strong")[0])} — {inline(descendants(item, "small")[0])}\n'
+                result += f'{index}. {inline(descendants(item, "strong")[0])}: {inline(descendants(item, "small")[0])}\n'
             return result + '\n'
         result = ''
         for index, item in enumerate(items, 1):

@@ -1,4 +1,4 @@
-# Leafcoin — A concept for verifiable agriculture
+# Leafcoin: Real crops. Verifiable data.
 
 Canonical presentation: [Leafcoin](https://leafcoin.org/).
 
@@ -8,9 +8,9 @@ Agrotech / Personal R&D
 
 ## Real crops. Verifiable data.
 
-Leafcoin is a personal agrotech R&D concept by Ilya Papou, exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records.
+From roots to records. Explore Leafcoin, Ilya Papou's agrotech R&D concept combining aeroponics, IoT, ML calibration and verifiable crop records.
 
-An exploration of how production data could support a more transparent agricultural ecosystem.
+Starting with a home aeroponics lab, the research explores how growing data could guide irrigation, nutrient calibration and traceable crop records.
 
 [Explore the architecture](https://leafcoin.org/#architecture)
 
@@ -69,11 +69,11 @@ The proposed architecture separates data collection, off-chain storage and ledge
 
 [AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#architecture) A proposed path from measurements to verifiable records.
 
-1. **Measure** — Farm sensors
-2. **Validate** — Quality checks
-3. **Store** — Off-chain data
-4. **Verify** — Report hashes
-5. **Use** — ML & passports
+1. **Measure**: Farm sensors
+2. **Validate**: Quality checks
+3. **Store**: Off-chain data
+4. **Verify**: Report hashes
+5. **Use**: ML & passports
 
 #### Collection & data quality · IoT
 
@@ -137,25 +137,25 @@ A proposed research sequence. Each stage would require validation; no completion
 
 [AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#roadmap) A proposed research sequence, with validation at each stage.
 
-#### 01 — Telemetry MVP
+#### 01: Telemetry MVP
 
 Connect a pilot farm, validate readings and build monitoring views. Test report fingerprints and a basic batch passport.
 
 Validate: sensor coverage, data quality and record verification.
 
-#### 02 — Operator-reviewed ML
+#### 02: Operator-reviewed ML
 
 Evaluate forecasts and recommendations against recorded crop outcomes. Keep operators in control of cultivation changes.
 
 Validate: model quality, reproducibility and operator review.
 
-#### 03 — Regulated integrations
+#### 03: Regulated integrations
 
 Research asset-linked services and partner requirements. Define legal responsibilities and user rights before building financial flows.
 
 Validate: feasibility, partner scope and the regulatory path.
 
-#### 04 — Additional farms & crops
+#### 04: Additional farms & crops
 
 Extend the system only after the pilot is useful and repeatable. Adapt monitoring and models to new sites and crops.
 

@@ -129,7 +129,7 @@ test("allow sends one sanitized pageview, denies all advertising, and loads once
   assert.equal(config.send_page_view, false);
   assert.equal(config.page_location, "https://leafcoin.org/");
   assert.equal(config.page_referrer, "https://example.org/");
-  assert.equal(config.page_title, "Leafcoin — A concept for verifiable agriculture");
+  assert.equal(config.page_title, "Leafcoin: Real crops. Verifiable data.");
   assert.equal("user_id" in config, false);
   assert.equal("user_properties" in config, false);
   assert.equal(commands.filter(([type]) => type === "event").length, 1);

@@ -162,7 +162,7 @@
       cookie_flags: "SameSite=Lax;Secure",
       page_location: pageLocation,
       page_referrer: safeReferrer(),
-      page_title: "Leafcoin — A concept for verifiable agriculture"
+      page_title: "Leafcoin: Real crops. Verifiable data."
     });
     window.gtag("event", "page_view", { send_to: measurementId });
     if (!scriptAdded) {

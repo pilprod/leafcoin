@@ -1,6 +1,6 @@
 # Leafcoin
 
-> Leafcoin is a personal agrotech R&D concept by Ilya Papou, exploring aeroponics, IoT telemetry, ML-assisted calibration and verifiable production records.
+> From roots to records. Explore Leafcoin, Ilya Papou's agrotech R&D concept combining aeroponics, IoT, ML calibration and verifiable crop records.
 
 Leafcoin is presented as a concept and personal R&D project. The public Home Aeroponics materials document historical prototypes. The architecture and roadmap describe proposed work; implementation status beyond those materials is not established here. Besu with QBFT consensus is being considered as an option for a permissioned EVM network. Network governance, data visibility and any confidentiality mechanism would require separate evaluation. Token design and financial-integration feasibility remain research questions.
 
