@@ -21,5 +21,9 @@ jobs:
         run: python3 scripts/check_site.py
       - name: Check generated learning library freshness
         run: python3 scripts/build_articles.py --check
+      - name: Check static Spanish versions and translations
+        run: python3 scripts/build_spanish.py --check
+      - name: Validate language selection and shared region lookup
+        run: node scripts/check_language.cjs
       - name: Validate regional analytics and visitor choices
         run: node scripts/check_analytics.cjs

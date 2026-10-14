@@ -6,6 +6,11 @@ Leafcoin is presented as a concept and personal R&D project. The public Home Aer
 
 A proposed ML research loop would use repeated cultivation iterations to evaluate irrigation schedules and nutrient-solution composition against observed plant responses, with operator review of suggested adjustments.
 
+## Languages
+
+- [Spanish site](https://leafcoin.org/es/): Complete Spanish concept and article library, with the same source evidence and proposed-work scope.
+- [Complete Spanish text](https://leafcoin.org/es/llms-full.txt): Spanish homepage and all four articles.
+
 ## Aeroponics learning library
 
 These educational guides cite original research and institutional guidance. Findings from other studies are distinct from Leafcoin’s proposed research. Follow each article’s canonical HTML or complete Markdown; do not infer measured Leafcoin results from general agricultural literature.

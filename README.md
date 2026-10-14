@@ -40,7 +40,7 @@ The apex has the four GitHub Pages IPv4 records and four IPv6 records; `www` is 
 
 ## Search and agent discovery
 
-The sitemap lists six canonical pages: the homepage, the learning library and four articles. It includes their displayed cover/content images and omits section fragments and duplicate Markdown versions as separate search results. Keep `lastmod` tied to substantive content changes.
+The sitemap lists twelve canonical pages: the homepage, learning library and four articles in English and Spanish. It includes their displayed cover/content images and omits section fragments and duplicate Markdown versions as separate search results. Each HTML page has reciprocal `en`, `es` and `x-default` links and its own canonical URL. Keep `lastmod` tied to substantive content changes.
 
 The homepage declares one stable 96x96 PNG favicon at `assets/favicon-96.png`, rendered from the existing `assets/favicon.svg`. This removes competing SVG/ICO declarations and uses a format supported by [Google Search's favicon guidance](https://developers.google.com/search/docs/appearance/favicon-in-search). The source SVG, multi-size `favicon.ico` and supplied Apple touch icon remain available. Search appearance updates after Google recrawls and processes the homepage and icon, and is not guaranteed.
 
@@ -57,12 +57,23 @@ After changing homepage/shared navigation or `articles/content.json`, rebuild th
 ```sh
 python3 scripts/build_articles.py
 python3 scripts/build_discovery.py
+python3 scripts/build_spanish.py
 python3 scripts/build_articles.py --check
+python3 scripts/build_spanish.py --check
 python3 scripts/check_site.py
 node scripts/check_analytics.cjs
+node scripts/check_language.cjs
 ```
 
-Both generators use only the Python standard library. The discovery generator preserves the homepage's existing `lastmod`; article dates come from the reviewed content metadata. Update dates only for substantive content changes. Review the generated diff before publishing. Checks verify that article copy, visible sources, full Markdown and structured article text agree. Analytics explicitly allows the six public pages on the custom domain and GitHub project origin; unreviewed paths and local previews stay disabled.
+The generators use only the Python standard library. The discovery generator preserves the homepage's existing `lastmod`; article dates come from the reviewed content metadata. Update dates only for substantive content changes. Review the generated diff before publishing. Checks verify that article copy, visible sources, full Markdown and structured article text agree in both languages. Analytics explicitly allows the twelve public pages on the custom domain and GitHub project origin; unreviewed paths and local previews stay disabled.
+
+## Spanish and language selection
+
+The complete static Spanish version lives at `/es/`, including the four articles, their Markdown, full text, structured metadata and eight Spanish SVG diagram variants. Reviewed copy lives in `locales/es/`. The article translation file includes a SHA-256 digest of the English source; updating that source requires reviewing the translation before changing its digest. Bibliographic publication titles remain in their original language. The source layouts are shared, so navigation and spacing changes apply to both versions.
+
+`language.js` uses the browser's primary preferred language as the available signal for the device's language. On English routes, a Spanish preference opens the corresponding Spanish page automatically unless an explicit English choice has been saved. Explicitly opened Spanish URLs remain accessible regardless of browser language. The header switch preserves the current page, query and fragment. Explicit choices are remembered in `leafcoin.language.v1` in local storage, with a session fallback when permanent storage is unavailable.
+
+Cloudflare country detection only offers a dialog for the listed Spanish-speaking countries and territories; it never changes the language by geography alone. Accepting Spanish, keeping English or dismissing with Escape records the choice. Unknown countries and local previews leave the current language unchanged. This lookup and analytics share one `/cdn-cgi/trace` request through `visitor-region.js`; only the country code is returned, and the full trace is discarded. Language preference and analytics consent use separate storage keys and policies.
 
 This repository's `robots.txt` is served at the `leafcoin.org` origin root. During the GitHub project preview, `/leafcoin/robots.txt` is only a companion; effective crawler rules are read at `https://pilprod.github.io/robots.txt`, outside this repository's path.
 

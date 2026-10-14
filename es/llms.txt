@@ -1,0 +1,11 @@
+# Leafcoin en español
+
+Concepto personal de I+D agrotecnológica. La arquitectura y el ciclo de ML son propuestas; los materiales del laboratorio documentan prototipos históricos.
+
+- [Inicio](https://leafcoin.org/es/)
+- [Concepto completo](https://leafcoin.org/es/index.md)
+- [Texto completo del sitio](https://leafcoin.org/es/llms-full.txt)
+- [Artículos](https://leafcoin.org/es/articles/)
+- [Biblioteca completa](https://leafcoin.org/es/articles/llms-full.txt)
+- [Relaciones estructuradas](https://leafcoin.org/es/concept.jsonld)
+- [English](https://leafcoin.org/)

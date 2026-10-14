@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://leafcoin.org/es/#website",
+      "url": "https://leafcoin.org/es/",
+      "name": "Leafcoin",
+      "alternateName": "leafcoin.org",
+      "publisher": {
+        "@id": "https://papou.work/#person"
+      },
+      "inLanguage": "es"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://papou.work/#person",
+      "name": "Ilya Papou",
+      "url": "https://papou.work/"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://leafcoin.org/es/articles/#library",
+      "url": "https://leafcoin.org/es/articles/",
+      "name": "Guías de aeroponía: métodos, control y futuro | Leafcoin",
+      "description": "Guías de aeroponía basadas en investigación: comparaciones con hidroponía, control del sistema y futuro de la agricultura, con fuentes y criterios prácticos.",
+      "inLanguage": "es",
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#website"
+      },
+      "publisher": {
+        "@id": "https://papou.work/#person"
+      },
+      "mainEntity": {
+        "@id": "https://leafcoin.org/es/articles/#reading-order"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://leafcoin.org/es/articles/#reading-order",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "¿Qué es la aeroponía? Cómo crecen las raíces sin suelo",
+          "url": "https://leafcoin.org/es/articles/what-is-aeroponics.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aeroponía e hidroponía: ventajas, límites y cómo compararlas",
+          "url": "https://leafcoin.org/es/articles/aeroponics-vs-hydroponics.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Por qué es difícil gestionar un sistema aeropónico y cómo podría ayudar el ML",
+          "url": "https://leafcoin.org/es/articles/aeroponic-system-control.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Cómo podría cambiar la aeroponía la agricultura y qué debe ocurrir primero",
+          "url": "https://leafcoin.org/es/articles/future-of-aeroponics.html"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://leafcoin.org/es/articles/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Leafcoin",
+          "item": "https://leafcoin.org/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Artículos",
+          "item": "https://leafcoin.org/es/articles/"
+        }
+      ]
+    }
+  ]
+}

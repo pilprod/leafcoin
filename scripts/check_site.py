@@ -33,6 +33,7 @@ class Page(HTMLParser):
         self.title_count = 0
         self.meta = {}
         self.canonicals = []
+        self.languages = {}
         self.ids = set()
         self.references = []
         self.idrefs = []
@@ -71,6 +72,9 @@ class Page(HTMLParser):
                 self.meta.setdefault(key, []).append(attrs.get("content", ""))
         if tag == "link" and "canonical" in attrs.get("rel", "").split():
             self.canonicals.append(attrs.get("href", ""))
+        if tag == "link" and attrs.get("hreflang"):
+            require(attrs["hreflang"] not in self.languages, f"{self.path}: duplicate language alternate")
+            self.languages[attrs["hreflang"]] = attrs.get("href", "")
         for attribute in ("href", "src", "poster"):
             if attrs.get(attribute):
                 self.references.append(attrs[attribute])
@@ -317,6 +321,49 @@ def check_discovery(site):
         site.check_reference(reference)
     check_concept_resources(site)
     check_article_resources(site)
+    check_spanish_resources(site)
+
+
+def check_spanish_resources(site):
+    from build_spanish import load_copy, PAGES
+    english, spanish, _ = load_copy()
+    for path in PAGES:
+        en, es = site.page(path), site.page("es/"+path)
+        expected={"en":en.canonicals[0],"es":es.canonicals[0],"x-default":en.canonicals[0]}
+        require(en.languages==es.languages==expected,path+": nonreciprocal language links")
+        require(es.lang=="es","es/"+path+": wrong document language")
+        nodes=[node for block in es.jsonld for node in jsonld_nodes(block)]
+        require(any(node.get("url")==es.canonicals[0] and node.get("inLanguage")=="es" for node in nodes),path+": Spanish schema language missing")
+    md=site.resource("es/index.md").decode()
+    library=site.resource("es/articles/llms-full.txt").decode()
+    require(site.resource("es/llms-full.txt").decode()==md+"\n\n"+library,"Spanish full text differs from its complete companions")
+    for block in site.page("es/index.html").content_blocks:
+        require(normalize_text(block) in normalize_text(md),"Spanish concept text omits: "+block[:80])
+    for article,original in zip(spanish["articles"],english["articles"]):
+        path="es/articles/"+article["slug"]+".html"
+        page=site.page(path)
+        markdown=site.resource(path.removesuffix("html")+"md").decode()
+        require(markdown in library,path+": incomplete library text")
+        structured=next(node for block in page.jsonld for node in jsonld_nodes(block) if node.get("@type")=="Article")
+        require(structured["headline"]==article["title"],path+": incorrect Spanish headline")
+        require(structured["wordCount"]==len(structured["articleBody"].split()),path+": incorrect Spanish word count")
+        expected_sources={english["sources"][key]["url"] for key in original["sources"]}
+        require(expected_sources=={item["url"] for item in structured["citation"]},path+": changed research sources")
+        require(expected_sources<=set(page.references),path+": missing visible research source")
+        from build_spanish import source_leaves
+        html=site.resource(path).decode()
+        visible=normalize_text(re.sub(r"<[^>]+>"," ",re.sub(r"<script[\s\S]*?</script>","",html)))
+        graph=normalize_text(structured["articleBody"])
+        for key,text in source_leaves(article):
+            if key in {"seo_title","description","image_alt","category"} or key.endswith((".alt",".text")):continue
+            require(normalize_text(text) in normalize_text(markdown),path+": Spanish Markdown omits "+key)
+            require(normalize_text(text) in visible and normalize_text(text) in graph,path+": Spanish visible or structured text omits "+key)
+        for section in article["sections"]:
+            for figure in section.get("figures",[]):
+                if figure["kind"]=="diagram":
+                    for suffix in ("","-mobile"):
+                        svg=ET.fromstring(site.resource("assets/diagrams/es/"+figure["id"]+suffix+".svg"))
+                        require(svg.findtext("{http://www.w3.org/2000/svg}title")==figure["title"],path+": unlocalized diagram title")
 
 
 

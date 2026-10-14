@@ -2,6 +2,8 @@
   "use strict";
 
   const measurementId = "G-SV3XY3N6NE";
+  if (window.__leafcoinLanguageRedirect) return;
+  const spanish = document.documentElement?.lang === "es";
   const consentKey = "leafcoin.analytics-consent.v1";
   const consentLifetime = 180 * 24 * 60 * 60 * 1000;
   const disableKey = `ga-disable-${measurementId}`;
@@ -23,7 +25,13 @@
     ["articles/what-is-aeroponics.html", "What Is Aeroponics? How It Works | Leafcoin"],
     ["articles/aeroponics-vs-hydroponics.html", "Aeroponics vs Hydroponics: Benefits and Limits | Leafcoin"],
     ["articles/aeroponic-system-control.html", "Aeroponic System Control: Sensors, Irrigation and ML | Leafcoin"],
-    ["articles/future-of-aeroponics.html", "The Future of Aeroponics: Opportunities and Limits | Leafcoin"]
+    ["articles/future-of-aeroponics.html", "The Future of Aeroponics: Opportunities and Limits | Leafcoin"],
+    ["es/", "Leafcoin: Cultivos reales. Datos verificables."],
+    ["es/articles/", "Guías de aeroponía: métodos, control y futuro | Leafcoin"],
+    ["es/articles/what-is-aeroponics.html", "Qué es la aeroponía y cómo funciona | Leafcoin"],
+    ["es/articles/aeroponics-vs-hydroponics.html", "Aeroponía e hidroponía: ventajas y límites | Leafcoin"],
+    ["es/articles/aeroponic-system-control.html", "Control aeropónico: sensores, riego y ML | Leafcoin"],
+    ["es/articles/future-of-aeroponics.html", "El futuro de la aeroponía: oportunidades y límites | Leafcoin"]
   ];
   const pages = new Map();
   for (const origin of ["https://leafcoin.org/", "https://pilprod.github.io/leafcoin/"]) {
@@ -104,6 +112,11 @@
 
   async function resolveRegion() {
     if (!pageLocation) return;
+    if (typeof window.leafcoinVisitorCountry === "function") {
+      const country = await window.leafcoinVisitorCountry();
+      applyRegion(countries.has(country) && !euCountries.has(country));
+      return;
+    }
     if (window.location.origin !== "https://leafcoin.org" || typeof window.fetch !== "function") {
       applyRegion(false);
       return;
@@ -140,6 +153,17 @@
         : "Google Analytics is on for this visit. Your browser could not save this choice."
       : choiceSaved ? "Google Analytics is off."
         : "Google Analytics is off for this visit. Your browser could not save this choice.";
+    if (spanish) {
+      const messages = {
+        "Analytics is disabled in this preview.": "La analítica está desactivada en esta vista previa.",
+        "Google Analytics is on. You can turn it off in settings.": "Google Analytics está activado. Puedes desactivarlo en la configuración.",
+        "Google Analytics is on.": "Google Analytics está activado.",
+        "Google Analytics is off.": "Google Analytics está desactivado.",
+        "Google Analytics is on for this visit. Your browser could not save this choice.": "Google Analytics está activado para esta visita. El navegador no pudo guardar tu elección.",
+        "Google Analytics is off for this visit. Your browser could not save this choice.": "Google Analytics está desactivado para esta visita. El navegador no pudo guardar tu elección."
+      };
+      status.textContent = messages[status.textContent];
+    }
     showPanel(Boolean(pageLocation) && !choice && !automaticOutsideEU);
   }
 

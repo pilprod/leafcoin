@@ -5,13 +5,14 @@
   const menu = toolbar?.querySelector("#site-menu");
   const label = toggle?.querySelector(".menu-toggle-label");
   if (!toolbar || !toggle || !menu || !label) return;
+  const spanish = document.documentElement.lang === "es";
 
-  const mobile = window.matchMedia("(max-width: 1000px)");
+  const mobile = window.matchMedia("(max-width: 1200px)");
   function setOpen(open) {
     toolbar.classList.toggle("is-menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    label.textContent = open ? "Close" : "Menu";
+    toggle.setAttribute("aria-label", spanish ? (open ? "Cerrar menú" : "Abrir menú") : (open ? "Close menu" : "Open menu"));
+    label.textContent = spanish ? (open ? "Cerrar" : "Menú") : (open ? "Close" : "Menu");
   }
   function isOpen() {
     return toggle.getAttribute("aria-expanded") === "true";

@@ -130,19 +130,21 @@ def shell(title, description, canonical, graph, content, social_image=None, soci
 <meta name="robots" content="index, follow, max-image-preview:large"><meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f5faf7" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#081411" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="{canonical}">{alternates}
+<link rel="alternate" hreflang="en" href="{canonical}"><link rel="alternate" hreflang="es" href="{ORIGIN+'es/'+canonical.removeprefix(ORIGIN)}"><link rel="alternate" hreflang="x-default" href="{canonical}">
 <link rel="describedby" href="../llms.txt" type="text/plain" title="Leafcoin reading guide"><link rel="describedby" href="llms-full.txt" type="text/plain" title="Complete learning library text">
 <link rel="icon" href="../assets/favicon-96.png" type="image/png" sizes="96x96"><link rel="apple-touch-icon" href="../assets/ios_ligth_leafcoin.png">
-<link rel="stylesheet" href="../styles.css?v=20261014-clean-layout"><link rel="stylesheet" href="../articles.css?v=20261014-clean-layout"><link rel="stylesheet" href="../analytics-ui.css?v=20260930-footer-center">
+<link rel="stylesheet" href="../styles.css?v=20261014-es-spacing"><link rel="stylesheet" href="../articles.css?v=20261014-es-spacing"><link rel="stylesheet" href="../analytics-ui.css?v=20260930-footer-center">
+<link rel="stylesheet" href="../language.css?v=20261014-es">
 <meta property="og:type" content="{'website' if hub else 'article'}"><meta property="og:site_name" content="Leafcoin"><meta property="og:locale" content="en_US">
 <meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{image}"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="{escape(alt)}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{escape(title)}"><meta name="twitter:description" content="{escape(description)}"><meta name="twitter:image" content="{image}"><meta name="twitter:image:alt" content="{escape(alt)}">
 {'' if hub else f'<meta property="article:published_time" content="{DATA["published"]}"><meta property="article:modified_time" content="{DATA["modified"]}">'}
 <script type="application/ld+json">{graph_json}</script>
-<script src="../site.js?v=20260930-menu2" defer></script><script src="../analytics.js?v=20261013-articles" defer></script>
+<script src="../visitor-region.js?v=20261014-es" defer></script><script src="../language.js?v=20261014-es" defer></script><script src="../site.js?v=20261014-es" defer></script><script src="../analytics.js?v=20261014-es" defer></script>
 </head><body class="learning-page">
 <a class="skip-link" href="#main">Skip to content</a>
-{header}
+{header.replace('href="es/"', 'href="../es/'+canonical.removeprefix(ORIGIN)+'"')}
 <main id="main" class="learning-main">{content}</main>
 {shared_tail}
 </body></html>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="1020" viewBox="0 0 320 1020" role="img" aria-labelledby="title description">
+<title id="title">Tres formas de abastecer la zona radicular</title><desc id="description">La aeroponía abastece raíces suspendidas mediante pulverización. La técnica de película nutritiva (NFT) hace circular una capa poco profunda por un canal. El cultivo en agua profunda (DWC) mantiene las raíces en una solución aireada. El rendimiento depende del diseño y la operación completos.</desc>
+<style>
+:root { --bg:#f5faf7; --card:#e9f3ed; --ink:#12201a; --muted:#486054;
+  --line:#b8cfc0; --accent:#146442; --water:#298b97; --root:#8c744f; }
+@media (prefers-color-scheme:dark) { :root { --bg:#081411; --card:#10271d;
+  --ink:#effcf3; --muted:#bed2c6; --line:#315b43; --accent:#9deb8f;
+  --water:#75cbd0; --root:#dcc9a4; } }
+text { font-family:Arial,sans-serif; fill:var(--ink); }
+.label { font-size:21px; font-weight:600; }
+.body { font-size:17px; fill:var(--muted); }
+.small { font-size:16px; fill:var(--muted); }
+.card { fill:var(--card); stroke:var(--line); stroke-width:1.5; }
+.arrow { fill:none; stroke:var(--accent); stroke-width:2.5; }
+.return { stroke-dasharray:5 6; }
+.wire { fill:none; stroke:var(--muted); stroke-width:2.5; }
+.roots { fill:none; stroke:var(--root); stroke-width:2; }
+.water { fill:var(--water); fill-opacity:.14; stroke:var(--water); stroke-width:2; }
+.leaf { fill:var(--accent); }
+.label {font-size:22px} .body {font-size:20px} .small {font-size:19px}</style><defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="var(--accent)"/></marker></defs>
+<rect width="320" height="1020" rx="16" fill="var(--bg)"/><rect class="card" x="20" y="18" width="280" height="316" rx="12"/><text class="label" x="38" y="53">Aeroponía</text><rect class="card" x="48" y="144" width="224" height="107" rx="5"/><g transform="translate(160.0 144)"><path class="wire" d="M0 0 V-36"/>
+<path class="leaf" d="M0-12 C-32-6-43-29-35-42 C-12-46 2-28 0-12 Z M0-22 C30-19 43-42 32-51 C10-50-1-38 0-22 Z"/>
+<path class="wire" d="M-18 0 H18 L12 14 H-12 Z"/></g><g transform="translate(160.0 158)"><path class="roots" d="M-7 0 C-20 25-3 44-28 69 M0 0 C12 28-8 45 5 69 M8 0 C31 32 11 53 32 69
+M-12 25 L-32 42 M-14 45 L-38 61 M3 26 L22 43 M0 49 L-16 66 M18 37 L39 52 M23 61 L43 76"/></g><path class="wire" d="M49 182 h18"/><path class="arrow" stroke-dasharray="2 7" d="M68 182 l42-17 M68 182 l42 12 M68 182 l42 35"/><text class="body" x="38" y="287">Raíces en el aire</text><text class="body" x="38" y="310">Riego por pulverización</text><rect class="card" x="20" y="350" width="280" height="316" rx="12"/><text class="label" x="38" y="385">NFT</text><rect class="card" x="48" y="476" width="224" height="107" rx="5"/><g transform="translate(160.0 476)"><path class="wire" d="M0 0 V-36"/>
+<path class="leaf" d="M0-12 C-32-6-43-29-35-42 C-12-46 2-28 0-12 Z M0-22 C30-19 43-42 32-51 C10-50-1-38 0-22 Z"/>
+<path class="wire" d="M-18 0 H18 L12 14 H-12 Z"/></g><g transform="translate(160.0 490)"><path class="roots" d="M-7 0 C-20 25-3 44-28 54 M0 0 C12 28-8 45 5 54 M8 0 C31 32 11 53 32 54
+M-12 25 L-32 42 M-14 45 L-38 61 M3 26 L22 43 M0 49 L-16 66 M18 37 L39 52 M23 61 L43 76"/></g><path class="wire" d="M51 544 L269 557"/><path class="water" d="M51 540 L269 553 v4 L51 544 Z"/><path class="arrow" marker-end="url(#arrow)" d="M64 567 h179"/><text class="body" x="38" y="619">Raíces en una película</text><text class="body" x="38" y="642">nutritiva en circulación</text><rect class="card" x="20" y="682" width="280" height="316" rx="12"/><text class="label" x="38" y="717">Cultivo en agua</text><rect class="card" x="48" y="808" width="224" height="107" rx="5"/><g transform="translate(160.0 808)"><path class="wire" d="M0 0 V-36"/>
+<path class="leaf" d="M0-12 C-32-6-43-29-35-42 C-12-46 2-28 0-12 Z M0-22 C30-19 43-42 32-51 C10-50-1-38 0-22 Z"/>
+<path class="wire" d="M-18 0 H18 L12 14 H-12 Z"/></g><path class="water" d="M50 834 h220 v79 H50 Z"/><g transform="translate(160.0 822)"><path class="roots" d="M-7 0 C-20 25-3 44-28 67 M0 0 C12 28-8 45 5 67 M8 0 C31 32 11 53 32 67
+M-12 25 L-32 42 M-14 45 L-38 61 M3 26 L22 43 M0 49 L-16 66 M18 37 L39 52 M23 61 L43 76"/></g><rect class="card" x="145.0" y="898" width="30" height="10" rx="4"/><circle cx="160.0" cy="887" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><circle cx="150.0" cy="875" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><circle cx="169.0" cy="865" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><circle cx="163.0" cy="848" r="3.5" fill="none" stroke="var(--water)" stroke-width="1.8"/><text class="body" x="38" y="951">Raíces en solución</text><text class="body" x="38" y="974">Oxígeno por aireación</text></svg>

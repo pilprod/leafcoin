@@ -1,0 +1,554 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://leafcoin.org/es/#website",
+      "url": "https://leafcoin.org/es/",
+      "name": "Leafcoin",
+      "alternateName": "leafcoin.org",
+      "inLanguage": "es",
+      "creator": {
+        "@id": "https://papou.work/#person"
+      },
+      "hasPart": [
+        {
+          "@id": "https://leafcoin.org/es/articles/#library"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://leafcoin.org/es/#webpage",
+      "url": "https://leafcoin.org/es/",
+      "name": "Leafcoin: Cultivos reales. Datos verificables.",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#website"
+      },
+      "mainEntity": {
+        "@id": "https://leafcoin.org/es/#concept"
+      },
+      "encoding": {
+        "@type": "MediaObject",
+        "encodingFormat": "text/markdown",
+        "contentUrl": "https://leafcoin.org/es/index.md"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://leafcoin.org/es/#image-article-nozzle-roots-detail"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://leafcoin.org/es/#concept",
+      "url": "https://leafcoin.org/es/",
+      "name": "Leafcoin: Cultivos reales. Datos verificables.",
+      "description": "De las raíces a los registros. Descubre Leafcoin, el concepto de I+D agrotecnológica de Ilya Papou que combina aeroponía, IoT, calibración con ML y registros verificables de cultivo. Se considera Besu con QBFT para una red EVM con permisos en la arquitectura propuesta.",
+      "creativeWorkStatus": "Concept / personal R&D",
+      "inLanguage": "es",
+      "creator": {
+        "@id": "https://papou.work/#person"
+      },
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#website"
+      },
+      "isBasedOn": [
+        {
+          "@id": "https://papou.work/portfolio.html#home"
+        },
+        {
+          "@id": "https://old.leafcoin.org/#original-presentation"
+        }
+      ],
+      "image": [
+        {
+          "@id": "https://leafcoin.org/es/#image-hero-home-lab"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-article-nozzle-roots-detail"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-section-architecture"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-section-calibration"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-section-roadmap"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-electronics-workbench"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-breadboard-prototype-privacy-20260909"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-power-shield"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-lighting-ventilation"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-home-assistant-dashboard-privacy-20260909"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-enclosure-camera"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-water-system"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-wiring-diagram"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-root-chamber"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@id": "https://leafcoin.org/es/#webpage"
+        },
+        {
+          "@id": "https://github.com/pilprod/leafcoin#source-code"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "https://leafcoin.org/es/#architecture"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#calibration"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#roadmap"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://papou.work/#person",
+      "name": "Ilya Papou",
+      "url": "https://papou.work/",
+      "sameAs": [
+        "https://github.com/pilprod",
+        "https://www.linkedin.com/in/pilprod/"
+      ]
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://papou.work/portfolio.html#home",
+      "url": "https://papou.work/portfolio.html#home",
+      "name": "Home Aeroponics y automatización IoT",
+      "creativeWorkStatus": "Historical personal R&D prototype",
+      "description": "El concepto nació de Home Aeroponics, un laboratorio personal de IoT y automatización. Sus repositorios públicos conservan parte de ese trabajo. Estos materiales de archivo aportan contexto al trabajo del laboratorio personal. No permiten establecer el estado de implementación del concepto Leafcoin en su conjunto. Los repositorios documentan las limitaciones de compilación, ejecución y hardware.",
+      "subjectOf": [
+        {
+          "@id": "https://leafcoin.org/es/#image-electronics-workbench"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-breadboard-prototype-privacy-20260909"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-power-shield"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-lighting-ventilation"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-home-assistant-dashboard-privacy-20260909"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-enclosure-camera"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-water-system"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-wiring-diagram"
+        },
+        {
+          "@id": "https://leafcoin.org/es/#image-root-chamber"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "https://github.com/pilprod/aeroponics-iot-control#source-code"
+        },
+        {
+          "@id": "https://github.com/pilprod/aeroponics-sensor-firmware#source-code"
+        }
+      ],
+      "inLanguage": "es"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://old.leafcoin.org/#original-presentation",
+      "url": "https://old.leafcoin.org/",
+      "name": "Original Leafcoin concept presentation",
+      "creativeWorkStatus": "Source concept presentation",
+      "description": "Presentación original utilizada como contexto del rediseño. La presentación histórica es independiente de las declaraciones actuales sobre el concepto y el alcance del prototipo.",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/pilprod/aeroponics-iot-control#source-code",
+      "name": "Control IoT de aeroponía",
+      "url": "https://github.com/pilprod/aeroponics-iot-control",
+      "codeRepository": "https://github.com/pilprod/aeroponics-iot-control",
+      "description": "Ejemplos históricos de controladores con Python y MQTT, con contexto de monitorización e integración.",
+      "isPartOf": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "creativeWorkStatus": "Historical personal R&D examples"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/pilprod/aeroponics-sensor-firmware#source-code",
+      "name": "Firmware de sensores de aeroponía",
+      "url": "https://github.com/pilprod/aeroponics-sensor-firmware",
+      "codeRepository": "https://github.com/pilprod/aeroponics-sensor-firmware",
+      "description": "Experimentos archivados de Arduino para sensores, telemetría y control de relés.",
+      "isPartOf": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "creativeWorkStatus": "Historical personal R&D examples"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/pilprod/leafcoin#source-code",
+      "name": "Código del sitio",
+      "url": "https://github.com/pilprod/leafcoin",
+      "codeRepository": "https://github.com/pilprod/leafcoin",
+      "description": "Código del sitio estático que presenta el concepto Leafcoin.",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#concept"
+      },
+      "creativeWorkStatus": "Static concept website"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-hero-home-lab",
+      "contentUrl": "https://leafcoin.org/assets/images/hero-home-lab.jpg",
+      "name": "Ilustración conceptual generada con IA para Leafcoin (leafcoin.org): un laboratorio doméstico compacto de aeroponía con plantas, iluminación de cultivo, un depósito de solución nutritiva y un controlador.",
+      "caption": "Aeroponía en casa Ilustración conceptual generada con IA",
+      "inLanguage": "es",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#hero",
+      "about": {
+        "@id": "https://leafcoin.org/es/#concept"
+      },
+      "creativeWorkStatus": "AI-generated concept illustration",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-article-nozzle-roots-detail",
+      "contentUrl": "https://leafcoin.org/assets/images/article-nozzle-roots-detail.jpg",
+      "name": "Ilustración conceptual generada con IA de una neblina nutritiva que llega a raíces suspendidas en una cámara aeropónica.",
+      "caption": "Ilustración conceptual generada con IA Aporte de nutrientes a raíces suspendidas.",
+      "inLanguage": "es",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#article-nozzle-roots-detail",
+      "about": {
+        "@id": "https://leafcoin.org/es/#concept"
+      },
+      "creativeWorkStatus": "AI-generated concept illustration",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-section-architecture",
+      "contentUrl": "https://leafcoin.org/assets/images/section-architecture.jpg",
+      "name": "Ilustración conceptual generada con IA que conecta sensores de cultivo, una pasarela, almacenamiento fuera de la cadena, módulos del libro mayor y un pasaporte de lote.",
+      "caption": "Ilustración conceptual generada con IA Un recorrido propuesto de las mediciones a los registros verificables.",
+      "inLanguage": "es",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#architecture",
+      "about": {
+        "@id": "https://leafcoin.org/es/#architecture"
+      },
+      "creativeWorkStatus": "AI-generated concept illustration",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-section-calibration",
+      "contentUrl": "https://leafcoin.org/assets/images/section-calibration.jpg",
+      "name": "Ilustración conceptual generada con IA de tres ensayos de cultivo comparables con equipos de riego, depósitos de dosificación y sondas de medición.",
+      "caption": "Ilustración conceptual generada con IA Experimentos repetidos sobre riego y solución nutritiva.",
+      "inLanguage": "es",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#calibration",
+      "about": {
+        "@id": "https://leafcoin.org/es/#calibration"
+      },
+      "creativeWorkStatus": "AI-generated concept illustration",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-section-roadmap",
+      "contentUrl": "https://leafcoin.org/assets/images/section-roadmap.jpg",
+      "name": "Ilustración conceptual generada con IA de cuatro etapas de investigación conectadas que combinan cultivos, sensores, evaluación y módulos adicionales de cultivo.",
+      "caption": "Ilustración conceptual generada con IA Una secuencia de investigación propuesta, con validación en cada etapa.",
+      "inLanguage": "es",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#roadmap",
+      "about": {
+        "@id": "https://leafcoin.org/es/#roadmap"
+      },
+      "creativeWorkStatus": "AI-generated concept illustration",
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-electronics-workbench",
+      "contentUrl": "https://leafcoin.org/assets/images/electronics-workbench.jpg",
+      "name": "Placas de desarrollo, sensores, cableado y herramientas de soldadura durante la creación de prototipos.",
+      "caption": "Banco de electrónica Placas de desarrollo, sensores, cableado y herramientas de soldadura durante la creación de prototipos. Fondo y zonas identificativas retocados con IA. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/electronics-workbench.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-breadboard-prototype-privacy-20260909",
+      "contentUrl": "https://leafcoin.org/assets/images/breadboard-prototype-privacy-20260909.jpg",
+      "name": "Módulos de sensores y cables de conexión montados en una protoboard durante el desarrollo del controlador.",
+      "caption": "Prototipo en protoboard Módulos de sensores y cables de conexión montados en una protoboard durante el desarrollo del controlador. Papel pintado sustituido por una pared neutra con ayuda de IA para proteger la privacidad. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/83f7e6a2a1ab138aa541010033e774c1c7a1783b/docs/images/breadboard-prototype-privacy-20260909.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-power-shield",
+      "contentUrl": "https://leafcoin.org/assets/images/power-shield.jpg",
+      "name": "Un módulo de potencia comercial integrado en el conjunto electrónico.",
+      "caption": "Módulo de potencia Un módulo de potencia comercial integrado en el conjunto electrónico. Fondo y zonas identificativas retocados con IA. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/power-shield.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-lighting-ventilation",
+      "contentUrl": "https://leafcoin.org/assets/images/lighting-ventilation.jpg",
+      "name": "Luminarias suspendidas, equipos de ventilación y cableado dentro del recinto.",
+      "caption": "Iluminación y ventilación Luminarias suspendidas, equipos de ventilación y cableado dentro del recinto. Fondo y zonas identificativas retocados con IA. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/lighting-ventilation.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-home-assistant-dashboard-privacy-20260909",
+      "contentUrl": "https://leafcoin.org/assets/images/home-assistant-dashboard-privacy-20260909.jpg",
+      "name": "Mediciones del clima y del agua, controles de iluminación y estados de los dispositivos.",
+      "caption": "Panel de Home Assistant Mediciones del clima y del agua, controles de iluminación y estados de los dispositivos. Papel pintado sustituido por una pared neutra con ayuda de IA para proteger la privacidad. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/994f20e27f54e8f3659731089f2d0208cead39c1/docs/images/home-assistant-dashboard-privacy-20260909.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-enclosure-camera",
+      "contentUrl": "https://leafcoin.org/assets/images/enclosure-camera.jpg",
+      "name": "Ubicación de la cámara dentro de la instalación experimental.",
+      "caption": "Cámara del recinto Ubicación de la cámara dentro de la instalación experimental. Fondo y zonas identificativas retocados con IA. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/enclosure-camera.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-water-system",
+      "contentUrl": "https://leafcoin.org/assets/images/water-system.jpg",
+      "name": "Depósitos, bombas dosificadoras, válvulas, tubos y circuito de circulación.",
+      "caption": "Sistema de agua Depósitos, bombas dosificadoras, válvulas, tubos y circuito de circulación. Fondo y zonas identificativas retocados con IA. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/water-system.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1085,
+      "height": 1450
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-wiring-diagram",
+      "contentUrl": "https://leafcoin.org/assets/images/wiring-diagram.jpg",
+      "name": "Dibujo original de conexión de los componentes realizado durante el diseño del sistema.",
+      "caption": "Esquema de cableado y E/S Dibujo original de conexión de los componentes realizado durante el diseño del sistema. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/9057bcd017df480416863801cf507760f6c2b6da/docs/images/wiring-diagram.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://leafcoin.org/es/#image-root-chamber",
+      "contentUrl": "https://leafcoin.org/assets/images/root-chamber.webp",
+      "name": "Raíces suspendidas y tubos dentro de la cámara.",
+      "caption": "Cámara de raíces Raíces suspendidas y tubos dentro de la cámara. Fuente publicada",
+      "inLanguage": "es",
+      "isBasedOn": "https://github.com/pilprod/aeroponics-iot-control/blob/7c0c97df694f764d4c7354408b18146c63ca5864/docs/images/root-chamber.jpg",
+      "about": {
+        "@id": "https://papou.work/portfolio.html#home"
+      },
+      "width": 1536,
+      "height": 2048
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://leafcoin.org/es/#architecture",
+      "url": "https://leafcoin.org/es/#architecture",
+      "name": "Primero los datos. Después los tokens.",
+      "description": "La arquitectura propuesta separa la recopilación de datos, el almacenamiento fuera de la cadena y la comprobación de integridad mediante un libro mayor. La telemetría sin procesar permanecería fuera de la cadena, mientras que el libro mayor almacenaría hashes de los informes.",
+      "creativeWorkStatus": "Proposed concept component",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#concept"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://leafcoin.org/es/#calibration",
+      "url": "https://leafcoin.org/es/#calibration",
+      "name": "Aprender de cada ciclo de cultivo.",
+      "description": "Un ciclo de investigación propuesto utilizaría iteraciones de cultivo repetidas para evaluar los programas de riego y la composición de la solución nutritiva según las respuestas observadas en las plantas. Esta es una línea de investigación propuesta. Se necesitarían mediciones y experimentos repetidos para establecer la calidad de los modelos y unos límites de operación útiles. La calibración de los sensores seguiría siendo un requisito independiente.",
+      "creativeWorkStatus": "Proposed concept component",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#concept"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://leafcoin.org/es/#roadmap",
+      "url": "https://leafcoin.org/es/#roadmap",
+      "name": "Un camino por etapas del laboratorio al ecosistema.",
+      "description": "Una secuencia de investigación propuesta. Cada etapa requeriría validación; aquí no se indican estados de finalización ni fechas de lanzamiento.",
+      "creativeWorkStatus": "Proposed concept component",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#concept"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://leafcoin.org/es/articles/#library",
+      "url": "https://leafcoin.org/es/articles/",
+      "name": "Biblioteca de Leafcoin",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/#website"
+      },
+      "hasPart": [
+        {
+          "@id": "https://leafcoin.org/es/articles/what-is-aeroponics.html#article"
+        },
+        {
+          "@id": "https://leafcoin.org/es/articles/aeroponics-vs-hydroponics.html#article"
+        },
+        {
+          "@id": "https://leafcoin.org/es/articles/aeroponic-system-control.html#article"
+        },
+        {
+          "@id": "https://leafcoin.org/es/articles/future-of-aeroponics.html#article"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/es/articles/what-is-aeroponics.html#article",
+      "url": "https://leafcoin.org/es/articles/what-is-aeroponics.html",
+      "headline": "¿Qué es la aeroponía? Cómo crecen las raíces sin suelo",
+      "description": "Descubre cómo la aeroponía alimenta raíces suspendidas con una neblina nutritiva, qué contiene un sistema y en qué se diferencia de la hidroponía y la agricultura vertical.",
+      "inLanguage": "es",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/articles/#library"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/es/articles/aeroponics-vs-hydroponics.html#article",
+      "url": "https://leafcoin.org/es/articles/aeroponics-vs-hydroponics.html",
+      "headline": "Aeroponía e hidroponía: ventajas, límites y cómo compararlas",
+      "description": "Compara la aeroponía con NFT y el cultivo en agua profunda: oxígeno en las raíces, uso de agua, mantenimiento, respuesta ante fallos y resultados de los ensayos.",
+      "inLanguage": "es",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/articles/#library"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/es/articles/aeroponic-system-control.html#article",
+      "url": "https://leafcoin.org/es/articles/aeroponic-system-control.html",
+      "headline": "Por qué es difícil gestionar un sistema aeropónico y cómo podría ayudar el ML",
+      "description": "Comprende los fallos de las boquillas, los tiempos de riego, el pH y la CE, la deriva de los sensores y un ciclo de ML propuesto para mejorar las decisiones de riego y nutrientes mediante ensayos.",
+      "inLanguage": "es",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/articles/#library"
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://leafcoin.org/es/articles/future-of-aeroponics.html#article",
+      "url": "https://leafcoin.org/es/articles/future-of-aeroponics.html",
+      "headline": "Cómo podría cambiar la aeroponía la agricultura y qué debe ocurrir primero",
+      "description": "Explora la aeroponía en la propagación, el cultivo controlado y la agricultura basada en datos, con límites realistas de energía, mantenimiento, costes y escala.",
+      "inLanguage": "es",
+      "author": {
+        "@id": "https://papou.work/#person"
+      },
+      "datePublished": "2026-10-13",
+      "dateModified": "2026-10-13",
+      "isPartOf": {
+        "@id": "https://leafcoin.org/es/articles/#library"
+      }
+    }
+  ]
+}

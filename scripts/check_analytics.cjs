@@ -17,6 +17,7 @@ const publishedRoutes = [
   ["articles/", "articles/index.html"],
   ...articleData.articles.map(article => ["articles/" + article.slug + ".html", "articles/" + article.slug + ".html"])
 ];
+publishedRoutes.push(...publishedRoutes.map(([route,file]) => ["es/"+route,"es/"+file]));
 
 class Element {
   constructor() { this.hidden = true; this.listeners = {}; this.attributes = {}; }
@@ -57,6 +58,8 @@ function browser(options = {}) {
   }
   if (options.sessionStorageGetterBlocked) Object.defineProperty(window, "sessionStorage", {get() {throw Error("Session storage blocked");}});
   if (options.fetch) window.fetch = options.fetch;
+  if (options.countryLookup) window.leafcoinVisitorCountry = options.countryLookup;
+  if (options.languageRedirect) window.__leafcoinLanguageRedirect = true;
   const document = {
     documentElement: {lang: options.lang || 'en'},
     referrer: options.referrer ?? "https://alice:password@example.org/private?email=referrer@example.com#hidden",
@@ -306,7 +309,7 @@ test("Google cookies on the GitHub project path are cleared on withdrawal", () =
 test("all published pages include one controller and the consent controls", () => {
   for (const [, file] of publishedRoutes) {
     const html = fs.readFileSync(path.join(__dirname, "..", file), "utf8");
-    assert.equal((html.match(/<script\b[^>]*src="(?:\.\.\/)?analytics\.js(?:\?[^"<>]*)?"/g) || []).length, 1, file);
+    assert.equal((html.match(/<script\b[^>]*src="(?:\.\.\/)*analytics\.js(?:\?[^"<>]*)?"/g) || []).length, 1, file);
     assert.doesNotMatch(html, /<script\b[^>]*src=["'][^"']*(?:googletagmanager|google-analytics)\.com/i, "Google must be loaded by the opt-in controller");
     assert.doesNotMatch(html, /\bgtag\s*\(/, "No second Google installation in the HTML");
     for (const id of ["analytics-tools", "analytics-status", "analytics-consent", "analytics-settings", "analytics-allow", "analytics-decline"]) {
@@ -321,8 +324,21 @@ async function regionalTests() {
   const response = country => ({ok:true,headers:{get:()=>"text/plain; charset=UTF-8"},text:async()=>"ip=192.0.2.123\nloc="+country+"\n"});
   async function regionalTest(name, run) { await run(); passed++; console.log("PASS:", name); }
 
+  await regionalTest("shared country lookup keeps analytics independent of language selection", async () => {
+    for (const country of ["AR","ES",null,"ZZ"]) {
+      const app=browser({url:"https://leafcoin.org/es/",lang:"es",countryLookup:async()=>country});
+      await flush();
+      assert.equal(app.state.scripts.length,country==="AR" ? 1 : 0);
+      assert.match(app.elements["analytics-status"].textContent,/Google Analytics está/);
+      app.click("analytics-decline");
+      assert.equal(app.window["ga-disable-"+ID],true);
+    }
+    const redirecting=browser({languageRedirect:true,saved:{value:"granted",expiresAt:NOW+LIFETIME}});
+    assert.equal(redirecting.state.scripts.length,0,"do not measure the page replaced by an automatic language redirect");
+  });
+
   await regionalTest("article visits preserve regional consent and explicit refusal", async () => {
-    for (const [route] of publishedRoutes.filter(([route]) => route.startsWith("articles/"))) {
+    for (const [route] of publishedRoutes.filter(([route]) => route.includes("articles/"))) {
       const url = "https://leafcoin.org/" + route + "?email=private@example.com#secret";
       const outside = browser({url, fetch:async()=>response("AR")});
       await flush();
