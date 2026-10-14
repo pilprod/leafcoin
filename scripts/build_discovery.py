@@ -303,6 +303,10 @@ graph = {'@context': 'https://schema.org', '@graph': [
      'description': 'The original concept presentation used as source context for this redesign. Its historical presentation is distinct from the current site’s concept and prototype scope statements.'},
     *repository_nodes, *images
 ]}
+preferred_image_url = next(node.attrs['content'] for node in descendants(dom.root, 'meta')
+                           if node.attrs.get('property') == 'og:image')
+preferred_image = next(image for image in images if image['contentUrl'] == preferred_image_url)
+graph['@graph'][1]['primaryImageOfPage'] = {'@id': preferred_image['@id']}
 component_nodes = []
 for section in descendants(main, 'section'):
     section_id = section.attrs.get('id')

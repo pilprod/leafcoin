@@ -39,9 +39,9 @@ Real production. Useful evidence.
 
 Before a digital asset can represent anything meaningful, the underlying production needs to be observable. Leafcoin starts with growing conditions, crop records and the quality of the data.
 
-![AI-generated concept illustration of an aeroponic growing module with leafy plants, a mist chamber, reservoir, pump and sensors.](https://leafcoin.org/assets/images/section-concept.jpg)
+![AI-generated concept illustration of nutrient mist reaching suspended roots in an aeroponic chamber.](https://leafcoin.org/assets/images/article-nozzle-roots-detail.jpg)
 
-[AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#concept) Cultivation and observable growing conditions.
+[AI-generated concept illustration](https://leafcoin.org/docs/generated-illustrations.md#article-nozzle-roots-detail) Nutrient delivery to suspended roots.
 
 #### Grow with better visibility
 

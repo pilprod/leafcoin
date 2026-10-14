@@ -33,6 +33,9 @@
         "@type": "MediaObject",
         "encodingFormat": "text/markdown",
         "contentUrl": "https://leafcoin.org/index.md"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://leafcoin.org/#image-article-nozzle-roots-detail"
       }
     },
     {
@@ -62,7 +65,7 @@
           "@id": "https://leafcoin.org/#image-hero-home-lab"
         },
         {
-          "@id": "https://leafcoin.org/#image-section-concept"
+          "@id": "https://leafcoin.org/#image-article-nozzle-roots-detail"
         },
         {
           "@id": "https://leafcoin.org/#image-section-architecture"
@@ -237,12 +240,12 @@
     },
     {
       "@type": "ImageObject",
-      "@id": "https://leafcoin.org/#image-section-concept",
-      "contentUrl": "https://leafcoin.org/assets/images/section-concept.jpg",
-      "name": "AI-generated concept illustration of an aeroponic growing module with leafy plants, a mist chamber, reservoir, pump and sensors.",
-      "caption": "AI-generated concept illustration Cultivation and observable growing conditions.",
+      "@id": "https://leafcoin.org/#image-article-nozzle-roots-detail",
+      "contentUrl": "https://leafcoin.org/assets/images/article-nozzle-roots-detail.jpg",
+      "name": "AI-generated concept illustration of nutrient mist reaching suspended roots in an aeroponic chamber.",
+      "caption": "AI-generated concept illustration Nutrient delivery to suspended roots.",
       "inLanguage": "en",
-      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#concept",
+      "isBasedOn": "https://leafcoin.org/docs/generated-illustrations.md#article-nozzle-roots-detail",
       "about": {
         "@id": "https://leafcoin.org/#concept"
       },
