@@ -80,7 +80,7 @@ h1 span { color: var(--accent); }
 .hero-figure img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; object-position: center; border-radius: 20px; box-shadow: 0 18px 54px rgb(0 0 0 / 14%); }
 .hero-figure figcaption { display: flex; justify-content: space-between; gap: 16px; padding-top: 14px; font-size: 12px; line-height: 1.7; color: var(--muted); }
 .photo-label { font-family: "IBM Plex Mono", monospace; color: var(--accent); }
-.research-layers { display: flex; gap: 30px; justify-content: space-between; align-items: center; padding: 25px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.research-layers { display: flex; gap: 30px; justify-content: space-between; align-items: center; padding: 25px 0; }
 .research-layers ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 18px 30px; color: var(--text); font-size: 14px; }
 .content-section { display: grid; grid-template-columns: 160px minmax(0, 1fr); column-gap: 60px; padding-top: 110px; }
 .section-label > span { color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: 12px; }
@@ -89,16 +89,15 @@ h2 { max-width: 750px; font-size: clamp(30px, 3.4vw, 43px); font-weight: 500; li
 h3 { font-size: 19px; font-weight: 500; line-height: 1.4; }
 .section-intro { margin-top: 24px; max-width: 760px; font-size: 18px; }
 .principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 38px; }
-.principles article { padding-top: 20px; border-top: 1px solid var(--accent); }
+.principles article { padding-top: 20px; }
 .principles p { margin-top: 13px; font-size: 15px; }
-.scope-note { margin-top: 34px; padding: 4px 0 4px 20px; border-left: 2px solid var(--line); color: var(--muted); font-size: 14px; line-height: 1.65; }
+.scope-note { margin-top: 34px; padding: 4px 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .data-flow { list-style: none; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 0; margin-top: 38px; }
-.data-flow li { position: relative; display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 20px 20px 20px 0; border-top: 1px solid var(--accent); }
+.data-flow li { position: relative; display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 20px 20px 20px 0; }
 .data-flow li > span { color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: 14px; margin-bottom: 12px; }
 .data-flow strong { color: var(--ink); font-size: 19px; font-weight: 500; }
 .data-flow small { color: var(--muted); font-size: 13px; line-height: 1.5; }
 .architecture-details { margin-top: 22px; }
-.architecture-details details { border-bottom: 1px solid var(--line); }
 .architecture-details summary { display: flex; align-items: center; gap: 14px; padding: 20px 0; color: var(--ink); list-style: none; cursor: pointer; font-size: 17px; font-weight: 500; }
 .architecture-details summary::-webkit-details-marker { display: none; }
 .architecture-details summary::before { content: "+"; flex: 0 0 18px; color: var(--accent); font-family: "IBM Plex Mono", monospace; font-weight: 400; }
@@ -107,7 +106,7 @@ h3 { font-size: 19px; font-weight: 500; line-height: 1.4; }
 .detail-copy { max-width: 850px; padding: 0 0 24px 32px; }
 .detail-copy p + p { margin-top: 12px; }
 .roadmap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; margin-top: 38px; padding: 0; list-style: none; }
-.roadmap li { min-width: 0; padding-top: 19px; border-top: 1px solid var(--line); }
+.roadmap li { min-width: 0; padding-top: 19px; }
 .phase-number { display: block; color: var(--accent); font-family: "IBM Plex Mono", monospace; font-size: 24px; margin-bottom: 22px; }
 .roadmap li p { margin-top: 12px; font-size: 15px; }
 .roadmap .phase-check { margin-top: 16px; font-size: 13px; color: var(--muted); }
@@ -119,7 +118,7 @@ h3 { font-size: 19px; font-weight: 500; line-height: 1.4; }
 .lab-gallery strong { color: var(--ink); font-size: 15px; font-weight: 500; }
 .lab-gallery p { margin-top: 5px; color: var(--muted); }
 .source-list { margin-top: 36px; }
-.source-list article { display: flex; gap: 24px; justify-content: space-between; padding: 25px 0; border-bottom: 1px solid var(--line); }
+.source-list article { display: flex; gap: 24px; justify-content: space-between; padding: 25px 0; }
 .source-list article:first-child { padding-top: 0; }
 .source-list h3 { margin-top: 6px; }
 .source-list p:not(.eyebrow) { margin-top: 8px; font-size: 15px; }
@@ -128,12 +127,12 @@ h3 { font-size: 19px; font-weight: 500; line-height: 1.4; }
 .creator h3 { margin-top: 6px; font-size: 25px; }
 .creator p:not(.eyebrow) { margin-top: 6px; font-size: 14px; }
 .creator-links { display: grid; gap: 10px; font-size: 14px; }
-.site-footer { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 16px; padding: 28px 0 35px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); text-align: center; }
+.site-footer { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 16px; padding: 28px 0 35px; font-size: 13px; color: var(--muted); text-align: center; }
 .site-footer > p { color: var(--ink); font-family: "IBM Plex Mono", monospace; font-size: 16px; }
 .footer-context { display: block; max-width: 40ch; margin: 6px auto 0; color: var(--muted); font-family: "IBM Plex Sans", sans-serif; font-size: 13px; line-height: 1.6; }
 .footer-links { display: flex; align-items: center; justify-content: center; gap: 24px; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; white-space: nowrap; }
-.site-footer .analytics-tools { width: 100%; grid-column: 1 / -1; padding-top: 12px; border-top: 1px solid var(--line); }
+.site-footer .analytics-tools { width: 100%; grid-column: 1 / -1; padding-top: 12px; }
 @media (max-width: 1100px) {
   .site-toolbar, .document, .site-footer { width: calc(100% - 64px); }
   .site-toolbar { gap: 24px; }
@@ -151,11 +150,11 @@ h3 { font-size: 19px; font-weight: 500; line-height: 1.4; }
 @media (max-width: 1000px) {
   .site-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; min-height: 88px; padding: 20px 0; gap: 0 12px; }
   .site-brand { width: fit-content; }
-  .toolbar-links { grid-column: 1 / -1; display: grid; gap: 8px; margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .toolbar-links { grid-column: 1 / -1; display: grid; gap: 8px; margin-top: 16px; padding-top: 12px; }
   .site-toolbar nav { display: grid; gap: 4px; justify-content: stretch; }
   .site-toolbar nav a, .site-toolbar .creator-link { display: flex; align-items: center; min-height: 48px; padding: 8px 12px; border-radius: 6px; font-size: 16px; white-space: nowrap; }
   .site-toolbar nav a:hover, .site-toolbar .creator-link:hover { background: var(--surface); text-decoration: none; }
-  .site-toolbar .creator-link { margin: 0; border-top: 1px solid var(--line); border-radius: 0; }
+  .site-toolbar .creator-link { margin: 0; border-radius: 0; }
   .site-toolbar[data-menu-ready] .menu-toggle { display: inline-flex; }
   .site-toolbar[data-menu-ready] .toolbar-links { display: none; position: absolute; z-index: 20; top: calc(100% - 2px); left: 0; right: 0; margin: 0; padding: 12px; max-height: calc(100vh - 100px); max-height: calc(100svh - 100px); overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--line); border-radius: 12px; background: var(--page); box-shadow: 0 16px 40px rgb(0 0 0 / 16%); }
   .site-toolbar[data-menu-ready].is-menu-open .toolbar-links { display: grid; }
@@ -195,7 +194,7 @@ h3 { font-size: 19px; font-weight: 500; line-height: 1.4; }
   .principles article { padding-top: 16px; }
   .principles p { font-size: 16px; margin-top: 9px; }
   .data-flow { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .data-flow li { display: grid; grid-template-columns: 30px 1fr 1.1fr; align-items: baseline; padding: 15px 0; gap: 10px; border-color: var(--line); }
+  .data-flow li { display: grid; grid-template-columns: 30px 1fr 1.1fr; align-items: baseline; padding: 15px 0; gap: 10px; }
   .data-flow li > span { margin: 0; }
   .data-flow strong { font-size: 17px; }
   .architecture-details summary { gap: 8px; font-size: 16px; }

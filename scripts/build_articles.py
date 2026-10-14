@@ -132,7 +132,7 @@ def shell(title, description, canonical, graph, content, social_image=None, soci
 <link rel="canonical" href="{canonical}">{alternates}
 <link rel="describedby" href="../llms.txt" type="text/plain" title="Leafcoin reading guide"><link rel="describedby" href="llms-full.txt" type="text/plain" title="Complete learning library text">
 <link rel="icon" href="../assets/favicon-96.png" type="image/png" sizes="96x96"><link rel="apple-touch-icon" href="../assets/ios_ligth_leafcoin.png">
-<link rel="stylesheet" href="../styles.css?v=20261013-articles"><link rel="stylesheet" href="../articles.css?v=20261013-visuals"><link rel="stylesheet" href="../analytics-ui.css?v=20260930-footer-center">
+<link rel="stylesheet" href="../styles.css?v=20261014-clean-layout"><link rel="stylesheet" href="../articles.css?v=20261014-clean-layout"><link rel="stylesheet" href="../analytics-ui.css?v=20260930-footer-center">
 <meta property="og:type" content="{'website' if hub else 'article'}"><meta property="og:site_name" content="Leafcoin"><meta property="og:locale" content="en_US">
 <meta property="og:title" content="{escape(title)}"><meta property="og:description" content="{escape(description)}"><meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{image}"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="{escape(alt)}">
